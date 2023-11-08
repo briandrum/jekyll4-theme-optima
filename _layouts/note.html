@@ -1,0 +1,59 @@
+---
+layout: default
+---
+
+{%- assign category = page.categories[0] -%}
+{%- assign notes = site.categories[category] -%}
+{%- for note in notes -%}
+  {%- if note.url == page.url -%}
+    {%- assign newerOffset = forloop.index0 | minus: 1 -%}
+    {%- assign olderOffset = newerOffset | plus: 2 -%}
+    {%- if forloop.first == false -%}
+      {% assign newer_note = notes[newerOffset] -%}
+    {%- endif -%}
+    {%- if forloop.last == false -%}
+      {%- assign older_note = notes[olderOffset] -%}
+    {%- endif -%}
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}
+
+<div class="Note">
+  <nav class="Note-nav">
+    <ol>
+      <li class="Note-navItem">
+        <a href="/notes/">Notes</a>
+      </li>
+      <li class="Note-navItem Note-navItem--older">
+        {%- if older_note -%}
+          <a class="Note-navItemContent" href="{{ older_note.url }}">Older</a>
+        {%- else -%}
+          <span class="Note-navItemContent">Older</span>
+        {%- endif -%}
+      </li>
+      <li class="Note-navItem Note-navItem--newer">
+        {%- if newer_note -%}
+          <a class="Note-navItemContent" href="{{ newer_note.url }}">Newer</a>
+        {%- else -%}
+          <span class="Note-navItemContent">Newer</span>
+        {%- endif -%}
+      </li>
+    </ol>
+  </nav>
+  <article class="Note-article h-entry">
+    <div class="Note-content p-content">
+      {{ content }}
+    </div>
+    <footer class="Note-footer">
+      <dl class="Note-tags Tags">
+        <dt>Tagged</dt>
+        {% for tag in page.tags %}
+          <dd><a href="/tags/{{ tag }}/">{{ tag | replace: "-", " " }}</a></dd>
+        {% endfor %}
+      </dl>
+      <div>
+        <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date:site.optima.time_and_date_short_format }}</time>
+      </div>
+    </footer>
+  </article>
+</div>

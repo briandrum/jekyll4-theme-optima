@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<div>
+  {%- if page.title -%}
+    <h1>{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+
+  {% assign notes = site.categories.notes %}
+
+  <div>
+    {%- if notes.size > 0 -%}
+      {%- for note in notes -%}
+        <section>
+          <div>
+            {{ note.content }}
+          </div>
+          <div>
+            <time class="dt-published" datetime="{{ note.date | date_to_xmlschema }}" itemprop="datePublished">
+              <a href="{{ note.url | relative_url }}">
+                {{ note.date | date:site.optima.time_and_date_short_format }}
+              </a>
+            </time>
+          </div>
+        </section>
+      {%- endfor -%}
+    {%- endif -%}
+  </div>
+</div>
