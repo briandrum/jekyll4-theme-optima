@@ -4,9 +4,11 @@
 #                                                                              #
 ################################################################################
 
-timezone: America/New_York
+baseurl: jekyll4-theme-optima
 
 permalink: pretty
 
 plugins:
   - jekyll-archives
+
+timezone: America/New_York
