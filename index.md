@@ -1,5 +1,8 @@
 ---
+layout: default
 title: Home
 ---
 
-Hello world!
+* [Articles](/articles/)
+* [Journal](/journal/)
+* [Notes](/notes/)

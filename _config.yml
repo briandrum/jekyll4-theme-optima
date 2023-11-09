@@ -4,11 +4,58 @@
 #                                                                              #
 ################################################################################
 
-baseurl: jekyll4-theme-optima
+baseurl: /jekyll4-theme-optima
 
-permalink: pretty
+permalink: /:categories/:year-:month-:day-:title/
 
 plugins:
   - jekyll-archives
+  - jekyll-paginate-v2
 
 timezone: America/New_York
+
+################################################################################
+#                                                                              #
+# Jekyll Archives                                                              #
+#                                                                              #
+################################################################################
+
+jekyll-archives:
+  enabled:
+#     - year
+#     - month
+#     - day
+#   layouts:
+#     year: notes # year-archive
+#     month: notes # month-archive
+#     day: notes # day-archive
+#   permalinks:
+#     year: '/archives/:year/'
+#     month: '/archives/:year/:month/'
+#     day: '/archives/:year/:month/:day/'
+
+################################################################################
+#                                                                              #
+# Jekyll Paginate v2                                                           #
+#                                                                              #
+################################################################################
+
+pagination:
+  enabled: true
+  per_page: 3
+  permalink: '/:num/'
+  title: ':title - page :num of :max'
+  limit: 0
+
+################################################################################
+#                                                                              #
+# Optima Theme Configuration Settings                                          #
+#                                                                              #
+################################################################################
+
+optima:
+  # Optima date formats
+  # Refer to https://shopify.github.io/liquid/filters/date/ if you want to
+  # customize these.
+  #
+  time_and_date_short_format: "%-I:%M %P - %-d %b %Y"

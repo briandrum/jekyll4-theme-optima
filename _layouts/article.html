@@ -22,7 +22,7 @@ layout: default
   <nav class="Note-nav">
     <ol>
       <li class="Note-navItem">
-        <a class="Note-navItemContent" href={{ "/notes/" | relative_url }}>Notes</a>
+        <a href={{ "/notes/" | relative_url }}>Notes</a>
       </li>
       <li class="Note-navItem Note-navItem--older">
         {%- if older_note -%}
@@ -48,7 +48,7 @@ layout: default
       <dl class="Note-tags Tags">
         <dt>Tagged</dt>
         {% for tag in page.tags %}
-          <dd><a href="{{ /tag/{{ tag }}/ | relative_url }}">{{ tag | replace: "-", " " }}</a></dd>
+          <dd><a href="/tag/{{ tag }}/">{{ tag | replace: "-", " " }}</a></dd>
         {% endfor %}
       </dl>
       <div>
