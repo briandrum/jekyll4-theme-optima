@@ -3,52 +3,52 @@ layout: default
 ---
 
 {%- assign category = page.categories[0] -%}
-{%- assign notes = site.categories[category] -%}
-{%- for note in notes -%}
-  {%- if note.url == page.url -%}
+{%- assign articles = site.categories[category] -%}
+{%- for article in articles -%}
+  {%- if article.url == page.url -%}
     {%- assign newerOffset = forloop.index0 | minus: 1 -%}
     {%- assign olderOffset = newerOffset | plus: 2 -%}
     {%- if forloop.first == false -%}
-      {% assign newer_note = notes[newerOffset] -%}
+      {% assign newer_article = articles[newerOffset] -%}
     {%- endif -%}
     {%- if forloop.last == false -%}
-      {%- assign older_note = notes[olderOffset] -%}
+      {%- assign older_article = articles[olderOffset] -%}
     {%- endif -%}
     {%- break -%}
   {%- endif -%}
 {%- endfor -%}
 
-<div class="Note">
-  <nav class="Note-nav">
+<div class="Article">
+  <nav class="Article-nav">
     <ol>
-      <li class="Note-navItem">
-        <a href={{ "/notes/" | relative_url }}>Notes</a>
+      <li class="Article-navItem">
+        <a href={{ "/articles/" | relative_url }}>Articles</a>
       </li>
-      <li class="Note-navItem Note-navItem--older">
-        {%- if older_note -%}
-          <a class="Note-navItemContent" href="{{ older_note.url | relative_url }}">Older</a>
+      <li class="Article-navItem Article-navItem--older">
+        {%- if older_article -%}
+          <a class="Article-navItemContent" href="{{ older_article.url | relative_url }}">Older</a>
         {%- else -%}
-          <span class="Note-navItemContent">Older</span>
+          <span class="Article-navItemContent">Older</span>
         {%- endif -%}
       </li>
-      <li class="Note-navItem Note-navItem--newer">
-        {%- if newer_note -%}
-          <a class="Note-navItemContent" href="{{ newer_note.url | relative_url }}">Newer</a>
+      <li class="Article-navItem Article-navItem--newer">
+        {%- if newer_article -%}
+          <a class="Article-navItemContent" href="{{ newer_article.url | relative_url }}">Newer</a>
         {%- else -%}
-          <span class="Note-navItemContent">Newer</span>
+          <span class="Article-navItemContent">Newer</span>
         {%- endif -%}
       </li>
     </ol>
   </nav>
-  <article class="Note-article h-entry">
-    <div class="Note-content p-content">
+  <article class="Article-article h-entry">
+    <div class="Article-content p-content">
       {{ content }}
     </div>
-    <footer class="Note-footer">
-      <dl class="Note-tags Tags">
+    <footer class="Article-footer">
+      <dl class="Article-tags Tags">
         <dt>Tagged</dt>
         {% for tag in page.tags %}
-          <dd><a href="/tag/{{ tag }}/">{{ tag | replace: "-", " " }}</a></dd>
+          <dd><a href="{{ tag | prepend: '/tag/' | relative_url }}">{{ tag | replace: "-", " " }}</a></dd>
         {% endfor %}
       </dl>
       <div>

@@ -48,7 +48,7 @@ layout: default
       <dl class="Note-tags Tags">
         <dt>Tagged</dt>
         {% for tag in page.tags %}
-          <dd><a href="{{ /tag/{{ tag }}/ | relative_url }}">{{ tag | replace: "-", " " }}</a></dd>
+          <dd><a href="{{ tag | prepend: '/tag/' | relative_url }}">{{ tag | replace: "-", " " }}</a></dd>
         {% endfor %}
       </dl>
       <div>

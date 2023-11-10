@@ -1,5 +1,51 @@
-<div class="Footer">
-  <p>
-    Footer
-  </p>
-</div>
+<footer class="Footer h-card">
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+  {%- assign default_paths = site.pages | map: "path" -%}
+  {%- assign page_paths = site.optima.header_pages | default: default_paths -%}
+  {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
+  <div class="Footer-nav">
+    <div class="">
+      <p><strong><a class="Footer-link" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a></strong></p>
+      <p>{{ site.description | escape }}</p>
+      <ul>
+        <li class="Footer-navListItem">
+          <a class="Footer-link Footer-link--withIcon" href="{{ 'feed.xml' | relative_url }}">
+            <svg class="Footer-linkIcon Icon">
+              <use xlink:href="{{ 'assets/optima-social-icons.svg#rss' | relative_url }}"></use>
+            </svg>
+            <span>Subscribe</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="Grid-cell u-sm-sizeFull u-md-size1of4 u-lg-size1of4">
+      <ul>
+        {%- for path in page_paths -%}
+          {%- assign my_page = site.pages | find_exp: "page", "page.path == path or page.pagination.category == path" -%}
+
+          {%- if my_page.short_title or my_page.title -%}
+            <li class="Footer-navListItem">
+              <a class="Footer-link" href="{{ my_page.url | relative_url }}">
+                {%- if my_page.title -%}
+                  {{ my_page.title | escape }}
+                {%- else -%}
+                  {{ my_page.short_title | escape }}
+                {%- endif -%}
+              </a>
+            </li>
+          {%- endif -%}
+        {%- endfor -%}
+      </ul>
+    </div>
+    <div class="Grid-cell u-sm-sizeFull u-md-size1of4 u-lg-size1of4">
+      {%- include social/social.html -%}
+    </div>
+  </div>
+  <div>
+    <p class="Footer-legalese">
+    {%- for fine_print in site.optima.footer_legalese -%}
+      <span class="u-textNoWrap">{{- fine_print.text }}</span>
+    {% endfor %}
+    </p>
+  </div>
+</footer>

@@ -1,0 +1,18 @@
+.Body {
+  background-color: var(--Body-backgroundColor);
+  color: var(--Body-color);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+.Body-header {
+}
+
+.Body-main {
+  display: flex;
+}
+
+.Body-footer {
+}

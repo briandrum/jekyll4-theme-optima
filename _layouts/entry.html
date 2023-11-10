@@ -1,0 +1,59 @@
+---
+layout: default
+---
+
+{%- assign category = page.categories[0] -%}
+{%- assign notes = site.categories[category] -%}
+{%- for entry in journal -%}
+  {%- if entry.url == page.url -%}
+    {%- assign newerOffset = forloop.index0 | minus: 1 -%}
+    {%- assign olderOffset = newerOffset | plus: 2 -%}
+    {%- if forloop.first == false -%}
+      {% assign newer_entry = journal[newerOffset] -%}
+    {%- endif -%}
+    {%- if forloop.last == false -%}
+      {%- assign older_entry = journal[olderOffset] -%}
+    {%- endif -%}
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}
+
+<div class="Entry">
+  <nav class="Entry-nav">
+    <ol>
+      <li class="Entry-navItem">
+        <a href={{ "/journal/" | relative_url }}>Journal</a>
+      </li>
+      <li class="Entry-navItem Entry-navItem--older">
+        {%- if older_entry -%}
+          <a class="Entry-navItemContent" href="{{ older_entry.url | relative_url }}">Older</a>
+        {%- else -%}
+          <span class="Entry-navItemContent">Older</span>
+        {%- endif -%}
+      </li>
+      <li class="Entry-navItem Entry-navItem--newer">
+        {%- if newer_entry -%}
+          <a class="Entry-navItemContent" href="{{ newer_entry.url | relative_url }}">Newer</a>
+        {%- else -%}
+          <span class="Entry-navItemContent">Newer</span>
+        {%- endif -%}
+      </li>
+    </ol>
+  </nav>
+  <article class="Entry-article h-entry">
+    <div class="Entry-content p-content">
+      {{ content }}
+    </div>
+    <footer class="Entry-footer">
+      <dl class="Entry-tags Tags">
+        <dt>Tagged</dt>
+        {% for tag in page.tags %}
+          <dd><a href="{{ tag | prepend: '/tag/' | relative_url }}">{{ tag | replace: "-", " " }}</a></dd>
+        {% endfor %}
+      </dl>
+      <div>
+        <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date:site.optima.time_and_date_short_format }}</time>
+      </div>
+    </footer>
+  </article>
+</div>
