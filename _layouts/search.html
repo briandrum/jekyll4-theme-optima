@@ -70,7 +70,7 @@ function searchDocuments(term) {
         var url = documents[ref]["url"].split("/").slice(3,-1).join(" › ");
         var title = documents[ref]["title"];
         var body = documents[ref]["body"].substring(0,320) + "…";
-        document.querySelectorAll("#search-results ol.SearchResults")[0].innerHTML = document.querySelectorAll("#search-results ol.SearchResults")[0].innerHTML + "<li class=\"SearchResults-result\"><a class=\"SearchResults-link u-linkComplex\" href=\"" + href + "\"><address class=\"SearchResults-url\">" + url + "</address><h4 class=\"SearchResults-title u-linkComplexTarget\">" + title + "</h4><p class=\"SearchResults-description\">" + body + "</p></a></li>";
+        document.querySelectorAll("#search-results ol.SearchResults")[0].innerHTML = document.querySelectorAll("#search-results ol.SearchResults")[0].innerHTML + "<li class=\"SearchResults-result\"><a class=\"SearchResults-link\" href=\"" + href + "\"><address class=\"SearchResults-url\">" + url + "</address><h4 class=\"SearchResults-title\">" + title + "</h4><p class=\"SearchResults-description\">" + body + "</p></a></li>";
       }
       focusFormElement("search-submit");;
     }
@@ -111,11 +111,11 @@ window.addEventListener("popstate", (event) => {
 
 </script>
 
-<div class="Grid Grid--withGutter">
-  <div class="Grid-cell u-sizeFull u-sm-sizeFull u-md-size3of4 u-lg-size3of4">
-    <div class="u-spaceStackLarge">
+<div class="Search">
+  <div class="Search-content">
+    <div class="">
       <form action="https://html.duckduckgo.com/html" method="get" onsubmit="return onFormSubmit();">
-        <fieldset class="InputGroup u-flex u-flexAlignItemsStretch u-flexJustifyContentStretch" id="search-fieldset">
+        <fieldset class="InputGroup" id="search-fieldset">
           <input autofocus class="TextInput u-size1of2" enterkeyhint="search" id="search-input" maxlength="255" name="q" placeholder="example: bicycle" type="search" value="site:{{ search_domain }} ">
           <button class="Button" id="search-clear" type="reset" onclick="return onFormReset();">Clear</button>
           <button class="Button" id="search-submit" type="submit">Search</button>
@@ -130,11 +130,11 @@ window.addEventListener("popstate", (event) => {
       </div>
     </div>
   </div>
-  <div class="Grid-cell u-sizeFull u-sm-sizeFull u-md-size1of4 u-lg-size1of4">
-    <div class="u-spaceStackLarge">
+  <div class="Search-aside">
+    <div class="">
       {%- assign content = content | strip_newlines -%}
       {%- unless content == "" -%}
-        <aside class="Aside">
+        <aside class="">
           <div class="Markdown">
             {{ content }}
           </div>

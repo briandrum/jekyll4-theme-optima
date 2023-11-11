@@ -15,8 +15,17 @@ Enable/disable each of these post categories in _config.yml
 
 ## RSS
 
+How to enable/disable
+
 ## SEO
+
+How to enable/disable
+Recommended config value to add
 
 ## Search
 
+How to enable/disable
+
 ## Plausible Analytics
+
+How to enable/disable

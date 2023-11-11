@@ -4,7 +4,7 @@
 #                                                                              #
 ################################################################################
 
-# baseurl: /jekyll4-theme-optima
+baseurl: /jekyll4-theme-optima
 
 permalink: /:categories/:year-:month-:day-:title/
 

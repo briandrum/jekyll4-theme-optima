@@ -17,7 +17,7 @@
 
 .Note-nav ol {
   display: flex;
-  list-style-type: none;
+  list-style-type: "";
   margin-block-end: var(--space-2xs);
   margin-block-start: var(--space-2xs);
   padding-inline-start: 0;
