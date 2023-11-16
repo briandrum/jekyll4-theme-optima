@@ -1,3 +1,17 @@
+:root {
+  --Page-header-color: var(--slate12);
+  --Page-header-fontFamily: var(--font-serif);
+  --Page-header-fontSize: var(--step-2);
+  --Page-header-fontWeight: var(--font-weight-6);
+  --Page-header-lineHeight: var(--line-height-1);
+
+  --Page-body-color: var(--slate12);
+  --Page-body-fontFamily: var(--font-serif);
+  --Page-body-fontSize: var(--step-1);
+  --Page-body-fontWeight: var(--font-weight-3);
+  --Page-body-lineHeight: var(--line-height-5);
+}
+
 .Page {
   align-self: center;
   margin-inline: auto;
@@ -7,14 +21,20 @@
 }
 
 .Page-headerContent {
-  font-family: var(--font-serif);
-  font-size: var(--step-2);
+  color: var(--Page-header-color);
+  font-family: var(--Page-header-fontFamily);
+  font-size: var(--Page-header-fontSize);
+  font-weight: var(--Page-header-fontWeight);
+  line-height: var(--Page-header-lineHeight);
+  max-width: 24em;
+  text-wrap: balance;
 }
 
 .Page-body {
-  font-family: var(--font-serif);
-  font-size: var(--step-1);
-  font-weight: 300;
-  line-height: var(--leading-loose);
+  color: var(--Page-body-color);
+  font-family: var(--Page-body-fontFamily);
+  font-size: var(--Page-body-fontSize);
+  font-weight: var(--Page-body-fontWeight);
+  line-height: var(--Page-body-lineHeight);
   max-width: 32em;
 }

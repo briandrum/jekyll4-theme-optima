@@ -1,19 +1,28 @@
+/* root */
+
+:root {
+  --anchor-link-color: var(--blue11);
+  --anchor-link-onHover-color: var(--blue12);
+  --anchor-visited-color: var(--blue8);
+  --anchor-visited-onHover-color: var(--blue9);
+}
+
 /* Icon */
 
 .Icon {
-  --Icon-color: var(--slate12);
+  --Icon-color: var(--slate9);
 }
 
 /* Body */
 
-:root {
+.Body {
   --Body-backgroundColor: var(--slate1);
   --Body-color: var(--slate12);
 }
 
 /* Header */
 
-:root {
+.Header {
   --Header-height: var(--space-xl-2xl);
   --Header-name-fontFamily: var(--font-sans);
   --Header-name-fontSize: var(--step--1);
@@ -25,4 +34,44 @@
   --Header-mobileNav-boxShadowColor: var(--slate2);
   --Header-mobileNav-color: var(--slate11);
   --Header-mobileNavListItem-boxShadowColor: var(--slate6);
+}
+
+/* Note */
+
+.Note {
+  --Note-content-anchor-link-color: var(--anchor-link-color);
+  --Note-content-anchor-link-onHover-color: var(--anchor-link-onHover-color);
+  --Note-content-anchor-visited-color: var(--anchor-visited-color);
+  --Note-content-anchor-visited-onHover-color: var(--anchor-visited-onHover-color);
+}
+
+/* Notes */
+
+.Notes {
+  --Notes-nav-marginBlock: var(--space-l);
+  --Notes-navContent-backgroundColor: var(--slate2);
+  --Notes-navContent-borderRadius: var(--space-3xs);
+  --Notes-navContent-color: var(--slate9);
+  --Notes-navContent-cursor: default;
+  --Notes-navContent-display: block;
+  --Notes-navContent-fontSize: var(--step--2);
+  --Notes-navContent-fontWeight: var(--font-weight-3);
+  --Notes-navContent-letterSpacing: var(--letter-spacing-1);
+  --Notes-navContent-paddingBlock: var(--space-xs);
+  --Notes-navContent-paddingInline: var(--space-s);
+  --Notes-navContent-textAlign: center;
+
+  --Notes-navContent-link-backgroundColor: var(--blue2);
+  --Notes-navContent-link-color: var(--blue8);
+  --Notes-navContent-link-cursor: pointer;
+  --Notes-navContent-link-textDecoration: none;
+
+  --Notes-navContent-link-onHover-backgroundColor: var(--blue3);
+  --Notes-navContent-link-onHover-color: var(--blue10);
+
+  --Notes-note-marginBlockStart: var(--space-m-l);
+}
+
+.Tags {
+  --Tags-detailsLink-borderRadius: 0.25em;
 }

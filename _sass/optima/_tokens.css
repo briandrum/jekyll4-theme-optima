@@ -257,6 +257,44 @@
   --font-monospace: ui-monospace, "SFMono-Regular", "SF Mono", "Menlo", "Consolas", "Liberation Mono", monospace;
 }
 
+/* typography */
+
+:root {
+  --line-height-1: 1.0;
+  --line-height-2: 1.0;
+
+  --line-height-3: 1.25;
+  --line-height-4: 1.25;
+
+  --line-height-5: 1.5;
+  --line-height-6: 1.5;
+
+  --line-height-7: 1.75;
+  --line-height-8: 1.75;
+
+  --line-height-9: 2.0;
+
+  --letter-spacing-1: 0.05em;
+  --letter-spacing-2: 0.05em;
+  --letter-spacing-3: 0.05em;
+  --letter-spacing-4: 0.05em;
+  --letter-spacing-5: 0.05em;
+  --letter-spacing-6: 0.05em;
+  --letter-spacing-7: 0.05em;
+  --letter-spacing-8: 0.05em;
+  --letter-spacing-9: 0.05em;
+
+  --font-weight-1: 100;
+  --font-weight-2: 200;
+  --font-weight-3: 300;
+  --font-weight-4: 400;
+  --font-weight-5: 500;
+  --font-weight-6: 600;
+  --font-weight-7: 700;
+  --font-weight-8: 800;
+  --font-weight-9: 900;
+}
+
 /* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 
 :root {
@@ -305,12 +343,4 @@
   --grid-max-width: 77.50rem;
   --grid-gutter: var(--space-s-l, clamp(1.125rem, 0.6467rem + 2.3913vw, 2.5rem));
   --grid-columns: 12;
-}
-
-/* typography */
-
-:root {
-  --leading-tight: 1;
-  --leading-comfy: 1.25;
-  --leading-loose: 1.5;
 }

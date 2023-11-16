@@ -17,13 +17,17 @@
 
           {% if page.url == my_page.url %}
             {% assign current_page = true %}
+          {% elsif page.pagination.category == my_page.layout %}
+            {% assign current_page = true %}
+          {% elsif page.categories.first == my_page.layout %}
+            {% assign current_page = true %}
           {% else %}
             {% assign current_page = false %}
           {% endif %}
 
           {%- if my_page.short_title or my_page.title -%}
           <li class="Header-navListItem">
-            <a class="Header-link{%- if current_page == true %} is-current{%- endif -%}" href="{{ my_page.url | relative_url }}">
+            <a class="Header-link{%- if current_page == true %} is-current{%- endif -%}" href="{{ my_page.url | remove: 'index.html' | relative_url }}">
               {%- if my_page.short_title -%}
                 {{ my_page.short_title | escape }}
               {%- else -%}

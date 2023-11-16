@@ -40,20 +40,5 @@ layout: default
       </li>
     </ol>
   </nav>
-  <article class="Note-article h-entry">
-    <div class="Note-content p-content">
-      {{ content }}
-    </div>
-    <footer class="Note-footer">
-      <dl class="Note-tags Tags">
-        <dt>Tagged</dt>
-        {% for tag in page.tags %}
-          <dd><a href="{{ tag | prepend: '/tag/' | relative_url }}">{{ tag | replace: "-", " " }}</a></dd>
-        {% endfor %}
-      </dl>
-      <div>
-        <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date:site.optima.time_and_date_short_format }}</time>
-      </div>
-    </footer>
-  </article>
+  {% include note-article.html content=page.content date=page.date size="Large" tags=page.tags url=page.url %}
 </div>

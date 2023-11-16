@@ -1,0 +1,34 @@
+.Tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin-inline-start: 0;
+}
+
+.Tags-term {
+  display: none;
+}
+
+.Tags-details {
+  margin-block-end: 0;
+  margin-block-start: 0;
+  margin-inline-end: 0;
+  margin-inline-start: 0;
+}
+
+.Tags-details a:link,
+.Tags-details a:visited {
+  background-color: var(--slate3);
+  border-radius: var(--Tags-detailsLink-borderRadius);
+  color: var(--slate10);
+  display: block;
+  padding-block: var(--space-3xs);
+  padding-inline: var(--space-2xs);
+  text-decoration: none;
+}
+
+.Tags-details a:link:hover,
+.Tags-details a:visited:hover {
+  background-color: var(--blue3);
+  color: var(--blue10);
+}
