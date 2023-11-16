@@ -9,5 +9,3 @@ pagination:
   sort_reverse: true
 permalink: /notes/
 ---
-
-Hello world

@@ -1,0 +1,17 @@
+<article class="Entry Entry--size{{ include.size | capitalize }} h-entry">
+  <header class="Entry-header">
+    <div class="Entry-published">
+      <time class="dt-published" datetime="{{ include.date | date_to_xmlschema }}" itemprop="datePublished">
+        <a href="{{ include.url | relative_url }}">
+          {{ include.date | date:site.optima.time_and_date_short_format }}
+        </a>
+      </time>
+    </div>
+    <h1 class="Entry-title">
+      {{ include.title }}
+    </h1>
+  </header>
+  <div class="Entry-content">
+    {{ include.content | markdownify }}
+  </div>
+</article>

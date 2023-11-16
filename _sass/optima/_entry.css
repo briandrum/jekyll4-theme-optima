@@ -1,0 +1,30 @@
+.Entry {
+}
+
+.Entry-header {
+}
+
+.Entry-published {
+}
+
+.Entry-title {
+  font-family: var(--font-serif);
+  font-size: var(--step-2);
+  font-weight: var(--font-weight-9);
+  line-height: var(--line-height-5);
+  max-width: 40em;
+}
+
+.Entry-content p {
+  font-family: var(--font-serif);
+  font-size: var(--step-0);
+  line-height: var(--line-height-5);
+  max-width: 40em;
+}
+
+.Entry-content h2 {
+  font-family: var(--font-serif);
+  font-size: var(--step-0);
+  line-height: var(--line-height-5);
+  max-width: 40em;
+}

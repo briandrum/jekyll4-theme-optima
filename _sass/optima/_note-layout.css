@@ -1,0 +1,66 @@
+.NoteLayout {
+  align-self: center;
+  margin-inline: auto;
+}
+
+.NoteLayout-nav {
+  color: var(--slate9);
+  cursor: default;
+  font-family: var(--font-sans);
+  font-size: var(--step--2);
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  margin-block-end: var(--space-2xs);
+  margin-block-start: var(--space-2xs);
+  text-transform: uppercase;
+  -webkit-user-select: none;
+}
+
+.NoteLayout-nav ol {
+  display: flex;
+  list-style-type: "";
+  margin-block-end: var(--space-2xs);
+  margin-block-start: var(--space-2xs);
+  padding-inline-start: 0;
+}
+
+.NoteLayout-navItem:not(:first-child) {
+  margin-inline-start: 0.5em;
+}
+
+.NoteLayout-navItem:not(:last-child) {
+  margin-inline-end: 0.5em;
+}
+
+.NoteLayout-navItem--newer::before {
+  content: "\2022\2003";
+}
+
+.NoteLayout-navItem--newer .NoteLayout-navItemContent::after {
+  content: "\A0\2192";
+}
+
+.NoteLayout-navItem--older .NoteLayout-navItemContent::before {
+  content: "\2190\A0";
+}
+
+.NoteLayout-navItemContent:link,
+.NoteLayout-navItemContent:visited {
+  text-decoration: none !important;
+}
+
+.NoteLayout-navItemContent:link {
+  color: var(--anchor-link-color);
+}
+
+.NoteLayout-navItemContent:link:hover {
+  color: var(--anchor-link-onHover-color);
+}
+
+.NoteLayout-navItemContent:visited {
+  color: var(--anchor-visited-color);
+}
+
+.NoteLayout-navItemContent:visited:hover {
+  color: var(--anchor-visited-onHover-color);
+}

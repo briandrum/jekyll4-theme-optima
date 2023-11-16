@@ -1,71 +1,4 @@
 .Note {
-  align-self: center;
-  margin-inline: auto;
-}
-
-.Note-nav {
-  color: var(--slate9);
-  cursor: default;
-  font-family: var(--font-sans);
-  font-size: var(--step--2);
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  margin-block-end: var(--space-2xs);
-  margin-block-start: var(--space-2xs);
-  text-transform: uppercase;
-  -webkit-user-select: none;
-}
-
-.Note-nav ol {
-  display: flex;
-  list-style-type: "";
-  margin-block-end: var(--space-2xs);
-  margin-block-start: var(--space-2xs);
-  padding-inline-start: 0;
-}
-
-.Note-navItem:not(:first-child) {
-  margin-inline-start: 0.5em;
-}
-
-.Note-navItem:not(:last-child) {
-  margin-inline-end: 0.5em;
-}
-
-.Note-navItem--newer::before {
-  content: "\2022\2003";
-}
-
-.Note-navItem--newer .Note-navItemContent::after {
-  content: "\A0\2192";
-}
-
-.Note-navItem--older .Note-navItemContent::before {
-  content: "\2190\A0";
-}
-
-.Note-navItemContent:link,
-.Note-navItemContent:visited {
-  text-decoration: none !important;
-}
-
-.Note-navItemContent:link {
-  color: var(--anchor-link-color);
-}
-
-.Note-navItemContent:link:hover {
-  color: var(--anchor-link-onHover-color);
-}
-
-.Note-navItemContent:visited {
-  color: var(--anchor-visited-color);
-}
-
-.Note-navItemContent:visited:hover {
-  color: var(--anchor-visited-onHover-color);
-}
-
-.Note-article {
   margin-block-end: var(--space-2xs);
   margin-block-start: var(--space-2xs);
 }
@@ -140,25 +73,25 @@
   margin: 0.375em 0 0 0;
 }
 
-.Note-article--sizeLarge .Note-content {
+.Note--sizeLarge .Note-content {
   font-size: var(--step-2);
   font-weight: 400;
   line-height: var(--line-height-5);
   max-width: 24em;
 }
 
-.Note-article--sizeLarge .Note-published {
+.Note--sizeLarge .Note-published {
   font-size: var(--step--1);
   font-weight: var(--font-weight-4);
 }
 
-.Note-article--sizeSmall .Note-content {
+.Note--sizeSmall .Note-content {
   font-size: var(--step-0);
   line-height: var(--line-height-5);
   max-width: 32em;
 }
 
-.Note-article--sizeSmall .Note-published {
+.Note--sizeSmall .Note-published {
   font-size: var(--step--2);
   font-weight: var(--font-weight-4);
 }

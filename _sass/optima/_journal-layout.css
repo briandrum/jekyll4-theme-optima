@@ -1,0 +1,12 @@
+.JournalLayout {
+  align-self: center;
+  margin-inline: auto;
+}
+
+.JournalLayout-title {
+  color: var(--JournalLayout-title-color);
+  font-family: var(--JournalLayout-title-fontFamily);
+  font-size: var(--JournalLayout-title-fontSize);
+  font-style: var(--JournalLayout-title-fontStyle);
+  font-weight: var(--JournalLayout-title-fontWeight);
+}

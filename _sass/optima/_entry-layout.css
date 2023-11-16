@@ -1,0 +1,12 @@
+.EntryLayout {
+  align-self: center;
+  margin-inline: auto;
+}
+
+.EntryLayout-title {
+  color: var(--EntryLayout-title-color);
+  font-family: var(--EntryLayout-title-fontFamily);
+  font-size: var(--EntryLayout-title-fontSize);
+  font-style: var(--EntryLayout-title-fontStyle);
+  font-weight: var(--EntryLayout-title-fontWeight);
+}

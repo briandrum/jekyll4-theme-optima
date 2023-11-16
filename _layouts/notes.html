@@ -2,34 +2,32 @@
 layout: default
 ---
 
-<div class="Notes">
-  {%- comment -%}
-    {%- if page.title -%}
-      <h1>{{ page.title }}</h1>
-    {%- endif -%}
+<div class="NotesLayout">
+  {%- if page.title -%}
+    <div class="NotesLayout-title">{{ page.title }}</div>
+  {%- endif -%}
 
-    {{ content | markdownify }}
-  {%- endcomment -%}
+  {{ content | markdownify }}
 
-  <nav class="Notes-nav">
+  <nav class="NotesLayout-nav">
     {% if paginator.previous_page %}
-      <a class="Notes-navContent" href="{{ paginator.previous_page_path | relative_url }}">View newer notes</a>
+      <a class="NotesLayout-navContent" href="{{ paginator.previous_page_path | relative_url }}">View newer notes</a>
     {%- else -%}
-      <span class="Notes-navContent">Viewing the most recent notes</span>
+      <span class="NotesLayout-navContent">Viewing the most recent notes</span>
     {% endif %}
   </nav>
 
   {% for post in paginator.posts %}
-    <section class="Notes-note Note">
-      {% include note-article.html slug=post.slug content=post.content date=post.date size="small" tags=post.tags url=post.url %}
+    <section class="NotesLayout-note">
+      {% include note.html slug=post.slug content=post.content date=post.date size="small" tags=post.tags url=post.url %}
     </section>
   {% endfor %}
 
-  <nav class="Notes-nav">
+  <nav class="NotesLayout-nav">
     {% if paginator.next_page %}
-      <a class="Notes-navContent" href="{{ paginator.next_page_path | relative_url }}">View older notes</a>
+      <a class="NotesLayout-navContent" href="{{ paginator.next_page_path | relative_url }}">View older notes</a>
     {%- else -%}
-      <span class="Notes-navContent">You've reached the end!</span>
+      <span class="NotesLayout-navContent">You've reached the end!</span>
     {% endif %}
   </li>
 </div>

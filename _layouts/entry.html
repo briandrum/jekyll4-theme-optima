@@ -18,31 +18,35 @@ layout: default
   {%- endif -%}
 {%- endfor -%}
 
-<div class="Entry">
-  <nav class="Entry-nav">
+<div class="EntryLayout">
+  {%- if category -%}
+    <div class="EntryLayout-title">{{ category | capitalize }}</div>
+  {%- endif -%}
+
+  <nav class="EntryLayout-nav">
     <ol>
-      <li class="Entry-navItem">
+      <li class="EntryLayout-navItem">
         <a href={{ "/journal/" | relative_url }}>Journal</a>
       </li>
-      <li class="Entry-navItem Entry-navItem--older">
+      <li class="EntryLayout-navItem EntryLayout-navItem--older">
         {%- if older_entry -%}
-          <a class="Entry-navItemContent" href="{{ older_entry.url | relative_url }}">Older</a>
+          <a class="EntryLayout-navItemContent" href="{{ older_entry.url | relative_url }}">Older</a>
         {%- else -%}
-          <span class="Entry-navItemContent">Older</span>
+          <span class="EntryLayout-navItemContent">Older</span>
         {%- endif -%}
       </li>
-      <li class="Entry-navItem Entry-navItem--newer">
+      <li class="EntryLayout-navItem EntryLayout-navItem--newer">
         {%- if newer_entry -%}
-          <a class="Entry-navItemContent" href="{{ newer_entry.url | relative_url }}">Newer</a>
+          <a class="EntryLayout-navItemContent" href="{{ newer_entry.url | relative_url }}">Newer</a>
         {%- else -%}
-          <span class="Entry-navItemContent">Newer</span>
+          <span class="EntryLayout-navItemContent">Newer</span>
         {%- endif -%}
       </li>
     </ol>
   </nav>
-  <article class="Entry-article h-entry">
+  <article class="Entry h-entry">
     <div class="Entry-content p-content">
-      {{ content }}
+      {% include entry.html slug=page.slug content=page.content date=page.date size="small" tags=page.tags url=page.url title=page.title %}
     </div>
     <footer class="Entry-footer">
       <dl class="Entry-tags Tags">

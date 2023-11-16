@@ -1,6 +1,6 @@
-<article class="Note-article Note-article--size{{ include.size | capitalize }} h-entry">
+<article class="Note Note--size{{ include.size | capitalize }} h-entry">
   <div class="Note-content e-content">
-    {{ include.content }}
+    {{ include.content | markdownify }}
   </div>
   <footer class="Note-footer">
     <dl class="Note-tags Tags">

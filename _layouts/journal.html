@@ -2,25 +2,16 @@
 layout: default
 ---
 
-<div>
+<div class="JournalLayout">
   {%- if page.title -%}
-    <h1>{{ page.title }}</h1>
+    <div class="JournalLayout-title">{{ page.title }}</div>
   {%- endif -%}
 
-  {{ content }}
+  {{ content | markdownify }}
 
   {% for post in paginator.posts %}
-    <section>
-      <div>
-        {{ post.content }}
-      </div>
-      <div>
-        <time class="dt-published" datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
-          <a href="{{ post.url | relative_url }}">
-            {{ post.date | date:site.optima.time_and_date_short_format }}
-          </a>
-        </time>
-      </div>
+    <section class="JournalLayout-entry">
+      {% include entry.html slug=post.slug content=post.content date=post.date size="small" tags=post.tags url=post.url title=post.title %}
     </section>
   {% endfor %}
 

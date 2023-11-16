@@ -18,27 +18,27 @@ layout: default
   {%- endif -%}
 {%- endfor -%}
 
-<div class="Note">
-  <nav class="Note-nav">
+<div class="NoteLayout">
+  <nav class="NoteLayout-nav">
     <ol>
-      <li class="Note-navItem">
-        <a class="Note-navItemContent" href={{ "/notes/" | relative_url }}>Notes</a>
+      <li class="NoteLayout-navItem">
+        <a class="NoteLayout-navItemContent" href={{ "/notes/" | relative_url }}>Notes</a>
       </li>
-      <li class="Note-navItem Note-navItem--older">
+      <li class="NoteLayout-navItem NoteLayout-navItem--older">
         {%- if older_note -%}
-          <a class="Note-navItemContent" href="{{ older_note.url | relative_url }}">Older</a>
+          <a class="NoteLayout-navItemContent" href="{{ older_note.url | relative_url }}">Older</a>
         {%- else -%}
-          <span class="Note-navItemContent">Older</span>
+          <span class="NoteLayout-navItemContent">Older</span>
         {%- endif -%}
       </li>
-      <li class="Note-navItem Note-navItem--newer">
+      <li class="NoteLayout-navItem NoteLayout-navItem--newer">
         {%- if newer_note -%}
-          <a class="Note-navItemContent" href="{{ newer_note.url | relative_url }}">Newer</a>
+          <a class="NoteLayout-navItemContent" href="{{ newer_note.url | relative_url }}">Newer</a>
         {%- else -%}
-          <span class="Note-navItemContent">Newer</span>
+          <span class="NoteLayout-navItemContent">Newer</span>
         {%- endif -%}
       </li>
     </ol>
   </nav>
-  {% include note-article.html content=page.content date=page.date size="Large" tags=page.tags url=page.url %}
+  {% include note.html content=page.content date=page.date size="Large" tags=page.tags url=page.url %}
 </div>
