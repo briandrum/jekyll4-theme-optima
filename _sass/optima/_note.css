@@ -1,14 +1,10 @@
-.Note {
-  margin-block-end: var(--space-2xs);
-  margin-block-start: var(--space-2xs);
-}
-
 .Note-content {
-  font-family: var(--font-serif);
-  font-size: var(--step-1);
-  font-weight: 400;
-  line-height: var(--line-height-5);
-  max-width: 24em;
+  color: var(--Note-content-color);
+  font-family: var(--Note-content-fontFamily);
+  font-size: var(--Note-content-fontSize);
+  font-weight: var(--Note-content-fontWeight);
+  line-height: var(--Note-content-lineHeight);
+  max-width: var(--Note-content-maxWidth);
 }
 
 .Note-content a:link {
@@ -28,31 +24,31 @@
 }
 
 .Note-tags {
-  font-size: var(--step--2);
-  margin-block-end: 0;
-  margin-block-start: var(--space-2xs);
-  margin-inline-start: var(--space-s);
+  font-size: var(--Note-tags-fontSize);
+  margin-block: var(--Note-tags-marginBlock);
+  max-width: var(--Note-tags-maxWidth);
 }
 
 .Note-published {
-  color: var(--slate9);
-  font-family: var(--font-sans);
-  font-size: var(--step--1);
-  font-weight: var(--font-weight-4);
-  margin-block-end: 0;
-  margin-block-start: var(--space-2xs);
+  color: var(--Note-published-color);
+  font-family: var(--Note-published-fontFamily);
+  font-size: var(--Note-published-fontSize);
+  font-weight: var(--Note-published-fontWeight);
+  margin-block: var(--Note-published-marginBlock);
+  white-space: nowrap;
 }
 
 .Note-publishedLink {
-  color: var(--slate9);
+  color: var(--Note-publishedLink-color);
   text-decoration: none;
+  transition: color 0.2s ease-in-out;
 }
 
 .Note-publishedLink:hover {
-  text-decoration: underline;
+  color: var(--Note-publishedLink-onHover-color);
 }
 
-@media screen and (min-width:24em) {
+@media screen and (min-width:32em) {
   .Note-footer {
     align-items: center;
     display: flex;
@@ -61,7 +57,7 @@
   }
 
   .Note-published {
-    margin-inline-end: var(--space-xs);
+    margin-inline: 0 var(--space-xs);
   }
 }
 
@@ -70,28 +66,27 @@
 }
 
 .Note-content p:not(:first-child) {
-  margin: 0.375em 0 0 0;
+  margin-block: calc(var(--line-height-5) / 4 * 1em) 0;
 }
 
 .Note--sizeLarge .Note-content {
   font-size: var(--step-2);
-  font-weight: 400;
   line-height: var(--line-height-5);
-  max-width: 24em;
+  max-width: var(--Note--sizeLarge-content-maxWidth);
 }
 
 .Note--sizeLarge .Note-published {
-  font-size: var(--step--1);
-  font-weight: var(--font-weight-4);
+  font-size: var(--Note--sizeLarge-published-fontSize);
+  font-weight: var(--Note--sizeLarge-published-fontWeight);
 }
 
 .Note--sizeSmall .Note-content {
-  font-size: var(--step-0);
-  line-height: var(--line-height-5);
-  max-width: 32em;
+  font-size: var(--Note--sizeSmall-content-fontSize);
+  line-height: var(--Note--sizeSmall-content-lineHeight);
+  max-width: var(--Note--sizeSmall-content-maxWidth);
 }
 
 .Note--sizeSmall .Note-published {
-  font-size: var(--step--2);
-  font-weight: var(--font-weight-4);
+  font-size: var(--Note--sizeSmall-published-fontSize);
+  font-weight: var(--Note--sizeSmall-published-fontWeight);
 }

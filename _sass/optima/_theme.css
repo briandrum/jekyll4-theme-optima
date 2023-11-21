@@ -30,9 +30,6 @@
   --EntryLayout-title-fontWeight: var(--font-weight-6);
 }
 
-.EntryLayout-title {
-}
-
 /* Header */
 
 .Header {
@@ -62,44 +59,88 @@
 /* Note */
 
 .Note {
+  --Note--sizeLarge-content-maxWidth: 24em;
+  --Note--sizeLarge-published-fontSize: var(--step--1);
+  --Note--sizeLarge-published-fontWeight: var(--font-weight-4);
+  --Note--sizeSmall-content-fontSize: var(--step-0);
+  --Note--sizeSmall-content-lineHeight: var(--line-height-5);
+  --Note--sizeSmall-content-maxWidth: 32em;
+  --Note--sizeSmall-published-fontSize: var(--step--2);
+  --Note--sizeSmall-published-fontWeight: var(--font-weight-4);
   --Note-content-anchor-link-color: var(--anchor-link-color);
   --Note-content-anchor-link-onHover-color: var(--anchor-link-onHover-color);
   --Note-content-anchor-visited-color: var(--anchor-visited-color);
   --Note-content-anchor-visited-onHover-color: var(--anchor-visited-onHover-color);
+  --Note-content-color: var(--slate12);
+  --Note-content-fontFamily: var(--font-serif);
+  --Note-content-fontSize: var(--step-1);
+  --Note-content-fontWeight: var(--font-weight-3);
+  --Note-content-lineHeight: var(--line-height-5);
+  --Note-content-maxWidth: 24em;
+  --Note-published-color: var(--slate9);
+  --Note-published-fontFamily: var(--font-sans);
+  --Note-published-fontSize: var(--step--1);
+  --Note-published-fontWeight: var(--font-weight-4);
+  --Note-published-marginBlock: var(--space-2xs) 0;
+  --Note-publishedLink-color: var(--slate9);
+  --Note-publishedLink-onHover-color: var(--slate11);
+  --Note-tags-fontSize: var(--step--2);
+  --Note-tags-marginBlock: var(--space-2xs) 0;
+  --Note-tags-maxWidth: 40em;
+}
+
+/* NoteLayout */
+
+.NoteLayout {
+  --NoteLayout-nav-color: var(--slate9);
+  --NoteLayout-nav-cursor: default;
+  --NoteLayout-nav-fontFamily: var(--font-sans);
+  --NoteLayout-nav-fontSize: var(--step--2);
+  --NoteLayout-nav-fontWeight: 800;
+  --NoteLayout-nav-letterSpacing: 0.1em;
+  --NoteLayout-nav-marginBlock: var(--space-2xs);
+  --NoteLayout-nav-textTransform: uppercase;
+  --NoteLayout-nav-userSelect: none;
+  --NoteLayout-navItemContent-link-color: var(--anchor-link-color);
+  --NoteLayout-navItemContent-link-onHover-color: var(--anchor-link-onHover-color);
+  --NoteLayout-navItemContent-visited-color: var(--anchor-visited-color);
+  --NoteLayout-navItemContent-visited-onHover-color: var(--anchor-visited-onHover-color);
+  --NoteLayout-navList-gap: 1.0em;
+  --NoteLayout-navList-marginBlock: var(--space-2xs) var(--space-2xs);
 }
 
 /* NotesLayout */
 
 .NotesLayout {
+  --NotesLayout-nav-marginBlock: var(--space-l) 0;
+  --NotesLayout-navContent-backgroundColor: var(--slate3);
+  --NotesLayout-navContent-borderRadius: 0.25em;
+  --NotesLayout-navContent-color: var(--slate10);
+  --NotesLayout-navContent-cursor: default;
+  --NotesLayout-navContent-display: block;
+  --NotesLayout-navContent-fontSize: var(--step--2);
+  --NotesLayout-navContent-fontWeight: var(--font-weight-4);
+  --NotesLayout-navContent-letterSpacing: var(--letter-spacing-1);
+  --NotesLayout-navContent-link-backgroundColor: var(--blue3);
+  --NotesLayout-navContent-link-color: var(--blue10);
+  --NotesLayout-navContent-link-cursor: pointer;
+  --NotesLayout-navContent-link-onHover-backgroundColor: var(--blue3);
+  --NotesLayout-navContent-link-onHover-color: var(--blue10);
+  --NotesLayout-navContent-link-textDecoration: none;
+  --NotesLayout-navContent-paddingBlock: var(--space-xs);
+  --NotesLayout-navContent-paddingInline: var(--space-s);
+  --NotesLayout-navContent-textAlign: center;
+  --NotesLayout-note-marginBlock: var(--space-m-l) 0;
   --NotesLayout-title-color: var(--slate8);
   --NotesLayout-title-fontFamily: var(--font-sans);
   --NotesLayout-title-fontSize: var(--step-0);
   --NotesLayout-title-fontStyle: normal;
   --NotesLayout-title-fontWeight: var(--font-weight-7);
-
-  --NotesLayout-nav-marginBlock: var(--space-l);
-  --NotesLayout-navContent-backgroundColor: var(--slate2);
-  --NotesLayout-navContent-borderRadius: var(--space-3xs);
-  --NotesLayout-navContent-color: var(--slate9);
-  --NotesLayout-navContent-cursor: default;
-  --NotesLayout-navContent-display: block;
-  --NotesLayout-navContent-fontSize: var(--step--2);
-  --NotesLayout-navContent-fontWeight: var(--font-weight-3);
-  --NotesLayout-navContent-letterSpacing: var(--letter-spacing-1);
-  --NotesLayout-navContent-paddingBlock: var(--space-xs);
-  --NotesLayout-navContent-paddingInline: var(--space-s);
-  --NotesLayout-navContent-textAlign: center;
-
-  --NotesLayout-navContent-link-backgroundColor: var(--blue2);
-  --NotesLayout-navContent-link-color: var(--blue8);
-  --NotesLayout-navContent-link-cursor: pointer;
-  --NotesLayout-navContent-link-textDecoration: none;
-
-  --NotesLayout-navContent-link-onHover-backgroundColor: var(--blue3);
-  --NotesLayout-navContent-link-onHover-color: var(--blue10);
-
-  --NotesLayout-note-marginBlockStart: var(--space-m-l);
+  --NotesLayout-title-marginBlock: var(--space-l) 0;
+  --NotesLayout-title-marginInline: 0;
 }
+
+/* Tags */
 
 .Tags {
   --Tags-detailsLink-borderRadius: 0.25em;

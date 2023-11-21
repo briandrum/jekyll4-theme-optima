@@ -9,13 +9,12 @@
   font-size: var(--NotesLayout-title-fontSize);
   font-style:  var(--NotesLayout-title-fontStyle);
   font-weight: var(--NotesLayout-title-fontWeight);
-  margin-block-end: 0;
-  margin-block-start: var(--space-l);
-  margin-inline: 0;
+  margin-block: var(--NotesLayout-title-marginBlock);
+  margin-inline: var(--NotesLayout-title-marginInline);
 }
 
 .NotesLayout-nav {
-  margin-block-start: var(--NotesLayout-nav-marginBlock);
+  margin-block: var(--NotesLayout-nav-marginBlock);
 }
 
 .NotesLayout-navContent {
@@ -47,5 +46,5 @@
 }
 
 .NotesLayout-note {
-  margin-block-start: var(--NotesLayout-note-marginBlockStart);
+  margin-block: var(--NotesLayout-note-marginBlock);
 }

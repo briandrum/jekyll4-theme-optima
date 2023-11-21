@@ -4,32 +4,24 @@
 }
 
 .NoteLayout-nav {
-  color: var(--slate9);
-  cursor: default;
-  font-family: var(--font-sans);
-  font-size: var(--step--2);
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  margin-block-end: var(--space-2xs);
-  margin-block-start: var(--space-2xs);
-  text-transform: uppercase;
-  -webkit-user-select: none;
+  color: var(--NoteLayout-nav-color);
+  cursor: var(--NoteLayout-nav-cursor);
+  font-family: var(--NoteLayout-nav-fontFamily);
+  font-size: var(--NoteLayout-nav-fontSize);
+  font-weight: var(--NoteLayout-nav-fontWeight);
+  letter-spacing: var(--NoteLayout-nav-letterSpacing);
+  margin-block: var(--NoteLayout-nav-marginBlock);
+  text-transform: var(--NoteLayout-nav-textTransform);
+  -webkit-user-select: var(--NoteLayout-nav-userSelect);
+          user-select: var(--NoteLayout-nav-userSelect);
 }
 
-.NoteLayout-nav ol {
+.NoteLayout-navList {
   display: flex;
+  gap: var(--NoteLayout-navList-gap);
   list-style-type: "";
-  margin-block-end: var(--space-2xs);
-  margin-block-start: var(--space-2xs);
-  padding-inline-start: 0;
-}
-
-.NoteLayout-navItem:not(:first-child) {
-  margin-inline-start: 0.5em;
-}
-
-.NoteLayout-navItem:not(:last-child) {
-  margin-inline-end: 0.5em;
+  margin-block: var(--NoteLayout-navList-marginBlock);
+  padding-inline: 0 0;
 }
 
 .NoteLayout-navItem--newer::before {
@@ -46,21 +38,21 @@
 
 .NoteLayout-navItemContent:link,
 .NoteLayout-navItemContent:visited {
-  text-decoration: none !important;
+  text-decoration: none;
 }
 
 .NoteLayout-navItemContent:link {
-  color: var(--anchor-link-color);
+  color: var(--NoteLayout-navItemContent-link-color);
 }
 
 .NoteLayout-navItemContent:link:hover {
-  color: var(--anchor-link-onHover-color);
+  color: var(--NoteLayout-navItemContent-link-onHover-color);
 }
 
 .NoteLayout-navItemContent:visited {
-  color: var(--anchor-visited-color);
+  color: var(--NoteLayout-navItemContent-visited-color);
 }
 
 .NoteLayout-navItemContent:visited:hover {
-  color: var(--anchor-visited-onHover-color);
+  color: var(--NoteLayout-navItemContent-visited-onHover-color);
 }

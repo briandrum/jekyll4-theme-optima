@@ -1,9 +1,8 @@
 .SearchResults {
   list-style-type: "";
-  margin-block-end: var(--space-m-l);
-  margin-block-start: var(--space-m-l);
+  margin-block: var(--space-m-l) var(--space-m-l);
   max-width: 40em;
-  padding-inline-start: 0;
+  padding-inline: 0 0;
 }
 
 .SearchResults-result + .SearchResults-result {

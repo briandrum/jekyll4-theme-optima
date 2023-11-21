@@ -7,7 +7,7 @@
 
 .Footer-navList {
   list-style-type: "";
-  padding-inline-start: 0;
+  padding-inline: 0 0;
 }
 
 .Footer-link:link,
