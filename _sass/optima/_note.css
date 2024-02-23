@@ -3,6 +3,7 @@
   font-family: var(--Note-content-fontFamily);
   font-size: var(--Note-content-fontSize);
   font-weight: var(--Note-content-fontWeight);
+  hanging-punctuation: first allow-end last;
   line-height: var(--Note-content-lineHeight);
   max-width: var(--Note-content-maxWidth);
 }
@@ -21,6 +22,11 @@
 
 .Note-content a:visited:hover {
   color: var(--Note-content-anchor-visited-onHover-color);
+}
+
+.Note-content img {
+  display: block;
+  max-width: 100%;
 }
 
 .Note-tags {
@@ -70,8 +76,7 @@
 }
 
 .Note--sizeLarge .Note-content {
-  font-size: var(--step-2);
-  line-height: var(--line-height-5);
+  font-size: var(--Note--sizeLarge-content-fontSize);
   max-width: var(--Note--sizeLarge-content-maxWidth);
 }
 
@@ -82,7 +87,6 @@
 
 .Note--sizeSmall .Note-content {
   font-size: var(--Note--sizeSmall-content-fontSize);
-  line-height: var(--Note--sizeSmall-content-lineHeight);
   max-width: var(--Note--sizeSmall-content-maxWidth);
 }
 

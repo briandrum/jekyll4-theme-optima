@@ -1,0 +1,35 @@
+.HomeLayout-note {
+  margin-block: var(--HomeLayout-note-marginBlock);
+}
+
+.HomeLayout-notes-nav {
+  margin-block: var(--HomeLayout-notes-nav-marginBlock);
+}
+
+.HomeLayout-notes-navContent {
+  background-color: var(--HomeLayout-notes-navContent-backgroundColor);
+  border-radius: var(--HomeLayout-notes-navContent-borderRadius);
+  color: var(--HomeLayout-notes-navContent-color);
+  cursor: var(--HomeLayout-notes-navContent-cursor);
+  display: var(--HomeLayout-notes-navContent-display);
+  font-size: var(--HomeLayout-notes-navContent-fontSize);
+  font-weight: var(--HomeLayout-notes-navContent-fontWeight);
+  letter-spacing: var(--HomeLayout-notes-navContent-letterSpacing);
+  padding-block: var(--HomeLayout-notes-navContent-paddingBlock);
+  padding-inline: var(--HomeLayout-notes-navContent-paddingInline);
+  text-align: var(--HomeLayout-notes-navContent-textAlign);
+}
+
+.HomeLayout-notes-navContent:link,
+.HomeLayout-notes-navContent:visited {
+  background-color: var(--HomeLayout-notes-navContent-link-backgroundColor);
+  color: var(--HomeLayout-notes-navContent-link-color);
+  cursor: var(--HomeLayout-notes-navContent-link-cursor);
+  text-decoration: var(--HomeLayout-notes-navContent-link-textDecoration);
+}
+
+.HomeLayout-notes-navContent:link:hover,
+.HomeLayout-notes-navContent:visited:hover {
+  background-color: var(--HomeLayout-notes-navContent-link-onHover-backgroundColor);
+  color: var(--HomeLayout-notes-navContent-link-onHover-color);
+}

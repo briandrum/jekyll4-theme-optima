@@ -1,2 +1,14 @@
 <article class="Article Article--size{{ include.size | capitalize }} h-entry">
 </article>
+<section class="Article">
+  <div class="Article-content">
+    {{ post.content }}
+  </div>
+  <div>
+    <time class="dt-published" datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
+      <a href="{{ post.url | relative_url }}">
+        {{ post.date | date:site.optima.time_and_date_short_format }}
+      </a>
+    </time>
+  </div>
+</section>

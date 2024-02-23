@@ -9,4 +9,6 @@
   font-size: var(--JournalLayout-title-fontSize);
   font-style: var(--JournalLayout-title-fontStyle);
   font-weight: var(--JournalLayout-title-fontWeight);
+  margin-block: var(--JournalLayout-title-marginBlock);
+  margin-inline: var(--JournalLayout-title-marginInline);
 }

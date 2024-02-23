@@ -1,0 +1,28 @@
+:root {
+  --Article-content-anchor-link-color: var(--anchor-link-color);
+  --Article-content-anchor-link-onHover-color: var(--anchor-link-onHover-color);
+  --Article-content-anchor-visited-color: var(--anchor-visited-color);
+  --Article-content-anchor-visited-onHover-color: var(--anchor-visited-onHover-color);
+
+  --Article-content-color: var(--slate12);
+  --Article-content-fontFamily: var(--font-serif);
+  --Article-content-fontSize: var(--step-0);
+  --Article-content-fontWeight: var(--font-weight-3);
+  --Article-content-lineHeight: var(--line-height-5);
+  --Article-content-maxWidth: 40em;
+}
+
+.Article-content {
+  color: var(--Article-content-color);
+  font-family: var(--Article-content-fontFamily);
+  font-size: var(--Article-content-fontSize);
+  font-weight: var(--Article-content-fontWeight);
+  hanging-punctuation: first allow-end last;
+  line-height: var(--Article-content-lineHeight);
+  max-width: var(--Article-content-maxWidth);
+}
+
+.Article-content p {
+  margin-block-end: 0.5em;
+  margin-block-start: 0.5em;
+}

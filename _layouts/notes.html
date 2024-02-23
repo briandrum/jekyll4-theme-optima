@@ -17,9 +17,10 @@ layout: default
     {% endif %}
   </nav>
 
-  {% for post in paginator.posts %}
+  {% assign notes = paginator.posts %}
+  {% for note in notes %}
     <section class="NotesLayout-note">
-      {% include note.html slug=post.slug content=post.content date=post.date size="small" tags=post.tags url=post.url %}
+      {% include note.html slug=note.slug content=note.content date=note.date size="medium" tags=note.tags url=note.url %}
     </section>
   {% endfor %}
 

@@ -1,0 +1,14 @@
+.ArticlesLayout {
+  align-self: center;
+  margin-inline: auto;
+}
+
+.ArticlesLayout-title {
+  color: var(--NotesLayout-title-color);
+  font-family: var(--NotesLayout-title-fontFamily);
+  font-size: var(--NotesLayout-title-fontSize);
+  font-style:  var(--NotesLayout-title-fontStyle);
+  font-weight: var(--NotesLayout-title-fontWeight);
+  margin-block: var(--NotesLayout-title-marginBlock);
+  margin-inline: var(--NotesLayout-title-marginInline);
+}

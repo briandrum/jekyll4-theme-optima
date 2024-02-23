@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<div class="HomeLayout">
+  <div class="HomeLayout-notes">
+    {% assign notes2 = site.posts | where_exp: "note", "note.categories.first == 'notes'" | sort: 'date' | reverse %}
+    {% assign notes = site.posts | where: 'categories', 'notes' | sort: 'date' | reverse %}
+    {% for note in notes limit:3 %}
+      <section class="HomeLayout-note">
+        {% include note.html slug=note.slug content=note.content date=note.date size="small" tags=note.tags url=note.url %}
+      </section>
+    {% endfor %}
+    <nav class="HomeLayout-notes-nav">
+      <a class="HomeLayout-notes-navContent" href="{{ '/notes/' | relative_url }}">View older notes</a>
+    </nav>
+  </div>
+</div>

@@ -7,6 +7,30 @@
   --anchor-visited-onHover-color: var(--blue9);
 }
 
+/* Home */
+
+.HomeLayout {
+  --HomeLayout-note-marginBlock: var(--space-s-m) 0;
+  --HomeLayout-notes-nav-marginBlock: var(--space-m) 0;
+  --HomeLayout-notes-navContent-backgroundColor: var(--slate3);
+  --HomeLayout-notes-navContent-borderRadius: 0.25em;
+  --HomeLayout-notes-navContent-color: var(--slate10);
+  --HomeLayout-notes-navContent-cursor: default;
+  --HomeLayout-notes-navContent-display: block;
+  --HomeLayout-notes-navContent-fontSize: var(--step--2);
+  --HomeLayout-notes-navContent-fontWeight: var(--font-weight-4);
+  --HomeLayout-notes-navContent-letterSpacing: var(--letter-spacing-1);
+  --HomeLayout-notes-navContent-link-backgroundColor: var(--blue3);
+  --HomeLayout-notes-navContent-link-color: var(--blue10);
+  --HomeLayout-notes-navContent-link-cursor: pointer;
+  --HomeLayout-notes-navContent-link-onHover-backgroundColor: var(--blue3);
+  --HomeLayout-notes-navContent-link-onHover-color: var(--blue10);
+  --HomeLayout-notes-navContent-link-textDecoration: none;
+  --HomeLayout-notes-navContent-paddingBlock: var(--space-2xs);
+  --HomeLayout-notes-navContent-paddingInline: var(--space-s);
+  --HomeLayout-notes-navContent-textAlign: center;
+}
+
 /* Icon */
 
 .Icon {
@@ -54,32 +78,38 @@
   --JournalLayout-title-fontSize: var(--step-0);
   --JournalLayout-title-fontStyle: normal;
   --JournalLayout-title-fontWeight: var(--font-weight-6);
+  --JournalLayout-title-marginBlock : var(--space-l) 0;
+  --JournalLayout-title-marginInline: 0;
 }
 
 /* Note */
 
 .Note {
+  --Note--sizeLarge-content-fontSize: var(--step-2);
   --Note--sizeLarge-content-maxWidth: 24em;
   --Note--sizeLarge-published-fontSize: var(--step--1);
   --Note--sizeLarge-published-fontWeight: var(--font-weight-4);
-  --Note--sizeSmall-content-fontSize: var(--step-0);
-  --Note--sizeSmall-content-lineHeight: var(--line-height-5);
-  --Note--sizeSmall-content-maxWidth: 32em;
+
+  --Note--sizeSmall-content-fontSize: var(--step--1);
+  --Note--sizeSmall-content-maxWidth: 24em;
   --Note--sizeSmall-published-fontSize: var(--step--2);
   --Note--sizeSmall-published-fontWeight: var(--font-weight-4);
+
   --Note-content-anchor-link-color: var(--anchor-link-color);
   --Note-content-anchor-link-onHover-color: var(--anchor-link-onHover-color);
   --Note-content-anchor-visited-color: var(--anchor-visited-color);
   --Note-content-anchor-visited-onHover-color: var(--anchor-visited-onHover-color);
+
   --Note-content-color: var(--slate12);
   --Note-content-fontFamily: var(--font-serif);
-  --Note-content-fontSize: var(--step-1);
+  --Note-content-fontSize: var(--step-0);
   --Note-content-fontWeight: var(--font-weight-3);
   --Note-content-lineHeight: var(--line-height-5);
-  --Note-content-maxWidth: 24em;
+  --Note-content-maxWidth: 32em;
+
   --Note-published-color: var(--slate9);
   --Note-published-fontFamily: var(--font-sans);
-  --Note-published-fontSize: var(--step--1);
+  --Note-published-fontSize: var(--step--2);
   --Note-published-fontWeight: var(--font-weight-4);
   --Note-published-marginBlock: var(--space-2xs) 0;
   --Note-publishedLink-color: var(--slate9);

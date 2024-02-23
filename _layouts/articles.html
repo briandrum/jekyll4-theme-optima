@@ -2,26 +2,15 @@
 layout: default
 ---
 
-<div>
+<div class="ArticlesLayout">
   {%- if page.title -%}
-    <h1>{{ page.title }}</h1>
+    <div class="ArticlesLayout-title">{{ page.title }}</h1>
   {%- endif -%}
 
   {{ content }}
 
   {% for post in paginator.posts %}
-    <section>
-      <div>
-        {{ post.content }}
-      </div>
-      <div>
-        <time class="dt-published" datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">
-          <a href="{{ post.url | relative_url }}">
-            {{ post.date | date:site.optima.time_and_date_short_format }}
-          </a>
-        </time>
-      </div>
-    </section>
+    {% include article.html slug=note.slug content=note.content date=note.date size="medium" tags=note.tags url=note.url %}
   {% endfor %}
 
   {% if paginator.total_pages > 1 %}

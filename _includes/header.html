@@ -5,7 +5,7 @@
 
   {%- if site.title -%}
     <div class="Header-name">
-      <a class="Header-link" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+      <a class="Header-link" rel="author" href="{{ "/" | relative_url }}">{{ site.title | smartify }}</a>
     </div>
   {%- endif -%}
 
@@ -29,9 +29,9 @@
           <li class="Header-navListItem">
             <a class="Header-link{%- if current_page == true %} is-current{%- endif -%}" href="{{ my_page.url | remove: 'index.html' | relative_url }}">
               {%- if my_page.short_title -%}
-                {{ my_page.short_title | escape }}
+                {{ my_page.short_title | smartify }}
               {%- else -%}
-                {{ my_page.title | escape }}
+                {{ my_page.title | smartify }}
               {%- endif -%}
               </a>
             </li>
@@ -50,9 +50,9 @@
             <li class="Header-mobileNavListItem">
               <a class="Header-mobileNavlink" href="{{ my_page.url | relative_url }}">
               {%- if my_page.title -%}
-                {{ my_page.title | escape }}
+                {{ my_page.title | smartify }}
               {%- else -%}
-                {{ my_page.short_title | escape }}
+                {{ my_page.short_title | smartify }}
               {%- endif -%}
               </a>
             </li>

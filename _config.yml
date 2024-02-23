@@ -8,16 +8,26 @@ baseurl: /jekyll4-theme-optima
 
 permalink: /:categories/:year-:month-:day-:title/
 
+defaults:
+  - scope:
+      path: "notes"
+      type: posts
+    values:
+      permalink: notes/:title
+
 plugins:
   - jekyll-archives
   - jekyll-feed
   - jekyll-paginate-v2
   - jekyll-remote-theme
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 timezone: America/New_York
 
 title: Optima
+
+description: "Optima dies … prima fugit"
 
 ################################################################################
 #                                                                              #

@@ -5,8 +5,8 @@
   {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
   <div class="Footer-content">
     <div class="Footer-about">
-      <p><strong><a class="Footer-link" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a></strong></p>
-      <p>{{ site.description | escape }}</p>
+      <p><strong><a class="Footer-link" rel="author" href="{{ "/" | relative_url }}">{{ site.title | smartify }}</a></strong></p>
+      <p>{{ site.description | smartify }}</p>
       <ul class="Footer-navList">
         <li class="Footer-navListItem">
           <a class="Footer-link Footer-link--withIcon" href="{{ 'feed.xml' | relative_url }}">
@@ -27,9 +27,9 @@
             <li class="Footer-navListItem">
               <a class="Footer-link" href="{{ my_page.url | remove: 'index.html' | relative_url }}">
                 {%- if my_page.title -%}
-                  {{ my_page.title | escape }}
+                  {{ my_page.title | smartify }}
                 {%- else -%}
-                  {{ my_page.short_title | escape }}
+                  {{ my_page.short_title | smartify }}
                 {%- endif -%}
               </a>
             </li>

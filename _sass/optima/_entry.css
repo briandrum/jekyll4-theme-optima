@@ -2,17 +2,40 @@
 }
 
 .Entry-header {
+  margin-block: var(--space-m-l) 0;
 }
 
 .Entry-published {
+  color: var(--Note-published-color);
+  font-family: var(--Note-published-fontFamily);
+  font-size: var(--Note-published-fontSize);
+  font-weight: var(--Note-published-fontWeight);
+  margin-block: var(--Note-published-marginBlock);
+  white-space: nowrap;
+}
+
+.Entry-publishedLink {
+  color: var(--Note-publishedLink-color);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.Entry-publishedLink:hover {
+  color: var(--Note-publishedLink-onHover-color);
 }
 
 .Entry-title {
   font-family: var(--font-serif);
-  font-size: var(--step-2);
-  font-weight: var(--font-weight-9);
+  font-size: var(--step-5);
+  font-weight: var(--font-weight-4);
+  letter-spacing: -0.04em;
   line-height: var(--line-height-5);
+  margin-block: 0 0;
   max-width: 40em;
+}
+
+.Entry-content {
+  hanging-punctuation: first allow-end last;
 }
 
 .Entry-content p {
