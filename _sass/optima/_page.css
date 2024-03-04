@@ -72,6 +72,11 @@
   text-transform: uppercase;
 }
 
+.Page-body img {
+  display: block;
+  max-width: 100%;
+}
+
 .Page-body p {
   margin-block: 0 0;
 }
