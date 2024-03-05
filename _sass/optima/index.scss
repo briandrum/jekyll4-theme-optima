@@ -1,30 +1,45 @@
 @charset "utf-8";
 
 @import
-  "optima/tokens",
-  "optima/tokens-custom",
-  "optima/fonts",
-  "optima/theme",
-  "optima/modern-normalize",
 
-  "optima/articles-layout",
-  "optima/article",
-  "optima/body",
-  "optima/entry-layout",
-  "optima/entry",
-  "optima/footer",
-  "optima/header",
-  "optima/home-layout",
-  "optima/icon",
-  "optima/journal-layout",
-  "optima/main",
-  "optima/note-layout",
-  "optima/note",
-  "optima/notes-layout",
-  "optima/page",
-  "optima/search-results",
-  "optima/search",
-  "optima/tags",
+  /* resources */
+  "optima/_resouces/tokens",
+  "optima/custom-tokens",
+  "optima/_resouces/fonts",
+  "optima/_resouces/theme",
+  "optima/_resouces/modern-normalize",
 
+  /* components */
+  "optima/_components/icon",
+  "optima/_components/tags",
+
+  /* layout */
+  "optima/_layout/body",
+  "optima/_layout/footer",
+  "optima/_layout/header",
+  "optima/_layout/main",
+
+  /* pages */
+  "optima/_pages/_home-layout",
+  "optima/_pages/_page",
+
+  /* posts */
+  "optima/_posts/articles-layout",
+  "optima/_posts/article",
+  "optima/_posts/entry-layout",
+  "optima/_posts/entry",
+  "optima/_posts/journal-layout",
+  "optima/_posts/note-layout",
+  "optima/_posts/note",
+  "optima/_posts/notes-layout",
+
+  /* archives */
+  "optima/_archives/_archives-layout",
+
+  /* search */
+  "optima/_search/_search-results",
+  "optima/_search/_search",
+
+  /* custom styles */
   "optima/custom-styles"
 ;

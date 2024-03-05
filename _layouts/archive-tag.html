@@ -2,13 +2,24 @@
 layout: default
 ---
 
-<h1>Archive of posts with {{ page.type }} '{{ page.title }}'</h1>
+<div class="ArchivesLayout NotesLayout">
+  {%- if page.title -%}
+    <h1 class="ArchivesLayout-title">Archive of posts with {{ page.type }} ‘{{ page.title }}’</h1>
+  {%- endif -%}
 
-<ul class="posts">
+  {{ content }}
+
   {% for post in page.posts %}
-    <li>
-      <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-      <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-    </li>
+    {%- if post.categories[0] == "notes" -%}
+      <section class="NotesLayout-note">
+        {% include note.html slug=post.slug content=post.content date=post.date size="medium" tags=post.tags url=post.url %}
+      </section>
+    {%- comment -%}
+    {%- elsif post.categories[0] == "journal" -%}
+      <section class="NotesLayout-note">
+      {% include entry.html slug=post.slug content=post.content date=post.date size="small" tags=post.tags url=post.url title=post.title %}
+      </section>
+    {%- endcomment -%}
+    {%- endif -%}
   {% endfor %}
-</ul>
+</div>

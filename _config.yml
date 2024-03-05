@@ -47,9 +47,9 @@ jekyll-archives:
     day: archive-day
     tag: archive-tag
   permalinks:
-    year: '/archive/:year/'
-    month: '/archive/:year/:month/'
-    day: '/archive/:year/:month/:day/'
+    year: '/archives/:year/'
+    month: '/archives/:year/:month/'
+    day: '/archives/:year/:month/:day/'
     tag: '/tag/:name/'
 
 ################################################################################
@@ -93,27 +93,27 @@ optima:
   # add the path to the pages in order as they should show up.
   #
   header_pages:
-    - index.md
+    - pages/index.md
     - journal
     - notes
     - articles
-    - now.md
-    - about.md
-    - archive.md
-    - search.md
+    - pages/now.md
+    - pages/about.md
+    - pages/archives.md
+    - pages/search.md
 
   # If you want to link only specific pages in your footer, uncomment this and
   # add the path to the pages in order as they should show up.
   #
   footer_pages:
-    - index.md
+    - pages/index.md
     - journal
     - notes
     - articles
-    - now.md
-    - about.md
-    - archive.md
-    - search.md
+    - pages/now.md
+    - pages/about.md
+    - pages/archives.md
+    - pages/search.md
 
   # Generate social links in footer.
   #

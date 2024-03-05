@@ -7,7 +7,64 @@
   --anchor-visited-onHover-color: var(--blue9);
 }
 
-/* Home */
+/* Body */
+
+.Body {
+  --Body-backgroundColor: var(--slate1);
+  --Body-color: var(--slate12);
+}
+
+/* Header */
+
+.Header {
+  --Header-height: var(--space-xl-2xl);
+  --Header-name-fontFamily: var(--font-sans);
+  --Header-name-fontSize: var(--step--1);
+  --Header-name-fontWeight: 600;
+  --Header-navListItem-fontFamily: var(--font-sans);
+  --Header-navListItem-fontSize: var(--step--1);
+  --Header-navListItem-fontWeight: 600;
+  --Header-mobileNav-backgroundColor: var(--slate2);
+  --Header-mobileNav-boxShadowColor: var(--slate2);
+  --Header-mobileNav-color: var(--slate11);
+  --Header-mobileNavListItem-boxShadowColor: var(--slate6);
+}
+
+/* ArchivesLayout */
+
+/* Icon */
+
+.Icon {
+  --Icon-color: var(--slate9);
+}
+
+/* Tags */
+
+.Tags {
+  --Tags-detailsLink-borderRadius: 0.25em;
+}
+
+.ArchivesLayout {
+  --ArchivesLayout-title-color: var(--slate8);
+  --ArchivesLayout-title-fontFamily: var(--font-sans);
+  --ArchivesLayout-title-fontSize: var(--step-0);
+  --ArchivesLayout-title-fontStyle: normal;
+  --ArchivesLayout-title-fontWeight: var(--font-weight-6);
+  --ArchivesLayout-title-marginBlock : var(--space-l) 0;
+  --ArchivesLayout-title-marginInline: 0;
+}
+
+/* EntryLayout */
+
+.EntryLayout {
+  --EntryLayout-title-color: var(--slate8);
+  --EntryLayout-title-fontFamily: var(--font-sans);
+  --EntryLayout-title-fontSize: var(--step-0);
+  --EntryLayout-title-fontStyle: normal;
+  --EntryLayout-title-fontWeight: var(--font-weight-6);
+}
+
+/* HomeLayout */
 
 .HomeLayout {
   --HomeLayout-note-marginBlock: var(--space-s-m) 0;
@@ -29,45 +86,6 @@
   --HomeLayout-notes-navContent-paddingBlock: var(--space-2xs);
   --HomeLayout-notes-navContent-paddingInline: var(--space-s);
   --HomeLayout-notes-navContent-textAlign: center;
-}
-
-/* Icon */
-
-.Icon {
-  --Icon-color: var(--slate9);
-}
-
-/* Body */
-
-.Body {
-  --Body-backgroundColor: var(--slate1);
-  --Body-color: var(--slate12);
-}
-
-/* EntryLayout */
-
-.EntryLayout {
-  --EntryLayout-title-color: var(--slate8);
-  --EntryLayout-title-fontFamily: var(--font-sans);
-  --EntryLayout-title-fontSize: var(--step-0);
-  --EntryLayout-title-fontStyle: normal;
-  --EntryLayout-title-fontWeight: var(--font-weight-6);
-}
-
-/* Header */
-
-.Header {
-  --Header-height: var(--space-xl-2xl);
-  --Header-name-fontFamily: var(--font-sans);
-  --Header-name-fontSize: var(--step--1);
-  --Header-name-fontWeight: 600;
-  --Header-navListItem-fontFamily: var(--font-sans);
-  --Header-navListItem-fontSize: var(--step--1);
-  --Header-navListItem-fontWeight: 600;
-  --Header-mobileNav-backgroundColor: var(--slate2);
-  --Header-mobileNav-boxShadowColor: var(--slate2);
-  --Header-mobileNav-color: var(--slate11);
-  --Header-mobileNavListItem-boxShadowColor: var(--slate6);
 }
 
 /* JournalLayout */
@@ -168,10 +186,4 @@
   --NotesLayout-title-fontWeight: var(--font-weight-7);
   --NotesLayout-title-marginBlock: var(--space-l) 0;
   --NotesLayout-title-marginInline: 0;
-}
-
-/* Tags */
-
-.Tags {
-  --Tags-detailsLink-borderRadius: 0.25em;
 }
