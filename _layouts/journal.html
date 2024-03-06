@@ -9,9 +9,9 @@ layout: default
 
   {{ content | markdownify }}
 
-  {% for post in paginator.posts %}
+  {% for entry in paginator.posts %}
     <section class="JournalLayout-entry">
-      {% include entry.html slug=post.slug content=post.content date=post.date size="small" tags=post.tags url=post.url title=post.title %}
+      {% include entry.html content=entry.content date=entry.date excerpt=entry.excerpt mode="excerpt" size="small" slug=entry.slug tags=entry.tags title=entry.title url=entry.url %}
     </section>
   {% endfor %}
 

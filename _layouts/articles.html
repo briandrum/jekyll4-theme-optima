@@ -9,8 +9,8 @@ layout: default
 
   {{ content }}
 
-  {% for post in paginator.posts %}
-    {% include article.html slug=note.slug content=note.content date=note.date size="medium" tags=note.tags url=note.url %}
+  {% for article in paginator.posts %}
+    {% include article.html content=article.content date=article.date excerpt=article.excerpt mode="excerpt" size="medium" slug=article.slug tags=article.tags title=article.title url=article.url %}
   {% endfor %}
 
   {% if paginator.total_pages > 1 %}

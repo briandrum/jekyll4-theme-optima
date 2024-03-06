@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{%- assign category = page.categories[0] -%}
+{%- assign category = page.categories.first -%}
 {%- assign articles = site.categories[category] -%}
 {%- for article in articles -%}
   {%- if article.url == page.url -%}
@@ -40,20 +40,7 @@ layout: default
       </li>
     </ol>
   </nav>
-  <article class="Article-article h-entry">
-    <div class="Article-content p-content">
-      {{ content }}
-    </div>
-    <footer class="Article-footer">
-      <dl class="Article-tags Tags">
-        <dt>Tagged</dt>
-        {% for tag in page.tags %}
-          <dd><a href="{{ tag | prepend: '/tag/' | relative_url }}">{{ tag | replace: "-", " " }}</a></dd>
-        {% endfor %}
-      </dl>
-      <div>
-        <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date:site.optima.time_and_date_short_format }}</time>
-      </div>
-    </footer>
-  </article>
+
+{% include article.html content=page.content date=page.date excerpt=page.excerpt mode="content" size="medium" slug=page.slug tags=page.tags title=page.title url=page.url %}
+
 </div>

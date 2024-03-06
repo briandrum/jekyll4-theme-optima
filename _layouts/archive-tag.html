@@ -10,12 +10,12 @@ layout: default
   {{ content }}
 
   {% for post in page.posts %}
-    {%- if post.categories[0] == "notes" -%}
+    {%- if post.categories.first == "notes" -%}
       <section class="NotesLayout-note">
         {% include note.html slug=post.slug content=post.content date=post.date size="medium" tags=post.tags url=post.url %}
       </section>
     {%- comment -%}
-    {%- elsif post.categories[0] == "journal" -%}
+    {%- elsif post.categories.first == "journal" -%}
       <section class="NotesLayout-note">
       {% include entry.html slug=post.slug content=post.content date=post.date size="small" tags=post.tags url=post.url title=post.title %}
       </section>

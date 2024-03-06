@@ -21,6 +21,11 @@
             {% assign current_page = true %}
           {% elsif page.categories.first == my_page.layout %}
             {% assign current_page = true %}
+
+          {% comment %} Archives {% endcomment %}
+          {% elsif page.layout contains my_page.match %}
+            {% assign current_page = true %}
+
           {% else %}
             {% assign current_page = false %}
           {% endif %}
@@ -63,5 +68,4 @@
     </details>
 
   {%- endif -%}
-
 </header>

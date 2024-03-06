@@ -62,6 +62,8 @@
   --EntryLayout-title-fontSize: var(--step-0);
   --EntryLayout-title-fontStyle: normal;
   --EntryLayout-title-fontWeight: var(--font-weight-6);
+  --EntryLayout-title-marginBlock : var(--space-l) 0;
+  --EntryLayout-title-marginInline: 0;
 }
 
 /* HomeLayout */

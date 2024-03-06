@@ -9,4 +9,6 @@
   font-size: var(--EntryLayout-title-fontSize);
   font-style: var(--EntryLayout-title-fontStyle);
   font-weight: var(--EntryLayout-title-fontWeight);
+  margin-block: var(--EntryLayout-title-marginBlock);
+  margin-inline: var(--EntryLayout-title-marginInline);
 }

@@ -2,8 +2,8 @@
 layout: default
 ---
 
-{%- assign category = page.categories[0] -%}
-{%- assign notes = site.categories[category] -%}
+{%- assign category = page.categories.first -%}
+{%- assign journal = site.categories[category] -%}
 {%- for entry in journal -%}
   {%- if entry.url == page.url -%}
     {%- assign newerOffset = forloop.index0 | minus: 1 -%}
@@ -44,20 +44,5 @@ layout: default
       </li>
     </ol>
   </nav>
-  <article class="Entry h-entry">
-    <div class="Entry-content p-content">
-      {% include entry.html slug=page.slug content=page.content date=page.date size="small" tags=page.tags url=page.url title=page.title %}
-    </div>
-    <footer class="Entry-footer">
-      <dl class="Entry-tags Tags">
-        <dt>Tagged</dt>
-        {% for tag in page.tags %}
-          <dd><a href="{{ tag | prepend: '/tag/' | relative_url }}">{{ tag | replace: "-", " " }}</a></dd>
-        {% endfor %}
-      </dl>
-      <div>
-        <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date:site.optima.time_and_date_short_format }}</time>
-      </div>
-    </footer>
-  </article>
+  {% include entry.html content=page.content date=page.date excerpt=page.excerpt mode="content" size="small" slug=page.slug tags=page.tags title=page.title url=page.url %}
 </div>

@@ -1,13 +1,18 @@
 <article class="Note Note--size{{ include.size | capitalize }} h-entry">
   <div class="Note-content e-content">
-    {{ include.content | markdownify }}
+    {%- if include.mode == "excerpt" -%}
+      {{ include.excerpt | markdownify }}
+    {%- else if include.mode == "content" -%}
+      {{ include.content | markdownify }}
+    {%- endif -%}
   </div>
   <footer class="Note-footer">
     <dl class="Note-tags Tags">
       <dt class="Tags-term">Tagged</dt>
       {% for tag in include.tags %}
         <dd class="Tags-details">
-          <a class="Tags-detailsLink p-category" href="{{ tag | prepend: '/tag/' | relative_url }}">{{ tag | replace: "-", " " }}</a></dd>
+          <a class="Tags-detailsLink p-category" href="{{ tag | prepend: '/tag/' | relative_url }}">{{ tag | replace: "-", " " }}</a>
+        </dd>
       {% endfor %}
     </dl>
     <div class="Note-published">

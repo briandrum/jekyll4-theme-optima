@@ -20,7 +20,7 @@ layout: default
   {% assign notes = paginator.posts %}
   {% for note in notes %}
     <section class="NotesLayout-note">
-      {% include note.html slug=note.slug content=note.content date=note.date size="medium" tags=note.tags url=note.url %}
+      {% include note.html content=note.content date=note.date excerpt=note.excerpt mode="content" size="medium" slug=note.slug tags=note.tags title=note.title url=note.url %}
     </section>
   {% endfor %}
 

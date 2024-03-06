@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{%- assign category = page.categories[0] -%}
+{%- assign category = page.categories.first -%}
 {%- assign notes = site.categories[category] -%}
 {%- for note in notes -%}
   {%- if note.url == page.url -%}
@@ -40,5 +40,5 @@ layout: default
       </li>
     </ol>
   </nav>
-  {% include note.html content=page.content date=page.date size="Large" tags=page.tags url=page.url %}
+  {% include note.html content=page.content date=page.date excerpt=page.excerpt mode="content" size="large" slug=page.slug tags=page.tags title=page.title url=page.url %}
 </div>
