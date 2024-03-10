@@ -135,6 +135,7 @@
   --Note-publishedLink-color: var(--slate9);
   --Note-publishedLink-onHover-color: var(--slate11);
   --Note-tags-fontSize: var(--step--2);
+  --Note-tags-lineHeight: var(--line-height-1);
   --Note-tags-marginBlock: var(--space-2xs) 0;
   --Note-tags-maxWidth: 40em;
 }

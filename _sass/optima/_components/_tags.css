@@ -14,19 +14,21 @@
   margin-inline: 0 0;
 }
 
-.Tags-details a:link,
-.Tags-details a:visited {
+.Tags-detailsLink,
+.Tags-detailsLink:link,
+.Tags-detailsLink:visited {
   background-color: var(--slate3);
   border-radius: var(--Tags-detailsLink-borderRadius);
   color: var(--slate10);
   display: block;
+  font-family: var(--font-sans);
   padding-block: var(--space-3xs);
   padding-inline: var(--space-2xs);
   text-decoration: none;
 }
 
-.Tags-details a:link:hover,
-.Tags-details a:visited:hover {
+.Tags-detailsLink:link:hover,
+.Tags-detailsLink:visited:hover {
   background-color: var(--blue3);
   color: var(--blue10);
 }
