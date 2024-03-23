@@ -1,52 +1,67 @@
 /* root */
 
 :root {
-  --anchor-link-color: var(--blue11);
-  --anchor-link-onHover-color: var(--blue12);
-  --anchor-visited-color: var(--blue8);
-  --anchor-visited-onHover-color: var(--blue9);
+  --anchor-link-color: var(--blue-11);
+  --anchor-link-onHover-color: var(--blue-12);
+  --anchor-visited-color: var(--blue-8);
+  --anchor-visited-onHover-color: var(--blue-9);
 }
 
 /* Body */
 
 .Body {
-  --Body-backgroundColor: var(--slate1);
-  --Body-color: var(--slate12);
+  --Body-backgroundColor: var(--slate-2);
+  --Body-color: var(--slate-12);
+  --Body-header-backgroundColor: inherit;
+  --Body-header-color: inherit;
+  --Body-footer-backgroundColor: inherit;
+  --Body-footer-color: inherit;
 }
 
 /* Header */
 
 .Header {
   --Header-height: var(--space-xl-2xl);
-  --Header-name-fontFamily: var(--font-sans);
+  --Header-name-fontFamily: var(--font-system);
   --Header-name-fontSize: var(--step--1);
   --Header-name-fontWeight: 600;
-  --Header-navListItem-fontFamily: var(--font-sans);
+  --Header-navListItem-fontFamily: var(--font-system);
   --Header-navListItem-fontSize: var(--step--1);
   --Header-navListItem-fontWeight: 600;
-  --Header-mobileNav-backgroundColor: var(--slate2);
-  --Header-mobileNav-boxShadowColor: var(--slate2);
-  --Header-mobileNav-color: var(--slate11);
-  --Header-mobileNavListItem-boxShadowColor: var(--slate6);
+  --Header-mobileNav-backgroundColor: var(--slate-2);
+  --Header-mobileNav-boxShadowColor: var(--slate-2);
+  --Header-mobileNav-color: var(--slate-11);
+  --Header-mobileNavListItem-boxShadowColor: var(--slate-6);
 }
-
-/* ArchivesLayout */
 
 /* Icon */
 
 .Icon {
-  --Icon-color: var(--slate9);
+  --Icon-color: var(--slate-9);
 }
 
 /* Tags */
 
 .Tags {
+  --Tags-detailsLink-backgroundColor: var(--slate-3);
   --Tags-detailsLink-borderRadius: 0.25em;
+  --Tags-detailsLink-color: var(--slate-10);
+  --Tags-detailsLink-fontFamily: var(--font-system);
+  --Tags-detailsLink-letterSpacing: 0.025em;
+  --Tags-detailsLink-paddingBlock: var(--space-3xs);
+  --Tags-detailsLink-paddingInline: var(--space-2xs);
+
+  --Tags-detailsLink-link-color: var(--slate-10);
+  --Tags-detailsLink-link-onHover-color: var(--blue-10);
+  --Tags-detailsLink-visited-color: var(--slate-10);
+  --Tags-detailsLink-visited-onHover-color: var(--blue-10);
 }
 
+/* ArchivesLayout */
+
 .ArchivesLayout {
-  --ArchivesLayout-title-color: var(--slate8);
-  --ArchivesLayout-title-fontFamily: var(--font-sans);
+  --ArchivesLayout-title-color: var(--slate-8);
+  --ArchivesLayout-title-fontFamily: var(--font-system);
   --ArchivesLayout-title-fontSize: var(--step-0);
   --ArchivesLayout-title-fontStyle: normal;
   --ArchivesLayout-title-fontWeight: var(--font-weight-6);
@@ -57,8 +72,8 @@
 /* EntryLayout */
 
 .EntryLayout {
-  --EntryLayout-title-color: var(--slate8);
-  --EntryLayout-title-fontFamily: var(--font-sans);
+  --EntryLayout-title-color: var(--slate-8);
+  --EntryLayout-title-fontFamily: var(--font-system);
   --EntryLayout-title-fontSize: var(--step-0);
   --EntryLayout-title-fontStyle: normal;
   --EntryLayout-title-fontWeight: var(--font-weight-6);
@@ -71,19 +86,19 @@
 .HomeLayout {
   --HomeLayout-note-marginBlock: var(--space-s-m) 0;
   --HomeLayout-notes-nav-marginBlock: var(--space-m) 0;
-  --HomeLayout-notes-navContent-backgroundColor: var(--slate3);
+  --HomeLayout-notes-navContent-backgroundColor: var(--slate-3);
   --HomeLayout-notes-navContent-borderRadius: 0.25em;
-  --HomeLayout-notes-navContent-color: var(--slate10);
+  --HomeLayout-notes-navContent-color: var(--slate-10);
   --HomeLayout-notes-navContent-cursor: default;
   --HomeLayout-notes-navContent-display: block;
   --HomeLayout-notes-navContent-fontSize: var(--step--2);
   --HomeLayout-notes-navContent-fontWeight: var(--font-weight-4);
   --HomeLayout-notes-navContent-letterSpacing: var(--letter-spacing-1);
-  --HomeLayout-notes-navContent-link-backgroundColor: var(--blue3);
-  --HomeLayout-notes-navContent-link-color: var(--blue10);
+  --HomeLayout-notes-navContent-link-backgroundColor: var(--blue-3);
+  --HomeLayout-notes-navContent-link-color: var(--blue-10);
   --HomeLayout-notes-navContent-link-cursor: pointer;
-  --HomeLayout-notes-navContent-link-onHover-backgroundColor: var(--blue3);
-  --HomeLayout-notes-navContent-link-onHover-color: var(--blue10);
+  --HomeLayout-notes-navContent-link-onHover-backgroundColor: var(--blue-3);
+  --HomeLayout-notes-navContent-link-onHover-color: var(--blue-10);
   --HomeLayout-notes-navContent-link-textDecoration: none;
   --HomeLayout-notes-navContent-paddingBlock: var(--space-2xs);
   --HomeLayout-notes-navContent-paddingInline: var(--space-s);
@@ -93,8 +108,8 @@
 /* JournalLayout */
 
 .JournalLayout {
-  --JournalLayout-title-color: var(--slate8);
-  --JournalLayout-title-fontFamily: var(--font-sans);
+  --JournalLayout-title-color: var(--slate-8);
+  --JournalLayout-title-fontFamily: var(--font-system);
   --JournalLayout-title-fontSize: var(--step-0);
   --JournalLayout-title-fontStyle: normal;
   --JournalLayout-title-fontWeight: var(--font-weight-6);
@@ -105,47 +120,50 @@
 /* Note */
 
 .Note {
-  --Note--sizeLarge-content-fontSize: var(--step-2);
-  --Note--sizeLarge-content-maxWidth: 24em;
-  --Note--sizeLarge-published-fontSize: var(--step--1);
-  --Note--sizeLarge-published-fontWeight: var(--font-weight-4);
-
-  --Note--sizeSmall-content-fontSize: var(--step--1);
-  --Note--sizeSmall-content-maxWidth: 24em;
-  --Note--sizeSmall-published-fontSize: var(--step--2);
-  --Note--sizeSmall-published-fontWeight: var(--font-weight-4);
-
-  --Note-content-anchor-link-color: var(--anchor-link-color);
-  --Note-content-anchor-link-onHover-color: var(--anchor-link-onHover-color);
-  --Note-content-anchor-visited-color: var(--anchor-visited-color);
-  --Note-content-anchor-visited-onHover-color: var(--anchor-visited-onHover-color);
-
-  --Note-content-color: var(--slate12);
+  --Note-content-color: var(--slate-12);
   --Note-content-fontFamily: var(--font-serif);
   --Note-content-fontSize: var(--step-0);
   --Note-content-fontWeight: var(--font-weight-3);
   --Note-content-lineHeight: var(--line-height-5);
   --Note-content-maxWidth: 32em;
 
-  --Note-published-color: var(--slate9);
-  --Note-published-fontFamily: var(--font-sans);
+  --Note--sizeSmall-content-fontSize: var(--step--1);
+  --Note--sizeSmall-content-maxWidth: 24em;
+  --Note--sizeLarge-content-fontSize: var(--step-2);
+  --Note--sizeLarge-content-maxWidth: 24em;
+
+  --Note-content-anchor-link-color: var(--anchor-link-color);
+  --Note-content-anchor-link-onHover-color: var(--anchor-link-onHover-color);
+  --Note-content-anchor-visited-color: var(--anchor-visited-color);
+  --Note-content-anchor-visited-onHover-color: var(--anchor-visited-onHover-color);
+
+  --Note-footer-marginBlock: var(--space-2xs) 0;
+
+  --Note-published-color: var(--slate-9);
+  --Note-published-fontFamily: var(--font-system);
   --Note-published-fontSize: var(--step--2);
   --Note-published-fontWeight: var(--font-weight-4);
-  --Note-published-marginBlock: var(--space-2xs) 0;
-  --Note-publishedLink-color: var(--slate9);
-  --Note-publishedLink-onHover-color: var(--slate11);
+  --Note-published-marginBlock: var(--Note-footer-marginBlock);
+  --Note-publishedLink-color: var(--slate-9);
+  --Note-publishedLink-onHover-color: var(--slate-11);
+
+  --Note--sizeSmall-published-fontSize: var(--step--2);
+  --Note--sizeSmall-published-fontWeight: var(--font-weight-4);
+  --Note--sizeLarge-published-fontSize: var(--step--1);
+  --Note--sizeLarge-published-fontWeight: var(--font-weight-4);
+
   --Note-tags-fontSize: var(--step--2);
   --Note-tags-lineHeight: var(--line-height-1);
-  --Note-tags-marginBlock: var(--space-2xs) 0;
+  --Note-tags-marginBlock: var(--Note-footer-marginBlock);
   --Note-tags-maxWidth: 40em;
 }
 
 /* NoteLayout */
 
 .NoteLayout {
-  --NoteLayout-nav-color: var(--slate9);
+  --NoteLayout-nav-color: var(--slate-9);
   --NoteLayout-nav-cursor: default;
-  --NoteLayout-nav-fontFamily: var(--font-sans);
+  --NoteLayout-nav-fontFamily: var(--font-system);
   --NoteLayout-nav-fontSize: var(--step--2);
   --NoteLayout-nav-fontWeight: 800;
   --NoteLayout-nav-letterSpacing: 0.1em;
@@ -164,26 +182,26 @@
 
 .NotesLayout {
   --NotesLayout-nav-marginBlock: var(--space-l) 0;
-  --NotesLayout-navContent-backgroundColor: var(--slate3);
+  --NotesLayout-navContent-backgroundColor: var(--slate-3);
   --NotesLayout-navContent-borderRadius: 0.25em;
-  --NotesLayout-navContent-color: var(--slate10);
+  --NotesLayout-navContent-color: var(--slate-10);
   --NotesLayout-navContent-cursor: default;
   --NotesLayout-navContent-display: block;
   --NotesLayout-navContent-fontSize: var(--step--2);
   --NotesLayout-navContent-fontWeight: var(--font-weight-4);
   --NotesLayout-navContent-letterSpacing: var(--letter-spacing-1);
-  --NotesLayout-navContent-link-backgroundColor: var(--blue3);
-  --NotesLayout-navContent-link-color: var(--blue10);
+  --NotesLayout-navContent-link-backgroundColor: var(--blue-3);
+  --NotesLayout-navContent-link-color: var(--blue-10);
   --NotesLayout-navContent-link-cursor: pointer;
-  --NotesLayout-navContent-link-onHover-backgroundColor: var(--blue3);
-  --NotesLayout-navContent-link-onHover-color: var(--blue10);
+  --NotesLayout-navContent-link-onHover-backgroundColor: var(--blue-3);
+  --NotesLayout-navContent-link-onHover-color: var(--blue-10);
   --NotesLayout-navContent-link-textDecoration: none;
   --NotesLayout-navContent-paddingBlock: var(--space-xs);
   --NotesLayout-navContent-paddingInline: var(--space-s);
   --NotesLayout-navContent-textAlign: center;
   --NotesLayout-note-marginBlock: var(--space-m-l) 0;
-  --NotesLayout-title-color: var(--slate8);
-  --NotesLayout-title-fontFamily: var(--font-sans);
+  --NotesLayout-title-color: var(--slate-8);
+  --NotesLayout-title-fontFamily: var(--font-system);
   --NotesLayout-title-fontSize: var(--step-0);
   --NotesLayout-title-fontStyle: normal;
   --NotesLayout-title-fontWeight: var(--font-weight-7);

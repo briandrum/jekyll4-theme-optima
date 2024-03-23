@@ -4,7 +4,7 @@
   --Article-content-anchor-visited-color: var(--anchor-visited-color);
   --Article-content-anchor-visited-onHover-color: var(--anchor-visited-onHover-color);
 
-  --Article-content-color: var(--slate12);
+  --Article-content-color: var(--slate-12);
   --Article-content-fontFamily: var(--font-serif);
   --Article-content-fontSize: var(--step-0);
   --Article-content-fontWeight: var(--font-weight-3);

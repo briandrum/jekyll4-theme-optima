@@ -1,8 +1,11 @@
 ---
 layout: entry
 date: 2023-11-09 09:00:00 -0500
-title: "III"
+title: "Book I – The Shimerdas – Part III"
+description: "The one where Jim meets Ántonia."
 ---
+
+<!--more-->
 
 On Sunday morning Otto Fuchs was to drive us over to make the acquaintance of our new Bohemian neighbours. We were taking them some provisions, as they had come to live on a wild place where there was no garden or chicken-house, and very little broken land. Fuchs brought up a sack of potatoes and a piece of cured pork from the cellar, and grandmother packed some loaves of Saturday's bread, a jar of butter, and several pumpkin pies in the straw of the wagon-box. We clambered up to the front seat and jolted off past the little pond and along the road that climbed to the big cornfield.
 

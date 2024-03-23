@@ -2,13 +2,28 @@
 layout: default
 ---
 
-<h1>Archive of posts from {{ page.date | date: "%Y" }}</h1>
+<div class="ArchivesLayout">
+  {%- if page.title -%}
+    <h1>Archive of posts from {{ page.date | date: "%Y" }}</h1>
+  {%- endif -%}
 
-<ul class="posts">
+  {{ content }}
+
   {% for post in page.posts %}
-    <li>
-      <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-      <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-    </li>
+    {%- if post.categories.first == "articles" -%}
+      <section class="ArchivesLayout-article">
+        {% include entry.html content=post.content date=post.date description=post.description excerpt=post.excerpt mode="excerpt" size="" slug=post.slug tags=post.tags title=post.title url=post.url %}
+      </section>
+    {%- endif -%}
+    {%- if post.categories.first == "journal" -%}
+      <section class="ArchivesLayout-entry">
+        {% include entry.html content=post.content date=post.date description=post.description excerpt=post.excerpt mode="excerpt" size="" slug=post.slug tags=post.tags title=post.title url=post.url %}
+      </section>
+    {%- endif -%}
+    {%- if post.categories.first == "notes" -%}
+      <section class="ArchivesLayout-note">
+        {% include note.html slug=post.slug content=post.content date=post.date size="medium" tags=post.tags url=post.url %}
+      </section>
+    {%- endif -%}
   {% endfor %}
-</ul>
+</div>

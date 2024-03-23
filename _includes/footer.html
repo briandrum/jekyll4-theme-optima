@@ -5,20 +5,11 @@
   {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
   <div class="Footer-content">
     <div class="Footer-about">
-      <p><strong><a class="Footer-link" rel="author" href="{{ "/" | relative_url }}">{{ site.title | smartify }}</a></strong></p>
+      <h1 class="Footer-heading">{{ site.optima.description_title }}</h1>
       <p>{{ site.description | smartify }}</p>
-      <ul class="Footer-navList">
-        <li class="Footer-navListItem">
-          <a class="Footer-link Footer-link--withIcon" href="{{ 'feed.xml' | relative_url }}">
-            <svg class="Footer-linkIcon Icon">
-              <use xlink:href="{{ 'assets/optima-social-icons.svg#rss' | relative_url }}"></use>
-            </svg>
-            <span>Subscribe</span>
-          </a>
-        </li>
-      </ul>
     </div>
     <div class="Footer-nav">
+      <h1 class="Footer-heading">{{ site.optima.footer_pages_title }}</h1>
       <ul class="Footer-navList">
         {%- for path in page_paths -%}
           {%- assign my_page = site.pages | find_exp: "page", "page.path == path or page.pagination.category == path" -%}
@@ -38,7 +29,30 @@
       </ul>
     </div>
     <div class="Footer-social">
-      {%- include social/social.html -%}
+      <h1 class="Footer-heading">{{ site.optima.social_links_title }}</h1>
+      <ul class="Footer-navList">
+        {%- if site.plugins contains "jekyll-feed" -%}
+          <li class="Footer-navListItem">
+            <a class="Footer-link Footer-link--withIcon" href="{{ 'feed.xml' | absolute_url }}">
+              <svg class="Footer-linkIcon Icon">
+                <use xlink:href="{{ 'assets/optima-social-icons.svg#rss' | relative_url }}"></use>
+              </svg>
+              <span>{{ 'feed.xml' | absolute_url | remove_first: "https" | remove_first: "http" | remove_first: "://" }}</span>
+            </a>
+          </li>
+        {%- endif -%}
+        {%- include social/social.html -%}
+      </ul>
+    </div>
+    <div class="Footer-other">
+      <h1 class="Footer-heading">{{ site.optima.other_links_title }}</h1>
+      <ul class="Footer-navList">
+        {%- for other_link in site.optima.other_links -%}
+          <li class="Footer-navListItem">
+            <a class="Footer-link" href="{{ other_link.site_url }}">{{ other_link.site_name }}</a>
+          </li>
+        {%- endfor -%}
+      </ul>
     </div>
   </div>
   <div>

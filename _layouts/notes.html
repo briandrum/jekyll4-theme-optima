@@ -3,9 +3,11 @@ layout: default
 ---
 
 <div class="NotesLayout">
-  {%- if page.title -%}
-    <div class="NotesLayout-title">{{ page.title }}</div>
-  {%- endif -%}
+  {%- comment -%}
+    {%- if page.title -%}
+      <div class="NotesLayout-title">{{ page.title }}</div>
+    {%- endif -%}
+  {%- endcomment -%}
 
   {{ content | markdownify }}
 
@@ -17,8 +19,7 @@ layout: default
     {% endif %}
   </nav>
 
-  {% assign notes = paginator.posts %}
-  {% for note in notes %}
+  {% for note in paginator.posts %}
     <section class="NotesLayout-note">
       {% include note.html content=note.content date=note.date excerpt=note.excerpt mode="content" size="medium" slug=note.slug tags=note.tags title=note.title url=note.url %}
     </section>
@@ -30,5 +31,5 @@ layout: default
     {%- else -%}
       <span class="NotesLayout-navContent">You've reached the end!</span>
     {% endif %}
-  </li>
+  </nav>
 </div>

@@ -1,9 +1,12 @@
 ---
 layout: entry
 date: 2023-11-09 09:00:00 -0500
-title: "I"
+title: "Book I – The Shimerdas – Part I"
+description: "The one where Jim is orphaned."
 tags: [safety]
 ---
+
+<!--more-->
 
 I first heard of Ántonia on what seemed to me an interminable journey across the great midland plain of North America. I was ten years old then; I had lost both my father and mother within a year, and my Virginia relatives were sending me out to my grandparents, who lived in Nebraska. I traveled in the care of a mountain boy, Jake Marpole, one of the "hands" on my father's old farm under the Blue Ridge, who was now going West to work for my grandfather. Jake's experience of the world was not much wider than mine. He had never been in a railway train until the morning when we set out together to try our fortunes in a new world.
 

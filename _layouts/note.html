@@ -20,7 +20,7 @@ layout: default
 
 <div class="NoteLayout">
   <nav class="NoteLayout-nav">
-    <ol class="NoteLayout-navList">
+    <ul class="NoteLayout-navList">
       <li class="NoteLayout-navItem">
         <a class="NoteLayout-navItemContent" href={{ "/notes/" | relative_url }}>Notes</a>
       </li>
@@ -38,7 +38,7 @@ layout: default
           <span class="NoteLayout-navItemContent">Newer</span>
         {%- endif -%}
       </li>
-    </ol>
+    </ul>
   </nav>
   {% include note.html content=page.content date=page.date excerpt=page.excerpt mode="content" size="large" slug=page.slug tags=page.tags title=page.title url=page.url %}
 </div>

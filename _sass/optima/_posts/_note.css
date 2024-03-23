@@ -76,16 +76,6 @@
   margin-block: calc(var(--line-height-5) / 4 * 1em) 0;
 }
 
-.Note--sizeLarge .Note-content {
-  font-size: var(--Note--sizeLarge-content-fontSize);
-  max-width: var(--Note--sizeLarge-content-maxWidth);
-}
-
-.Note--sizeLarge .Note-published {
-  font-size: var(--Note--sizeLarge-published-fontSize);
-  font-weight: var(--Note--sizeLarge-published-fontWeight);
-}
-
 .Note--sizeSmall .Note-content {
   font-size: var(--Note--sizeSmall-content-fontSize);
   max-width: var(--Note--sizeSmall-content-maxWidth);
@@ -94,4 +84,14 @@
 .Note--sizeSmall .Note-published {
   font-size: var(--Note--sizeSmall-published-fontSize);
   font-weight: var(--Note--sizeSmall-published-fontWeight);
+}
+
+.Note--sizeLarge .Note-content {
+  font-size: var(--Note--sizeLarge-content-fontSize);
+  max-width: var(--Note--sizeLarge-content-maxWidth);
+}
+
+.Note--sizeLarge .Note-published {
+  font-size: var(--Note--sizeLarge-published-fontSize);
+  font-weight: var(--Note--sizeLarge-published-fontWeight);
 }

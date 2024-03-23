@@ -21,5 +21,7 @@
 
   {%- include head-custom.html -%}
 
-  {%- feed_meta -%}
+  {%- if site.plugins contains "jekyll-feed" -%}
+    {%- include head-feed.html -%}
+  {%- endif -%}
 </head>

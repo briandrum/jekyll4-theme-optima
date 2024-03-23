@@ -19,14 +19,18 @@ layout: default
 {%- endfor -%}
 
 <div class="EntryLayout">
-  {%- if category -%}
+  {%- comment -%}
+    {%- if category -%}
     <div class="EntryLayout-title">{{ category | capitalize }}</div>
-  {%- endif -%}
+    {%- endif -%}
+  {%- endcomment -%}
+
+  {% include entry.html content=page.content date=page.date description=page.description excerpt=page.excerpt mode="content" size="large" slug=page.slug tags=page.tags title=page.title url=page.url %}
 
   <nav class="EntryLayout-nav">
-    <ol>
+    <ul>
       <li class="EntryLayout-navItem">
-        <a href={{ "/journal/" | relative_url }}>Journal</a>
+        <a href={{ "/journal/" | relative_url }}>{{ category | capitalize }}</a>
       </li>
       <li class="EntryLayout-navItem EntryLayout-navItem--older">
         {%- if older_entry -%}
@@ -42,7 +46,6 @@ layout: default
           <span class="EntryLayout-navItemContent">Newer</span>
         {%- endif -%}
       </li>
-    </ol>
+    </ul>
   </nav>
-  {% include entry.html content=page.content date=page.date excerpt=page.excerpt mode="content" size="small" slug=page.slug tags=page.tags title=page.title url=page.url %}
 </div>

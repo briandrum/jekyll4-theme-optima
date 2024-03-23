@@ -8,6 +8,8 @@
 }
 
 .Body-header {
+  background-color: var(--Body-header-backgroundColor);
+  color: var(--Body-header-color);
 }
 
 .Body-main {
@@ -15,4 +17,6 @@
 }
 
 .Body-footer {
+  background-color: var(--Body-footer-backgroundColor);
+  color: var(--Body-footer-color);
 }

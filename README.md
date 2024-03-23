@@ -7,9 +7,15 @@ Entries, and Notes.
 
 Articles are long-form and evergreen
 
-Entries are long-form and time-bound (typical "blog")
+https://indieweb.org/article
+
+Journal entries are long-form and time-bound (typical "blog" post)
+
+https://indieweb.org/posts
 
 Notes are brief, lack titles, and time-bound (Twitter, Threads, etc.)
+
+https://indieweb.org/note
 
 Enable/disable each of these post categories in _config.yml
 

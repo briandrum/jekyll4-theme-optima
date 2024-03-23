@@ -22,23 +22,35 @@
 .SearchResults-url {
   align-items: center;
   display: flex;
-  font-family: var(--font-sans);
+  font-family: var(--font-system);
   font-size: var(--step--2);
   font-style: normal;
   line-height: var(--line-height-5);
   transition: color ease-in-out 0.1s;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
 }
 
 .SearchResults-url::before {
-  background-color: var(--slate8);
+  background-color: var(--slate-8);
   content: "";
   display: block;
+  flex-grow: 0;
+  flex-shrink: 0;
   height: 1em;
   margin-right: var(--space-3xs);
   mask-image: url('/favicon.svg');
   mask-size: cover;
   width: 1em;
   transition: background-color ease-in-out 0.1s;
+}
+
+.SearchResults-url span {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .SearchResults-title {
@@ -51,8 +63,8 @@
 }
 
 .SearchResults-description {
-  color: var(--slate11);
-  font-family: var(--font-sans);
+  color: var(--slate-11);
+  font-family: var(--font-system);
   font-size: var(--step--1);
   font-weight: 300;
   line-height: var(--line-height-5);
@@ -62,22 +74,22 @@
 
 .SearchResults-link:hover,
 .SearchResults-link:focus {
-  background-color: var(--blue2);
+  background-color: var(--blue-2);
 }
 
 .SearchResults-link:hover .SearchResults-url::before,
 .SearchResults-link:focus .SearchResults-url::before {
-  background-color: var(--blue10);
+  background-color: var(--blue-10);
 }
 
 .SearchResults-link:hover .SearchResults-url,
 .SearchResults-link:focus .SearchResults-url {
-  color: var(--blue11);
+  color: var(--blue-11);
 }
 
 .SearchResults-link:hover .SearchResults-title,
 .SearchResults-link:hover .SearchResults-description,
 .SearchResults-link:focus .SearchResults-title,
 .SearchResults-link:focus .SearchResults-description {
-  color: var(--blue12);
+  color: var(--blue-12);
 }

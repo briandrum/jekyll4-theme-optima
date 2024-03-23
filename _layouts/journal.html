@@ -3,30 +3,33 @@ layout: default
 ---
 
 <div class="JournalLayout">
-  {%- if page.title -%}
-    <h1 class="JournalLayout-title">{{ page.title }}</h1>
-  {%- endif -%}
+  {%- comment -%}
+    {%- if page.title -%}
+      <h1 class="JournalLayout-title">{{ page.title }}</h1>
+    {%- endif -%}
+  {%- endcomment -%}
 
   {{ content | markdownify }}
 
+  <nav class="JournalLayout-nav">
+    {% if paginator.previous_page %}
+      <a class="JournalLayout-navContent" href="{{ paginator.previous_page_path | relative_url }}">View newer entries</a>
+    {%- else -%}
+      <span class="JournalLayout-navContent">Viewing the most recent journal entries</span>
+    {% endif %}
+  </nav>
+
   {% for entry in paginator.posts %}
     <section class="JournalLayout-entry">
-      {% include entry.html content=entry.content date=entry.date excerpt=entry.excerpt mode="excerpt" size="small" slug=entry.slug tags=entry.tags title=entry.title url=entry.url %}
+      {% include entry.html content=entry.content date=entry.date description=entry.description excerpt=entry.excerpt mode="excerpt" size="small" slug=entry.slug tags=entry.tags title=entry.title url=entry.url %}
     </section>
   {% endfor %}
 
-  {% if paginator.total_pages > 1 %}
-  <ul>
-    {% if paginator.previous_page %}
-    <li>
-      <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>
-    </li>
-    {% endif %}
+  <nav class="JournalLayout-nav">
     {% if paginator.next_page %}
-    <li>
-      <a href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
-    </li>
+      <a class="JournalLayout-navContent" href="{{ paginator.next_page_path | relative_url }}">View older journal entries</a>
+    {%- else -%}
+      <span class="JournalLayout-navContent">You've reached the end!</span>
     {% endif %}
-  </ul>
-  {% endif %}
+  </nav>
 </div>

@@ -66,7 +66,7 @@
 
 .Header-link:hover,
 .Header-link:focus {
-  background-color: var(--slate2);
+  background-color: var(--slate-2);
 }
 
 .Header-link.is-current:link,
@@ -74,7 +74,7 @@
 .Header-link.is-current:hover,
 .Header-link.is-current:focus,
 .Header-link.is-current:active {
-  background-color: var(--slate3);
+  background-color: var(--slate-3);
 }
 
 .Header-details {

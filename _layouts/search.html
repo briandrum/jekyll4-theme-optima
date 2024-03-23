@@ -70,7 +70,7 @@ function searchDocuments(term) {
         var url = documents[ref]["url"].split("/").slice(3,-1).join(" › ");
         var title = documents[ref]["title"];
         var body = documents[ref]["body"].substring(0,320) + "…";
-        document.querySelectorAll("#search-results ol.SearchResults")[0].innerHTML = document.querySelectorAll("#search-results ol.SearchResults")[0].innerHTML + "<li class=\"SearchResults-result\"><a class=\"SearchResults-link\" href=\"" + href + "\"><address class=\"SearchResults-url\">" + url + "</address><h4 class=\"SearchResults-title\">" + title + "</h4><p class=\"SearchResults-description\">" + body + "</p></a></li>";
+        document.querySelectorAll("#search-results ol.SearchResults")[0].innerHTML = document.querySelectorAll("#search-results ol.SearchResults")[0].innerHTML + "<li class=\"SearchResults-result\"><a class=\"SearchResults-link\" href=\"" + href + "\"><address class=\"SearchResults-url\"><span>" + url + "</span></address><h4 class=\"SearchResults-title\">" + title + "</h4><p class=\"SearchResults-description\">" + body + "</p></a></li>";
       }
       focusFormElement("search-submit");;
     }
@@ -113,7 +113,7 @@ window.addEventListener("popstate", (event) => {
 
 <div class="Search">
   <div class="Search-content">
-    <div class="">
+    <search class="">
       <form action="https://html.duckduckgo.com/html" method="get" onsubmit="return onFormSubmit();">
         <fieldset class="InputGroup" id="search-fieldset">
           <input autofocus class="TextInput u-size1of2" enterkeyhint="search" id="search-input" maxlength="255" name="q" placeholder="example: bicycle" type="search" value="site:{{ search_domain }} ">
@@ -128,7 +128,7 @@ window.addEventListener("popstate", (event) => {
           </noscript>
         </div>
       </div>
-    </div>
+    </search>
   </div>
   <div class="Search-aside">
     <div class="">

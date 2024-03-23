@@ -3,21 +3,28 @@
     <div class="Entry-published">
       <time class="dt-published" datetime="{{ include.date | date_to_xmlschema }}" itemprop="datePublished">
         <a class="Entry-publishedLink u-url" href="{{ include.url | relative_url }}">
-          {{ include.date | date:site.optima.time_and_date_short_format }}
+          {{ include.date | date:site.optima.date_long_format }}
         </a>
       </time>
     </div>
     <h1 class="Entry-title">
-      <a class="Entry-titleLink u-url" href="{{ include.url | relative_url }}">
-        {{ include.title |smartify }}
-      </a>
+      {%- if include.mode == "excerpt" -%}
+        <a class="Entry-titleLink u-url" href="{{ include.url | relative_url }}">
+          {{ include.title |smartify }}
+        </a>
+      {%- else if include.mode == "content" -%}
+        <span class="Entry-titleLink u-url">
+          {{ include.title |smartify }}
+        </span>
+      {%- endif -%}
     </h1>
   </header>
   <div class="Entry-content e-content">
-    {%- if include.mode == "excerpt" -%}
-      {{ include.excerpt | markdownify }}
-    {%- else if include.mode == "content" -%}
+    {%- if include.mode == "content" -%}
       {{ include.content | markdownify }}
+    {%- else if include.mode == "excerpt" -%}
+      {{ include.description | markdownify }}
+      {{ include.excerpt | markdownify }}
     {%- endif -%}
   </div>
   <footer class="Entry-footer">

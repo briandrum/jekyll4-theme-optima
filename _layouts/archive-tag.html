@@ -2,24 +2,22 @@
 layout: default
 ---
 
-<div class="ArchivesLayout NotesLayout">
+<div class="ArchivesLayout">
   {%- if page.title -%}
-    <h1 class="ArchivesLayout-title">Archive of posts with {{ page.type }} ‘{{ page.title }}’</h1>
+    <h1 class="ArchivesLayout-title">Archive of everything with {{ page.type }} ‘{{ page.title }}’</h1>
   {%- endif -%}
 
   {{ content }}
 
   {% for post in page.posts %}
     {%- if post.categories.first == "notes" -%}
-      <section class="NotesLayout-note">
+      <section class="ArchivesLayout-note">
         {% include note.html slug=post.slug content=post.content date=post.date size="medium" tags=post.tags url=post.url %}
       </section>
-    {%- comment -%}
     {%- elsif post.categories.first == "journal" -%}
-      <section class="NotesLayout-note">
-      {% include entry.html slug=post.slug content=post.content date=post.date size="small" tags=post.tags url=post.url title=post.title %}
+      <section class="ArchivesLayout-entry">
+        {% include entry.html content=post.content date=post.date description=post.description excerpt=post.excerpt mode="excerpt" size="" slug=post.slug tags=post.tags title=post.title url=post.url %}
       </section>
-    {%- endcomment -%}
     {%- endif -%}
   {% endfor %}
 </div>

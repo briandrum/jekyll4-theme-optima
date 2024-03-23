@@ -12,3 +12,8 @@
   margin-block: var(--ArchivesLayout-title-marginBlock);
   margin-inline: var(--ArchivesLayout-title-marginInline);
 }
+
+.ArchivesLayout-entry,
+.ArchivesLayout-note {
+  margin-block: var(--space-m-l) 0;
+}
