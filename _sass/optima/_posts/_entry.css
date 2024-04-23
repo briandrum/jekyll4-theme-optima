@@ -13,12 +13,12 @@
   --Entry--sizeLarge-published-fontWeight: var(--font-weight-4);
 
   --Entry-title-fontSize: var(--step-3);
-  --Entry-title-maxWidth: auto;
+  --Entry-title-maxWidth: 20em;
 
   --Entry--sizeSmall-title-fontSize: var(--step-3);
-  --Entry--sizeSmall-title-maxWidth: auto;
+  --Entry--sizeSmall-title-maxWidth: 20em;
   --Entry--sizeLarge-title-fontSize: var(--step-5);
-  --Entry--sizeLarge-title-maxWidth: 40em;
+  --Entry--sizeLarge-title-maxWidth: 20em;
 
   --Entry-content-fontFamily: var(--font-serif);
   --Entry-content-fontSize: var(--step-0);

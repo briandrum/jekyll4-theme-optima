@@ -27,14 +27,16 @@
       {{ include.excerpt | markdownify }}
     {%- endif -%}
   </div>
-  <footer class="Entry-footer">
-    <dl class="Entry-tags Tags">
-      <dt class="Tags-term">Tagged</dt>
-      {% for tag in include.tags %}
-        <dd class="Tags-details">
-          <a class="Tags-detailsLink p-category" href="{{ tag | prepend: '/tag/' | relative_url }}">{{ tag | replace: "-", " " }}</a>
-        </dd>
-      {% endfor %}
-    </dl>
-  </footer>
+  {%- if include.mode == "content" -%}
+    <footer class="Entry-footer">
+      <dl class="Entry-tags Tags">
+        <dt class="Tags-term">Tagged</dt>
+        {% for tag in include.tags %}
+          <dd class="Tags-details">
+            <a class="Tags-detailsLink p-category" href="{{ tag | prepend: '/tag/' | relative_url }}">{{ tag | replace: "-", " " }}</a>
+          </dd>
+        {% endfor %}
+      </dl>
+    </footer>
+  {%- endif -%}
 </article>
