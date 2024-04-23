@@ -1,5 +1,5 @@
 <footer class="Footer h-card">
-  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+  <data class="u-url" value="{{ "/" | relative_url }}"></data>
   {%- assign default_paths = site.pages | map: "path" -%}
   {%- assign page_paths = site.optima.footer_pages | default: default_paths -%}
   {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
