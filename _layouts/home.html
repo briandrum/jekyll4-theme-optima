@@ -3,6 +3,17 @@ layout: default
 ---
 
 <div class="HomeLayout">
+  <div class="HomeLayout-content">
+    {{ content }}
+  </div>
+  <div class="HomeLayout-journal">
+    {% assign journal = site.posts | where: 'categories', 'journal' | sort: 'date' | reverse %}
+    {% for entry in journal limit:3 %}
+      <section class="HomeLayout-entry">
+        {% include entry.html content=entry.content date=entry.date description=entry.description excerpt=entry.excerpt mode="excerpt" size="small" slug=entry.slug tags=entry.tags title=entry.title url=entry.url %}
+      </section>
+    {% endfor %}
+  </div>
   <div class="HomeLayout-notes">
     {% assign notes2 = site.posts | where_exp: "note", "note.categories.first == 'notes'" | sort: 'date' | reverse %}
     {% assign notes = site.posts | where: 'categories', 'notes' | sort: 'date' | reverse %}

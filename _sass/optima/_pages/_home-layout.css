@@ -1,3 +1,26 @@
+.HomeLayout {
+  --HomeLayout-entry-marginBlock: var(--space-m-l) 0;
+  --HomeLayout-content-fontFamily: var(--font-serif);
+  --HomeLayout-content-fontSize: var(--step-0);
+  --HomeLayout-content-maxWidth: 40em;
+}
+
+.HomeLayout-content {
+  font-family: var(--HomeLayout-content-fontFamily);
+  font-size: var(--HomeLayout-content-fontSize);
+  font-weight: var(--font-weight-3);
+  line-height: var(--line-height-5);
+  margin-block: var(--space-xs-s) 0;
+  max-width: var(--HomeLayout-content-maxWidth);
+}
+
+.HomeLayout-journal {
+}
+
+.HomeLayout-entry {
+  margin-block: var(--HomeLayout-entry-marginBlock);
+}
+
 .HomeLayout-note {
   margin-block: var(--HomeLayout-note-marginBlock);
 }
