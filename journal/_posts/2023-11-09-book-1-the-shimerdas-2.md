@@ -6,9 +6,9 @@ description: "The one where Jim meets his grandmother."
 tags: [safety]
 ---
 
-<!--more-->
-
 I do not remember our arrival at my grandfather's farm sometime before daybreak, after a drive of nearly twenty miles with heavy work-horses. When I awoke, it was afternoon. I was lying in a little room, scarcely larger than the bed that held me, and the window-shade at my head was flapping softly in a warm wind. A tall woman, with wrinkled brown skin and black hair, stood looking down at me; I knew that she must be my grandmother. She had been crying, I could see, but when I opened my eyes she smiled, peered at me anxiously, and sat down on the foot of my bed.
+
+<!-- more -->
 
 'Had a good sleep, Jimmy?' she asked briskly. Then in a very different tone she said, as if to herself, 'My, how you do look like your father!' I remembered that my father had been her little boy; she must often have come to wake him like this when he overslept. 'Here are your clean clothes,' she went on, stroking my coverlid with her brown hand as she talked. 'But first you come down to the kitchen with me, and have a nice warm bath behind the stove. Bring your things; there's nobody about.'
 

@@ -5,9 +5,9 @@ title: "Book I – The Shimerdas – Part III"
 description: "The one where Jim meets Ántonia."
 ---
 
-<!--more-->
-
 On Sunday morning Otto Fuchs was to drive us over to make the acquaintance of our new Bohemian neighbours. We were taking them some provisions, as they had come to live on a wild place where there was no garden or chicken-house, and very little broken land. Fuchs brought up a sack of potatoes and a piece of cured pork from the cellar, and grandmother packed some loaves of Saturday's bread, a jar of butter, and several pumpkin pies in the straw of the wagon-box. We clambered up to the front seat and jolted off past the little pond and along the road that climbed to the big cornfield.
+
+<!-- more -->
 
 I could hardly wait to see what lay beyond that cornfield; but there was only red grass like ours, and nothing else, though from the high wagon-seat one could look off a long way. The road ran about like a wild thing, avoiding the deep draws, crossing them where they were wide and shallow. And all along it, wherever it looped or ran, the sunflowers grew; some of them were as big as little trees, with great rough leaves and many branches which bore dozens of blossoms. They made a gold ribbon across the prairie. Occasionally one of the horses would tear off with his teeth a plant full of blossoms, and walk along munching it, the flowers nodding in time to his bites as he ate down toward them.
 
