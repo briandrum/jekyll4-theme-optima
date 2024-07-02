@@ -50,7 +50,7 @@ function updateSearchResults(id, html) {
 }
 
 function resetSearchResults() {
-  updateSearchResults("search-results", "<ol class=\"SearchResults\"></ol>");
+  updateSearchResults("search-results", "<ol class=\"Search-results\"></ol>");
 }
 
 function readySearchForm() {
@@ -70,7 +70,7 @@ function searchDocuments(term) {
         var url = documents[ref]["url"].split("/").slice(3,-1).join(" › ");
         var title = documents[ref]["title"];
         var body = documents[ref]["body"].substring(0,320) + "…";
-        document.querySelectorAll("#search-results ol.SearchResults")[0].innerHTML = document.querySelectorAll("#search-results ol.SearchResults")[0].innerHTML + "<li class=\"SearchResults-result\"><a class=\"SearchResults-link\" href=\"" + href + "\"><address class=\"SearchResults-url\"><span>" + url + "</span></address><h4 class=\"SearchResults-title\">" + title + "</h4><p class=\"SearchResults-description\">" + body + "</p></a></li>";
+        document.querySelectorAll("#search-results ol.Search-results")[0].innerHTML = document.querySelectorAll("#search-results ol.Search-results")[0].innerHTML + "<li class=\"Search-result\"><a class=\"Search-resultLink\" href=\"" + href + "\"><address class=\"Search-resultUrl\"><span>" + url + "</span></address><h4 class=\"Search-resultTitle\">" + title + "</h4><p class=\"Search-resultDescription\">" + body + "</p></a></li>";
       }
       focusFormElement("search-submit");;
     }
@@ -111,33 +111,29 @@ window.addEventListener("popstate", (event) => {
 
 </script>
 
-<div class="Search">
+<search class="Search">
   <div class="Search-content">
-    <search class="">
-      <form action="https://html.duckduckgo.com/html" method="get" onsubmit="return onFormSubmit();">
-        <fieldset class="InputGroup" id="search-fieldset">
-          <input autofocus class="TextInput u-size1of2" enterkeyhint="search" id="search-input" maxlength="255" name="q" placeholder="example: bicycle" type="search" value="site:{{ search_domain }} ">
-          <button class="Button" id="search-clear" type="reset" onclick="return onFormReset();">Clear</button>
-          <button class="Button" id="search-submit" type="submit">Search</button>
-        </fieldset>
-      </form>
-      <div id="search-results">
-        <div class="BlankSlate">
-          <noscript>
-            <p>Enter your search terms above after <kbd class="Kbd">site:{{ search_domain }}</kbd></p>
-          </noscript>
-        </div>
+    <form action="https://html.duckduckgo.com/html" method="get" onsubmit="return onFormSubmit();">
+      <fieldset class="Search-fieldSet" id="search-fieldset">
+        <input autofocus class="Search-fieldInput" enterkeyhint="search" id="search-input" maxlength="255" name="q" placeholder="example: bicycle" type="search" value="site:{{ search_domain }} ">
+        <button class="Search-fieldClear" id="search-clear" type="reset" onclick="return onFormReset();">×️</button>
+        <button class="Search-fieldSubmit" id="search-submit" type="submit">➤</button>
+      </fieldset>
+    </form>
+    <div id="search-results">
+      <div class="BlankSlate">
+        <noscript>
+          <p>Enter your search terms above after <kbd class="Kbd">site:{{ search_domain }}</kbd></p>
+        </noscript>
       </div>
-    </search>
+    </div>
   </div>
   <div class="Search-aside">
     <div class="">
       {%- assign content = content | strip_newlines -%}
       {%- unless content == "" -%}
         <aside class="">
-          <div class="Markdown">
-            {{ content }}
-          </div>
+          {{ content }}
         </aside>
       {%- endunless -%}
       <details class="Aside Details">
@@ -175,7 +171,7 @@ window.addEventListener("popstate", (event) => {
       </details>
     </div>
   </div>
-</div>
+</search>
 <script>
   onPageLoad();
 </script>

@@ -30,7 +30,7 @@ permalink: /search.json
 
 [{% for page in site.pages %}{% if page.url contains '.xml' or page.url contains 'assets' or page.url contains 'search' %}{% else %}{
   "id": {{ counter }},
-  "url": "{{ site.url }}{{ page.url }}",
+  "url": "{{ page.url | remove: "index.html" | absolute_url }}",
   "title": "{{ page.title }}",
   "body": "{{ page.content | markdownify | replace: newline, ' ' | replace: '\', '. ' | replace: '&amp;', '&' | replace: '</h1>', '. ' | replace: '</h2>', '. ' | replace: '</h3>', '. ' | replace: '</h4>', '. ' | replace: '</h5>', '. ' | replace: '</li>', '. ' | replace: '</p>', ' ' | strip_html | strip_newlines | strip | normalize_whitespace | replace: '. . ', '. '| replace: '"', ' '}}"{% assign counter = counter | plus: 1 %}
   }, {% endif %}{% endfor %}{% for page in site.posts %}{

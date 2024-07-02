@@ -9,7 +9,9 @@ layout: default
     {%- endif -%}
   {%- endcomment -%}
 
-  {{ content | markdownify }}
+  <div class="NotesLayout-content">
+    {{ content | markdownify }}
+  </div>
 
   <nav class="NotesLayout-nav">
     {% if paginator.previous_page %}

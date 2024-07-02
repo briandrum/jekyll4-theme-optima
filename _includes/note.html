@@ -11,7 +11,7 @@
       <dt class="Tags-term">Tagged</dt>
       {% for tag in include.tags %}
         <dd class="Tags-details">
-          <a class="Tags-detailsLink p-category" href="{{ tag | prepend: '/tag/' | relative_url }}">{{ tag | replace: "-", " " }}</a>
+          <a class="Tags-detailsLink p-category" href="{{ tag | prepend: '/tags/' | relative_url }}">{{ tag | replace: "-", " " }}</a>
         </dd>
       {% endfor %}
     </dl>

@@ -1,14 +1,89 @@
 .ArticlesLayout {
+  --ArticlesLayout-content-fontFamily: var(--font-serif);
+  --ArticlesLayout-content-fontSize: var(--step-0);
+  --ArticlesLayout-entry-marginBlock: var(--space-m-l) 0;
+  --ArticlesLayout-nav-marginBlock: var(--space-l-xl) 0;
+  --ArticlesLayout-navContent-backgroundColor: var(--slate-3);
+  --ArticlesLayout-navContent-borderRadius: 0.25em;
+  --ArticlesLayout-navContent-color: var(--slate-10);
+  --ArticlesLayout-navContent-cursor: default;
+  --ArticlesLayout-navContent-display: block;
+  --ArticlesLayout-navContent-fontSize: var(--step--2);
+  --ArticlesLayout-navContent-fontWeight: var(--font-weight-4);
+  --ArticlesLayout-navContent-letterSpacing: var(--letter-spacing-1);
+  --ArticlesLayout-navContent-link-backgroundColor: var(--blue-3);
+  --ArticlesLayout-navContent-link-color: var(--blue-10);
+  --ArticlesLayout-navContent-link-cursor: pointer;
+  --ArticlesLayout-navContent-link-onHover-backgroundColor: var(--blue-3);
+  --ArticlesLayout-navContent-link-onHover-color: var(--blue-10);
+  --ArticlesLayout-navContent-link-textDecoration: none;
+  --ArticlesLayout-navContent-paddingBlock: var(--space-xs);
+  --ArticlesLayout-navContent-paddingInline: var(--space-s);
+  --ArticlesLayout-navContent-textAlign: center;
+  --ArticlesLayout-title-color: var(--slate-8);
+  --ArticlesLayout-title-fontFamily: var(--font-system);
+  --ArticlesLayout-title-fontSize: var(--step-0);
+  --ArticlesLayout-title-fontStyle: normal;
+  --ArticlesLayout-title-fontWeight: var(--font-weight-7);
+  --ArticlesLayout-title-marginBlock: var(--space-l) 0;
+  --ArticlesLayout-title-marginInline: 0;
+}
+
+.ArticlesLayout {
   align-self: center;
   margin-inline: auto;
 }
 
 .ArticlesLayout-title {
-  color: var(--NotesLayout-title-color);
-  font-family: var(--NotesLayout-title-fontFamily);
-  font-size: var(--NotesLayout-title-fontSize);
-  font-style:  var(--NotesLayout-title-fontStyle);
-  font-weight: var(--NotesLayout-title-fontWeight);
-  margin-block: var(--NotesLayout-title-marginBlock);
-  margin-inline: var(--NotesLayout-title-marginInline);
+  color: var(--ArticlesLayout-title-color);
+  font-family: var(--ArticlesLayout-title-fontFamily);
+  font-size: var(--ArticlesLayout-title-fontSize);
+  font-style:  var(--ArticlesLayout-title-fontStyle);
+  font-weight: var(--ArticlesLayout-title-fontWeight);
+  margin-block: var(--ArticlesLayout-title-marginBlock);
+  margin-inline: var(--ArticlesLayout-title-marginInline);
+}
+
+.ArticlesLayout-content {
+  font-family: var(--ArticlesLayout-content-fontFamily);
+  font-size: var(--ArticlesLayout-content-fontSize);
+  font-weight: var(--font-weight-3);
+  line-height: var(--line-height-5);
+  margin-block: var(--space-xs-s) 0;
+}
+
+.ArticlesLayout-nav {
+  margin-block: var(--ArticlesLayout-nav-marginBlock);
+}
+
+.ArticlesLayout-navContent {
+  background-color: var(--ArticlesLayout-navContent-backgroundColor);
+  border-radius: var(--ArticlesLayout-navContent-borderRadius);
+  color: var(--ArticlesLayout-navContent-color);
+  cursor: var(--ArticlesLayout-navContent-cursor);
+  display: var(--ArticlesLayout-navContent-display);
+  font-size: var(--ArticlesLayout-navContent-fontSize);
+  font-weight: var(--ArticlesLayout-navContent-fontWeight);
+  letter-spacing: var(--ArticlesLayout-navContent-letterSpacing);
+  padding-block: var(--ArticlesLayout-navContent-paddingBlock);
+  padding-inline: var(--ArticlesLayout-navContent-paddingInline);
+  text-align: var(--ArticlesLayout-navContent-textAlign);
+}
+
+.ArticlesLayout-navContent:link,
+.ArticlesLayout-navContent:visited {
+  background-color: var(--ArticlesLayout-navContent-link-backgroundColor);
+  color: var(--ArticlesLayout-navContent-link-color);
+  cursor: var(--ArticlesLayout-navContent-link-cursor);
+  text-decoration: var(--ArticlesLayout-navContent-link-textDecoration);
+}
+
+.ArticlesLayout-navContent:link:hover,
+.ArticlesLayout-navContent:visited:hover {
+  background-color: var(--ArticlesLayout-navContent-link-onHover-backgroundColor);
+  color: var(--ArticlesLayout-navContent-link-onHover-color);
+}
+
+.ArticlesLayout-entry {
+  margin-block: var(--ArticlesLayout-entry-marginBlock);
 }

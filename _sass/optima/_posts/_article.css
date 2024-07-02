@@ -1,16 +1,52 @@
-:root {
-  --Article-content-anchor-link-color: var(--anchor-link-color);
-  --Article-content-anchor-link-onHover-color: var(--anchor-link-onHover-color);
-  --Article-content-anchor-visited-color: var(--anchor-visited-color);
-  --Article-content-anchor-visited-onHover-color: var(--anchor-visited-onHover-color);
-
-  --Article-content-color: var(--slate-12);
-  --Article-content-fontFamily: var(--font-serif);
-  --Article-content-fontSize: var(--step-0);
-  --Article-content-fontWeight: var(--font-weight-3);
-  --Article-content-lineHeight: var(--line-height-5);
-  --Article-content-maxWidth: 40em;
+.Article {
 }
+
+.Article-header {
+}
+
+.Article-published {
+  color: var(--Article-published-color);
+  font-family: var(--Article-published-fontFamily);
+  font-size: var(--Article-published-fontSize);
+  font-weight: var(--Article-published-fontWeight);
+  margin-block: var(--Article-published-marginBlock);
+  white-space: nowrap;
+}
+
+.Article-publishedLink {
+  color: var(--Article-publishedLink-color);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.Article-publishedLink:hover {
+  color: var(--Article-publishedLink-onHover-color);
+}
+
+.Article-title {
+  font-family: var(--font-serif);
+  font-size: var(--Article-title-fontSize);
+  font-weight: var(--font-weight-4);
+  letter-spacing: -0.04em;
+  line-height: var(--line-height-1);
+  margin-block: var(--space-2xs-xs) 0;
+  max-width: var(--Article-title-maxWidth);
+  text-wrap: balance;
+}
+
+.Article-titleLink:link,
+.Article-titleLink:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+.Article-titleLink:link:hover,
+.Article-titleLink:link:focus,
+.Article-titleLink:visited:hover,
+.Article-titleLink:visited:focus {
+  color: var(--Article-title-anchor-link-onHover-color);
+}
+
 
 .Article-content {
   color: var(--Article-content-color);
@@ -22,7 +58,83 @@
   max-width: var(--Article-content-maxWidth);
 }
 
+.Article-description p {
+  font-weight: var(--font-weight-4) !important;
+}
+
 .Article-content p {
-  margin-block-end: 0.5em;
-  margin-block-start: 0.5em;
+  font-family: var(--Article-content-fontFamily);
+  font-size: var(--Article-content-fontSize);
+  font-weight: var(--font-weight-3);
+  line-height: var(--line-height-5);
+  margin-block: var(--space-xs-s) 0;
+  max-width: var(--Article-content-maxWidth);
+}
+
+/* .Article-content p:first-child::first-line, */
+.Article-content h2 {
+  color: var(--slate-12);
+  font-family: var(--font-grotesque);
+  font-optical-sizing: auto;
+  font-size: var(--step-2);
+  font-style: normal;
+  font-weight: 500;
+  font-variation-settings: "wdth" 75;
+  margin-block: var(--space-l) 0;
+  text-transform: uppercase;
+}
+
+.Article-content img {
+  display: block;
+  max-width: 100%;
+}
+
+@media screen and (min-width:32em) {
+  .Article-footer {
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+  }
+
+  .Article-published {
+    margin-inline: 0 var(--space-xs);
+  }
+}
+
+.Article-tags {
+  font-size: var(--Article-tags-fontSize);
+  line-height: var(--Article-tags-lineHeight);
+  margin-block: var(--Article-tags-marginBlock);
+  max-width: var(--Article-tags-maxWidth);
+}
+
+.Article--sizeSmall .Article-published {
+  font-size: var(--Article--sizeSmall-published-fontSize);
+  font-weight: var(--Article--sizeSmall-published-fontWeight);
+}
+
+.Article--sizeSmall .Article-title {
+  font-size: var(--Article--sizeSmall-title-fontSize);
+  max-width: var(--Article--sizeSmall-title-maxWidth);
+}
+
+.Article--sizeSmall .Article-content p {
+  font-size: var(--Article--sizeSmall-content-fontSize);
+  max-width: var(--Article--sizeSmall-content-maxWidth);
+}
+
+.Article--sizeLarge .Article-published {
+  font-size: var(--Article--sizeLarge-published-fontSize);
+  font-weight: var(--Article--sizeLarge-published-fontWeight);
+}
+
+.Article--sizeLarge .Article-title {
+  font-size: var(--Article--sizeLarge-title-fontSize);
+  max-width: var(--Article--sizeLarge-title-maxWidth);
+}
+
+.Article--sizeLarge .Article-content p {
+  font-size: var(--Article--sizeLarge-content-fontSize);
+  max-width: var(--Article--sizeLarge-content-maxWidth);
 }

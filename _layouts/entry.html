@@ -19,33 +19,76 @@ layout: default
 {%- endfor -%}
 
 <div class="EntryLayout">
-  {%- comment -%}
-    {%- if category -%}
-    <div class="EntryLayout-title">{{ category | capitalize }}</div>
-    {%- endif -%}
-  {%- endcomment -%}
 
   {% include entry.html content=page.content date=page.date description=page.description excerpt=page.excerpt mode="content" size="large" slug=page.slug tags=page.tags title=page.title url=page.url %}
 
-  <nav class="EntryLayout-nav">
-    <ul>
-      <li class="EntryLayout-navItem">
-        <a href={{ "/journal/" | relative_url }}>{{ category | capitalize }}</a>
-      </li>
-      <li class="EntryLayout-navItem EntryLayout-navItem--older">
-        {%- if older_entry -%}
-          <a class="EntryLayout-navItemContent" href="{{ older_entry.url | relative_url }}">Older</a>
-        {%- else -%}
-          <span class="EntryLayout-navItemContent">Older</span>
-        {%- endif -%}
-      </li>
-      <li class="EntryLayout-navItem EntryLayout-navItem--newer">
-        {%- if newer_entry -%}
-          <a class="EntryLayout-navItemContent" href="{{ newer_entry.url | relative_url }}">Newer</a>
-        {%- else -%}
-          <span class="EntryLayout-navItemContent">Newer</span>
-        {%- endif -%}
-      </li>
-    </ul>
-  </nav>
+  {% comment %}
+    <div>
+      <h2>Related entries</h2>
+      <!-- https://blog.webjeda.com/jekyll-related-posts/ -->
+      {% assign posts = site.posts | sort: 'date' | reverse %}
+      {% assign maxRelated = 4 %}
+      {% assign minCommonTags =  1 %}
+      {% assign maxRelatedCounter = 0 %}
+
+      {% for post in posts %}
+
+        {% assign sameTagCount = 0 %}
+        {% assign commonTags = '' %}
+
+        {% for tag in post.tags %}
+          {% if post.url != page.url %}
+            {% if page.tags contains tag %}
+              {% assign sameTagCount = sameTagCount | plus: 1 %}
+              {% capture tagmarkup %} <span class="label label-default">{{ tag }}</span> {% endcapture %}
+              {% assign commonTags = commonTags | append: tagmarkup %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+
+        {% if sameTagCount >= minCommonTags %}
+          <div>
+          <h5><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}{{ commonTags }}</a></h5>
+          </div>
+          {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+          {% if maxRelatedCounter >= maxRelated %}
+            {% break %}
+          {% endif %}
+        {% endif %}
+
+      {% endfor %}
+    </div>
+  {% endcomment %}
+
+  {% comment %}
+    <nav class="EntryLayout-nav">
+      <ul>
+<!--
+        <li class="EntryLayout-navItem">
+          <a href={{ "/journal/" | relative_url }}>{{ category | capitalize }}</a>
+        </li>
+ -->
+        <li class="EntryLayout-navItem EntryLayout-navItem--older">
+          {%- if older_entry -%}
+            <h1><a class="EntryLayout-navItemContent" href="{{ older_entry.url | relative_url }}">{{ older_entry.title }}</a></h1>
+            <div>
+              {{ older_entry.description }}
+            </div>
+          {%- else -%}
+            <span class="EntryLayout-navItemContent">Older</span>
+          {%- endif -%}
+        </li>
+        <li class="EntryLayout-navItem EntryLayout-navItem--newer">
+          {%- if newer_entry -%}
+            <h1><a class="EntryLayout-navItemContent" href="{{ newer_entry.url | relative_url }}">{{ newer_entry.title }}</a></h1>
+            <div>
+              {{ newer_entry.description }}
+            </div>
+          {%- else -%}
+            <span class="EntryLayout-navItemContent">Newer</span>
+          {%- endif -%}
+        </li>
+      </ul>
+    </nav>
+  {% endcomment %}
 </div>

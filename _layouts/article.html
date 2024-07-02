@@ -18,29 +18,31 @@ layout: default
   {%- endif -%}
 {%- endfor -%}
 
-<div class="Article">
-  <nav class="Article-nav">
-    <ol>
-      <li class="Article-navItem">
-        <a href={{ "/articles/" | relative_url }}>Articles</a>
-      </li>
-      <li class="Article-navItem Article-navItem--older">
-        {%- if older_article -%}
-          <a class="Article-navItemContent" href="{{ older_article.url | relative_url }}">Older</a>
-        {%- else -%}
-          <span class="Article-navItemContent">Older</span>
-        {%- endif -%}
-      </li>
-      <li class="Article-navItem Article-navItem--newer">
-        {%- if newer_article -%}
-          <a class="Article-navItemContent" href="{{ newer_article.url | relative_url }}">Newer</a>
-        {%- else -%}
-          <span class="Article-navItemContent">Newer</span>
-        {%- endif -%}
-      </li>
-    </ol>
-  </nav>
+<div class="ArticleLayout">
 
-{% include article.html content=page.content date=page.date excerpt=page.excerpt mode="content" size="medium" slug=page.slug tags=page.tags title=page.title url=page.url %}
+  {% include article.html content=page.content date=page.date description=page.description excerpt=page.excerpt mode="content" size="large" slug=page.slug tags=page.tags title=page.title url=page.url %}
 
+  {% comment %}
+    <nav class="ArticleLayout-nav">
+      <ul>
+        <li class="ArticleLayout-navItem">
+          <a href={{ "/articles/" | relative_url }}>{{ category | capitalize }}</a>
+        </li>
+        <li class="ArticleLayout-navItem ArticleLayout-navItem--older">
+          {%- if older_article -%}
+            <a class="ArticleLayout-navItemContent" href="{{ older_article.url | relative_url }}">Older</a>
+          {%- else -%}
+            <span class="ArticleLayout-navItemContent">Older</span>
+          {%- endif -%}
+        </li>
+        <li class="ArticleLayout-navItem Article-navItem--newer">
+          {%- if newer_article -%}
+            <a class="ArticleLayout-navItemContent" href="{{ newer_article.url | relative_url }}">Newer</a>
+          {%- else -%}
+            <span class="ArticleLayout-navItemContent">Newer</span>
+          {%- endif -%}
+        </li>
+      </ul>
+    </nav>
+  {% endcomment %}
 </div>
