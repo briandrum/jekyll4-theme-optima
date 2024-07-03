@@ -4,7 +4,7 @@
 #                                                                              #
 ################################################################################
 
-# baseurl: /jekyll4-theme-optima
+baseurl: /jekyll4-theme-optima
 
 permalink: /:categories/:year-:month-:day-:title/
 
@@ -13,7 +13,9 @@ defaults:
       path: "notes"
       type: posts
     values:
-      permalink: notes/:title
+      permalink: notes/:title/
+
+excerpt_separator: "<!-- more -->"
 
 plugins:
   - jekyll-archives
@@ -23,9 +25,14 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
+remote_theme: briandrum/jekyll4-theme-optima
+
 timezone: America/New_York
 
-# remote_theme: briandrum/jekyll4-theme-optima
+url: https://briandrum.github.io
+
+# Set to true to generate future-date posts
+# future: true
 
 ################################################################################
 #                                                                              #
@@ -87,7 +94,7 @@ jekyll-archives:
     year: '/archives/:year/'
     month: '/archives/:year/:month/'
     day: '/archives/:year/:month/:day/'
-    tag: '/tag/:name/'
+    tag: '/tags/:name/'
 
 ################################################################################
 #                                                                              #
@@ -97,7 +104,7 @@ jekyll-archives:
 
 pagination:
   enabled: true
-  per_page: 3
+  per_page: 10
   permalink: '/:num/'
   title: ':title - page :num of :max'
   limit: 0
@@ -127,24 +134,23 @@ optima:
   #
   plausible_analytics: briandrum.github.io
 
-  post_categories:
+  # post_categories:
 
-    articles:
-      enabled: true
+    # articles:
+      # enabled: true
 
-    journal:
-      enabled: true
+    # journal:
+      # enabled: true
 
-    notes:
-      enabled: true
+    # notes:
+      # enabled: true
 
   # If you want to link only specific pages in your header, uncomment this and
   # add the path to the pages in order as they should show up.
   #
   header_pages:
-    - pages/index.md
-    - journal
     - notes
+    - journal
     - articles
     - pages/now.md
     - pages/about.md
@@ -160,9 +166,9 @@ optima:
   #
   footer_pages_title: "Here"
   footer_pages:
-    - pages/index.md
-    - journal
+    - pages/home.md
     - notes
+    - journal
     - articles
     - pages/now.md
     - pages/about.md

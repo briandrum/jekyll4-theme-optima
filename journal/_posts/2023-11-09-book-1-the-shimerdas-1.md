@@ -6,9 +6,9 @@ description: "The one where Jim is orphaned."
 tags: [safety]
 ---
 
-<!--more-->
-
 I first heard of Ántonia on what seemed to me an interminable journey across the great midland plain of North America. I was ten years old then; I had lost both my father and mother within a year, and my Virginia relatives were sending me out to my grandparents, who lived in Nebraska. I traveled in the care of a mountain boy, Jake Marpole, one of the "hands" on my father's old farm under the Blue Ridge, who was now going West to work for my grandfather. Jake's experience of the world was not much wider than mine. He had never been in a railway train until the morning when we set out together to try our fortunes in a new world.
+
+<!-- more -->
 
 We went all the way in day-coaches, becoming more sticky and grimy with each stage of the journey. Jake bought everything the newsboys offered him: candy, oranges, brass collar buttons, a watch-charm, and for me a "Life of Jesse James," which I remember as one of the most satisfactory books I have ever read. Beyond Chicago we were under the protection of a friendly passenger conductor, who knew all about the country to which we were going and gave us a great deal of advice in exchange for our confidence. He seemed to us an experienced and worldly man who had been almost everywhere; in his conversation he threw out lightly the names of distant States and cities. He wore the rings and pins and badges of different fraternal orders to which he belonged. Even his cuff-buttons were engraved with hieroglyphics, and he was more inscribed than an Egyptian obelisk. Once when he sat down to chat, he told us that in the immigrant car ahead there was a family from "across the water" whose destination was the same as ours.
 

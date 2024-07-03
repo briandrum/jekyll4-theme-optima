@@ -1,7 +1,6 @@
 ---
 layout: note
 date: 2023-08-14 18:00:00 -0500
-description: "Test note."
 tags: [crosswalks, safety]
 ---
 
