@@ -3,13 +3,13 @@ layout: default
 ---
 
 <div class="JournalLayout">
-  {%- comment -%}
-    {%- if page.title -%}
-      <h1 class="JournalLayout-title">{{ page.title }}</h1>
-    {%- endif -%}
-  {%- endcomment -%}
 
-  {{ content | markdownify }}
+  {%- assign testContent = content | strip_newlines -%}
+  {%- unless testContent == "" -%}
+    <div class="JournalLayout-content">
+      {{ content | markdownify }}
+    </div>
+  {%- endunless -%}
 
   <nav class="JournalLayout-nav">
     {% if paginator.previous_page %}
@@ -21,7 +21,7 @@ layout: default
 
   {% for entry in paginator.posts %}
     <section class="JournalLayout-entry">
-      {% include entry.html content=entry.content date=entry.date description=entry.description excerpt=entry.excerpt mode="excerpt" size="small" slug=entry.slug tags=entry.tags title=entry.title url=entry.url %}
+      {% include entry.html content=entry.content date=entry.date description=entry.description excerpt=entry.excerpt mode="excerpt" size="medium" slug=entry.slug tags=entry.tags title=entry.title url=entry.url %}
     </section>
   {% endfor %}
 

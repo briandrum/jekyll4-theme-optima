@@ -23,6 +23,16 @@
   margin-inline: auto;
 }
 
+/* Since iframes have unknown width, just take the whole horizontal space */
+
+.Page:has(iframe) {
+  width: 100%;
+}
+
+.Page:has(iframe) .Page-body {
+  max-width: none;
+}
+
 .Page-header {
 }
 

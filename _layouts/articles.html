@@ -3,28 +3,33 @@ layout: default
 ---
 
 <div class="ArticlesLayout">
-  {%- if page.title -%}
-    <h1 class="ArticlesLayout-title">{{ page.title }}</h1>
-  {%- endif -%}
 
-  {{ content }}
+  {%- assign testContent = content | strip_newlines -%}
+  {%- unless testContent == "" -%}
+    <div class="ArticlesLayout-content">
+      {{ content | markdownify }}
+    </div>
+  {%- endunless -%}
+
+  <nav class="ArticlesLayout-nav">
+    {% if paginator.previous_page %}
+      <a class="ArticlesLayout-navContent" href="{{ paginator.previous_page_path | relative_url }}">View newer articles</a>
+    {%- else -%}
+      <span class="ArticlesLayout-navContent">Viewing the most recent articles</span>
+    {% endif %}
+  </nav>
 
   {% for article in paginator.posts %}
-    {% include article.html content=article.content date=article.date excerpt=article.excerpt mode="excerpt" size="medium" slug=article.slug tags=article.tags title=article.title url=article.url %}
+    <section class="ArticlesLayout-entry">
+      {% include article.html content=article.content date=article.date description=article.description excerpt=article.excerpt mode="excerpt" size="medium" slug=article.slug tags=article.tags title=article.title url=article.url %}
+    </section>
   {% endfor %}
 
-  {% if paginator.total_pages > 1 %}
-  <ul>
-    {% if paginator.previous_page %}
-    <li>
-      <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>
-    </li>
-    {% endif %}
+  <nav class="ArticlesLayout-nav">
     {% if paginator.next_page %}
-    <li>
-      <a href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
-    </li>
+      <a class="ArticlesLayout-navContent" href="{{ paginator.next_page_path | relative_url }}">View older articles</a>
+    {%- else -%}
+      <span class="ArticlesLayout-navContent">You've reached the end!</span>
     {% endif %}
-  </ul>
-  {% endif %}
+  </nav>
 </div>

@@ -1,2 +1,5 @@
 .ArticleLayout {
+  align-self: center;
+  margin-block: var(--space-m-l);
+  margin-inline: auto;
 }

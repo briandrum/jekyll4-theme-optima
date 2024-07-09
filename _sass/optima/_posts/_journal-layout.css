@@ -1,4 +1,7 @@
 .JournalLayout {
+  --JournalLayout-content-fontFamily: var(--font-serif);
+  --JournalLayout-content-fontSize: var(--step-0);
+  --JournalLayout-entry-marginBlock: var(--space-m-l) 0;
   --JournalLayout-nav-marginBlock: var(--space-l-xl) 0;
   --JournalLayout-navContent-backgroundColor: var(--slate-3);
   --JournalLayout-navContent-borderRadius: 0.25em;
@@ -17,7 +20,6 @@
   --JournalLayout-navContent-paddingBlock: var(--space-xs);
   --JournalLayout-navContent-paddingInline: var(--space-s);
   --JournalLayout-navContent-textAlign: center;
-  --JournalLayout-entry-marginBlock: var(--space-m-l) 0;
   --JournalLayout-title-color: var(--slate-8);
   --JournalLayout-title-fontFamily: var(--font-system);
   --JournalLayout-title-fontSize: var(--step-0);
@@ -40,6 +42,14 @@
   font-weight: var(--JournalLayout-title-fontWeight);
   margin-block: var(--JournalLayout-title-marginBlock);
   margin-inline: var(--JournalLayout-title-marginInline);
+}
+
+.JournalLayout-content {
+  font-family: var(--JournalLayout-content-fontFamily);
+  font-size: var(--JournalLayout-content-fontSize);
+  font-weight: var(--font-weight-3);
+  line-height: var(--line-height-5);
+  margin-block: var(--space-xs-s) 0;
 }
 
 .JournalLayout-nav {

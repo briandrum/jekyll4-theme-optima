@@ -13,6 +13,14 @@
   margin-inline: var(--NotesLayout-title-marginInline);
 }
 
+.NotesLayout-content {
+  font-family: var(--NotesLayout-content-fontFamily);
+  font-size: var(--NotesLayout-content-fontSize);
+  font-weight: var(--font-weight-3);
+  line-height: var(--line-height-5);
+  margin-block: var(--space-xs-s) 0;
+}
+
 .NotesLayout-nav {
   margin-block: var(--NotesLayout-nav-marginBlock);
 }

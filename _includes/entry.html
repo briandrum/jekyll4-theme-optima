@@ -1,42 +1,50 @@
 <article class="Entry Entry--size{{ include.size | capitalize }} h-entry">
   <header class="Entry-header">
-    <div class="Entry-published">
-      <time class="dt-published" datetime="{{ include.date | date_to_xmlschema }}" itemprop="datePublished">
-        <a class="Entry-publishedLink u-url" href="{{ include.url | relative_url }}">
+    {%- if include.mode == "content" -%}
+      <div class="Entry-published">
+        <time class="dt-published" datetime="{{ include.date | date_to_xmlschema }}" itemprop="datePublished">
           {{ include.date | date:site.optima.date_long_format }}
-        </a>
-      </time>
-    </div>
+        </time>
+      </div>
+    {%- endif -%}
     <h1 class="Entry-title">
       {%- if include.mode == "excerpt" -%}
         <a class="Entry-titleLink u-url" href="{{ include.url | relative_url }}">
-          {{ include.title |smartify }}
+          {{ include.title | smartify }}
         </a>
       {%- else if include.mode == "content" -%}
         <span class="Entry-titleLink u-url">
-          {{ include.title |smartify }}
+          {{ include.title | smartify }}
         </span>
       {%- endif -%}
     </h1>
   </header>
   <div class="Entry-content e-content">
-    {%- if include.mode == "content" -%}
-      {{ include.content | markdownify }}
-    {%- else if include.mode == "excerpt" -%}
+    <div class="Entry-description">
       {{ include.description | markdownify }}
+    </div>
+    {%- if include.mode == "excerpt" -%}
       {{ include.excerpt | markdownify }}
+      <div><a class="Entry-continueLink u-url" href="{{ include.url | relative_url }}">Continue reading</a></div>
+    {%- else if include.mode == "content" -%}
+      {{ include.content | markdownify }}
     {%- endif -%}
   </div>
-  {%- if include.mode == "content" -%}
-    <footer class="Entry-footer">
-      <dl class="Entry-tags Tags">
-        <dt class="Tags-term">Tagged</dt>
-        {% for tag in include.tags %}
-          <dd class="Tags-details">
-            <a class="Tags-detailsLink p-category" href="{{ tag | prepend: '/tag/' | relative_url }}">{{ tag | replace: "-", " " }}</a>
-          </dd>
-        {% endfor %}
-      </dl>
-    </footer>
-  {%- endif -%}
+  <footer class="Entry-footer">
+    <dl class="Entry-tags Tags">
+      <dt class="Tags-term">Tagged</dt>
+      {% for tag in include.tags %}
+        <dd class="Tags-details">
+          <a class="Tags-detailsLink p-category" href="{{ tag | prepend: '/tags/' | relative_url }}">{{ tag | replace: "-", " " }}</a>
+        </dd>
+      {% endfor %}
+    </dl>
+    <div class="Entry-published">
+      <time class="dt-published" datetime="{{ include.date | date_to_xmlschema }}" itemprop="datePublished">
+        <a class="Entry-publishedLink u-url" href="{{ include.url | relative_url }}">
+          {{ include.date | date:site.optima.time_and_date_short_format }}
+        </a>
+      </time>
+    </div>
+  </footer>
 </article>

@@ -3,27 +3,36 @@ layout: default
 ---
 
 <div class="HomeLayout">
+
+  {%- assign testContent = content | strip_newlines -%}
+  {%- unless testContent == "" -%}
+    <div class="HomeLayout-content">
+      {{ content | markdownify }}
+    </div>
+  {%- endunless -%}
+
+  <div class="HomeLayout-posts">
+    {%- assign posts = site.posts | sort: 'date' | reverse  -%}
+    {%- for post in posts limit: 10 -%}
+      <section class="HomeLayout-post">
+        <div class="HomeLayout-postCategory">
+          <a class="HomeLayout-postCategoryText" href="{{ post.categories.first | append: '/' | relative_url }}">{{ post.categories.first }}</a>
+        </div>
+        {% case post.categories.first %}
+          {% when "articles" %}
+            {% include article.html content=post.content date=post.date description=post.description excerpt=post.excerpt mode="excerpt" size="medium" slug=post.slug tags=post.tags title=post.title url=post.url %}
+          {% when "journal" %}
+            {% include entry.html content=post.content date=post.date description=post.description excerpt=post.excerpt mode="excerpt" size="medium" slug=post.slug tags=post.tags title=post.title url=post.url %}
+          {% when "notes" %}
+            {% include note.html slug=post.slug content=post.content date=post.date tags=post.tags url=post.url %}
+          {% else %}
+        {% endcase %}
+      </section>
+    {%- endfor -%}
+  </div>
+
   <div class="HomeLayout-content">
-    {{ content }}
+    Read other <a href="/articles/">articles</a>, <a href="/journal/">entries</a>, or  <a href="/notes/">notes</a>.
   </div>
-  <div class="HomeLayout-journal">
-    {% assign journal = site.posts | where: 'categories', 'journal' | sort: 'date' | reverse %}
-    {% for entry in journal limit:3 %}
-      <section class="HomeLayout-entry">
-        {% include entry.html content=entry.content date=entry.date description=entry.description excerpt=entry.excerpt mode="excerpt" size="small" slug=entry.slug tags=entry.tags title=entry.title url=entry.url %}
-      </section>
-    {% endfor %}
-  </div>
-  <div class="HomeLayout-notes">
-    {% assign notes2 = site.posts | where_exp: "note", "note.categories.first == 'notes'" | sort: 'date' | reverse %}
-    {% assign notes = site.posts | where: 'categories', 'notes' | sort: 'date' | reverse %}
-    {% for note in notes limit:3 %}
-      <section class="HomeLayout-note">
-        {% include note.html slug=note.slug content=note.content date=note.date size="small" tags=note.tags url=note.url %}
-      </section>
-    {% endfor %}
-    <nav class="HomeLayout-notes-nav">
-      <a class="HomeLayout-notes-navContent" href="{{ '/notes/' | relative_url }}">View older notes</a>
-    </nav>
-  </div>
+
 </div>

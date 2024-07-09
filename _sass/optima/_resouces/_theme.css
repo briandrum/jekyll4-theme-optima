@@ -7,32 +7,45 @@
   --anchor-visited-onHover-color: var(--blue-9);
 }
 
+/*******************************************************************************
+ *                                                                             *
+ * Layout                                                                      *
+ *                                                                             *
+ ******************************************************************************/
+
 /* Body */
 
 .Body {
   --Body-backgroundColor: var(--slate-2);
   --Body-color: var(--slate-12);
-  --Body-header-backgroundColor: inherit;
-  --Body-header-color: inherit;
   --Body-footer-backgroundColor: inherit;
   --Body-footer-color: inherit;
+  --Body-header-backgroundColor: inherit;
+  --Body-header-color: inherit;
 }
 
 /* Header */
 
 .Header {
   --Header-height: var(--space-xl-2xl);
+  --Header-mobileNav-backgroundColor: var(--slate-2);
+  --Header-mobileNav-boxShadowColor: var(--slate-2);
+  --Header-mobileNav-color: var(--slate-11);
+  --Header-mobileNavListItem-boxShadowColor: var(--slate-6);
+  --Header-name-color: var(--slate-11);
   --Header-name-fontFamily: var(--font-system);
   --Header-name-fontSize: var(--step--1);
   --Header-name-fontWeight: 600;
   --Header-navListItem-fontFamily: var(--font-system);
   --Header-navListItem-fontSize: var(--step--1);
   --Header-navListItem-fontWeight: 600;
-  --Header-mobileNav-backgroundColor: var(--slate-2);
-  --Header-mobileNav-boxShadowColor: var(--slate-2);
-  --Header-mobileNav-color: var(--slate-11);
-  --Header-mobileNavListItem-boxShadowColor: var(--slate-6);
 }
+
+/*******************************************************************************
+ *                                                                             *
+ * Components                                                                  *
+ *                                                                             *
+ ******************************************************************************/
 
 /* Icon */
 
@@ -48,61 +61,209 @@
   --Tags-detailsLink-color: var(--slate-10);
   --Tags-detailsLink-fontFamily: var(--font-system);
   --Tags-detailsLink-letterSpacing: 0.025em;
-  --Tags-detailsLink-paddingBlock: var(--space-3xs);
-  --Tags-detailsLink-paddingInline: var(--space-2xs);
-
   --Tags-detailsLink-link-color: var(--slate-10);
   --Tags-detailsLink-link-onHover-color: var(--blue-10);
+  --Tags-detailsLink-paddingBlock: var(--space-3xs);
+  --Tags-detailsLink-paddingInline: var(--space-2xs);
   --Tags-detailsLink-visited-color: var(--slate-10);
   --Tags-detailsLink-visited-onHover-color: var(--blue-10);
 }
 
+/*******************************************************************************
+ *                                                                             *
+ * Pages                                                                       *
+ *                                                                             *
+ ******************************************************************************/
+
 /* ArchivesLayout */
 
 .ArchivesLayout {
+  --ArchivesLayout-post-paddingBlock: var(--space-xs-s) var(--space-l-xl);
+  --ArchivesLayout-postCategory-color: var(--slate-9);
+  --ArchivesLayout-postCategory-cursor: default;
+  --ArchivesLayout-postCategory-fontFamily: var(--font-system);
+  --ArchivesLayout-postCategory-fontSize: var(--step--2);
+  --ArchivesLayout-postCategory-fontWeight: 800;
+  --ArchivesLayout-postCategory-letterSpacing: 0.1em;
+  --ArchivesLayout-postCategory-textTransform: uppercase;
+  --ArchivesLayout-postCategory-userSelect: none;
+  --ArchivesLayout-postCategoryText-link-color: var(--slate-8);
+  --ArchivesLayout-postCategoryText-link-onHover-color: var(--anchor-link-onHover-color);
+  --ArchivesLayout-postCategoryText-visited-color: var(--slate-8);
+  --ArchivesLayout-postCategoryText-visited-onHover-color: var(--anchor-visited-onHover-color);
   --ArchivesLayout-title-color: var(--slate-8);
   --ArchivesLayout-title-fontFamily: var(--font-system);
   --ArchivesLayout-title-fontSize: var(--step-0);
   --ArchivesLayout-title-fontStyle: normal;
   --ArchivesLayout-title-fontWeight: var(--font-weight-6);
-  --ArchivesLayout-title-marginBlock : var(--space-l) 0;
+  --ArchivesLayout-title-marginBlock : var(--space-l);
   --ArchivesLayout-title-marginInline: 0;
-}
-
-/* EntryLayout */
-
-.EntryLayout {
-  --EntryLayout-title-color: var(--slate-8);
-  --EntryLayout-title-fontFamily: var(--font-system);
-  --EntryLayout-title-fontSize: var(--step-0);
-  --EntryLayout-title-fontStyle: normal;
-  --EntryLayout-title-fontWeight: var(--font-weight-6);
-  --EntryLayout-title-marginBlock : var(--space-l) 0;
-  --EntryLayout-title-marginInline: 0;
 }
 
 /* HomeLayout */
 
 .HomeLayout {
-  --HomeLayout-note-marginBlock: var(--space-s-m) 0;
-  --HomeLayout-notes-nav-marginBlock: var(--space-m) 0;
-  --HomeLayout-notes-navContent-backgroundColor: var(--slate-3);
-  --HomeLayout-notes-navContent-borderRadius: 0.25em;
-  --HomeLayout-notes-navContent-color: var(--slate-10);
-  --HomeLayout-notes-navContent-cursor: default;
-  --HomeLayout-notes-navContent-display: block;
-  --HomeLayout-notes-navContent-fontSize: var(--step--2);
-  --HomeLayout-notes-navContent-fontWeight: var(--font-weight-4);
-  --HomeLayout-notes-navContent-letterSpacing: var(--letter-spacing-1);
-  --HomeLayout-notes-navContent-link-backgroundColor: var(--blue-3);
-  --HomeLayout-notes-navContent-link-color: var(--blue-10);
-  --HomeLayout-notes-navContent-link-cursor: pointer;
-  --HomeLayout-notes-navContent-link-onHover-backgroundColor: var(--blue-3);
-  --HomeLayout-notes-navContent-link-onHover-color: var(--blue-10);
-  --HomeLayout-notes-navContent-link-textDecoration: none;
-  --HomeLayout-notes-navContent-paddingBlock: var(--space-2xs);
-  --HomeLayout-notes-navContent-paddingInline: var(--space-s);
-  --HomeLayout-notes-navContent-textAlign: center;
+  --HomeLayout-post-paddingBlock: var(--space-xs-s) var(--space-l-xl);
+  --HomeLayout-postCategory-color: var(--slate-8);
+  --HomeLayout-postCategory-cursor: default;
+  --HomeLayout-postCategory-fontFamily: var(--font-system);
+  --HomeLayout-postCategory-fontSize: var(--step--2);
+  --HomeLayout-postCategory-fontWeight: 800;
+  --HomeLayout-postCategory-letterSpacing: 0.1em;
+  --HomeLayout-postCategory-textTransform: uppercase;
+  --HomeLayout-postCategory-userSelect: none;
+  --HomeLayout-postCategoryText-link-color: var(--slate-8);
+  --HomeLayout-postCategoryText-link-onHover-color: var(--anchor-link-onHover-color);
+  --HomeLayout-postCategoryText-visited-color: var(--slate-8);
+  --HomeLayout-postCategoryText-visited-onHover-color: var(--anchor-visited-onHover-color);
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * Posts                                                                       *
+ *                                                                             *
+ ******************************************************************************/
+
+/* Article */
+
+.Article {
+  --Article--sizeLarge-content-fontSize: var(--step-1);
+  --Article--sizeLarge-content-maxWidth: 40em;
+  --Article--sizeLarge-publishedFooter-fontSize: var(--step--1);
+  --Article--sizeLarge-publishedFooter-fontWeight: var(--font-weight-3);
+  --Article--sizeLarge-publishedHeader-fontSize: var(--step-1);
+  --Article--sizeLarge-publishedHeader-fontWeight: var(--font-weight-9);
+  --Article--sizeLarge-title-fontSize: var(--step-5);
+  --Article--sizeLarge-title-maxWidth: 20em;
+  --Article--sizeSmall-content-fontSize: var(--step-0);
+  --Article--sizeSmall-content-maxWidth: 40em;
+  --Article--sizeSmall-publishedFooter-fontSize: var(--step--2);
+  --Article--sizeSmall-publishedFooter-fontWeight: var(--font-weight-3);
+  --Article--sizeSmall-publishedHeader-fontSize: var(--step--2);
+  --Article--sizeSmall-publishedHeader-fontWeight: var(--font-weight-3);
+  --Article--sizeSmall-title-fontSize: var(--step-3);
+  --Article--sizeSmall-title-maxWidth: 20em;
+  --Article-content-anchor-link-color: var(--anchor-link-color);
+  --Article-content-anchor-link-onHover-color: var(--anchor-link-onHover-color);
+  --Article-content-anchor-visited-color: var(--anchor-visited-color);
+  --Article-content-anchor-visited-onHover-color: var(--anchor-visited-onHover-color);
+  --Article-content-color: var(--slate-12);
+  --Article-content-fontFamily: var(--font-serif);
+  --Article-content-fontSize: var(--step-0);
+  --Article-content-fontWeight: var(--font-weight-3);
+  --Article-content-iframe-borderRadius: var(--space-3xs);
+  --Article-content-img-borderRadius: var(--space-3xs);
+  --Article-content-lineHeight: var(--line-height-5);
+  --Article-content-liteYoutube-borderRadius: var(--space-3xs);
+  --Article-content-maxWidth: 40em;
+  --Article-footer-marginBlock: var(--space-2xs) 0;
+  --Article-published-color: var(--slate-9);
+  --Article-published-fontFamily: var(--font-grotesque);
+  --Article-published-marginBlock: var(--Article-footer-marginBlock);
+  --Article-publishedFooter-fontSize: var(--step--2);
+  --Article-publishedFooter-fontWeight: var(--font-weight-3);
+  --Article-publishedHeader-fontSize: var(--step--2);
+  --Article-publishedHeader-fontWeight: var(--font-weight-3);
+  --Article-publishedLink-color: var(--slate-9);
+  --Article-publishedLink-onHover-color: var(--slate-11);
+  --Article-tags-fontSize: var(--step--2);
+  --Article-tags-lineHeight: var(--line-height-1);
+  --Article-tags-marginBlock: var(--space-2xs) 0;
+  --Article-tags-maxWidth: 40em;
+  --Article-title-anchor-link-onHover-color: var(--blue-10);
+  --Article-title-fontSize: var(--step-3);
+  --Article-title-maxWidth: 20em;
+}
+
+/* ArticleLayout */
+
+.ArticleLayout {
+}
+
+/* ArticlesLayout */
+
+.ArticlesLayout {
+  --ArticlesLayout-title-color: var(--slate-8);
+  --ArticlesLayout-title-fontFamily: var(--font-system);
+  --ArticlesLayout-title-fontSize: var(--step-0);
+  --ArticlesLayout-title-fontStyle: normal;
+  --ArticlesLayout-title-fontWeight: var(--font-weight-6);
+  --ArticlesLayout-title-marginBlock : var(--space-l) 0;
+  --ArticlesLayout-title-marginInline: 0;
+}
+
+.Entry {
+  --Entry--sizeLarge-content-fontSize: var(--step-1);
+  --Entry--sizeLarge-content-maxWidth: 40em;
+  --Entry--sizeLarge-publishedFooter-fontSize: var(--step--1);
+  --Entry--sizeLarge-publishedFooter-fontWeight: var(--font-weight-3);
+  --Entry--sizeLarge-publishedHeader-fontSize: var(--step-1);
+  --Entry--sizeLarge-publishedHeader-fontWeight: var(--font-weight-9);
+  --Entry--sizeLarge-title-fontSize: var(--step-5);
+  --Entry--sizeLarge-title-maxWidth: 20em;
+  --Entry--sizeSmall-content-fontSize: var(--step-0);
+  --Entry--sizeSmall-content-maxWidth: 40em;
+  --Entry--sizeSmall-publishedFooter-fontSize: var(--step--2);
+  --Entry--sizeSmall-publishedFooter-fontWeight: var(--font-weight-3);
+  --Entry--sizeSmall-publishedHeader-fontSize: var(--step--2);
+  --Entry--sizeSmall-publishedHeader-fontWeight: var(--font-weight-3);
+  --Entry--sizeSmall-title-fontSize: var(--step-3);
+  --Entry--sizeSmall-title-maxWidth: 20em;
+  --Entry-content-anchor-link-color: var(--anchor-link-color);
+  --Entry-content-anchor-link-onHover-color: var(--anchor-link-onHover-color);
+  --Entry-content-anchor-visited-color: var(--anchor-visited-color);
+  --Entry-content-anchor-visited-onHover-color: var(--anchor-visited-onHover-color);
+  --Entry-content-color: var(--slate-12);
+  --Entry-content-fontFamily: var(--font-serif);
+  --Entry-content-fontSize: var(--step-0);
+  --Entry-content-fontWeight: var(--font-weight-3);
+  --Entry-content-iframe-borderRadius: var(--space-3xs);
+  --Entry-content-img-borderRadius: var(--space-3xs);
+  --Entry-content-lineHeight: var(--line-height-5);
+  --Entry-content-liteYoutube-borderRadius: var(--space-3xs);
+  --Entry-content-maxWidth: 40em;
+  --Entry-continueLink-borderColor: var(--slate-6);
+  --Entry-continueLink-borderRadius: var(--space-3xs);
+  --Entry-continueLink-borderStyle: solid;
+  --Entry-continueLink-borderWidth: 1px;
+  --Entry-continueLink-color: var(--anchor-link-color);
+  --Entry-continueLink-fontFamily: var(--font-grotesque);
+  --Entry-continueLink-fontSize: var(--step--2);
+  --Entry-continueLink-fontWeight: var(--font-weight-6);
+  --Entry-continueLink-letterSpacing: 0.05em;
+  --Entry-continueLink-link-borderColor: var(--blue-6);
+  --Entry-continueLink-link-color: var(--anchor-link-color);
+  --Entry-continueLink-link-onHover-borderColor: var(--blue-7);
+  --Entry-continueLink-link-onHover-color: var(--anchor-link-onHover-color);
+  --Entry-continueLink-padding: var(--space-3xs) var(--space-2xs);
+  --Entry-continueLink-textDecoration: none;
+  --Entry-continueLink-textTransform: uppercase;
+  --Entry-continueLink-visited-borderColor: var(--blue-6);
+  --Entry-continueLink-visited-color: var(--anchor-visited-color);
+  --Entry-continueLink-visited-onHover-borderColor: var(--blue-7);
+  --Entry-continueLink-visited-onHover-color: var(--anchor-visited-onHover-color);
+  --Entry-footer-marginBlock: var(--space-2xs) 0;
+  --Entry-published-color: var(--slate-9);
+  --Entry-published-fontFamily: var(--font-grotesque);
+  --Entry-published-marginBlock: var(--Entry-footer-marginBlock);
+  --Entry-publishedFooter-fontSize: var(--step--2);
+  --Entry-publishedFooter-fontWeight: var(--font-weight-3);
+  --Entry-publishedHeader-fontSize: var(--step--2);
+  --Entry-publishedHeader-fontWeight: var(--font-weight-3);
+  --Entry-publishedLink-color: var(--slate-9);
+  --Entry-publishedLink-onHover-color: var(--slate-11);
+  --Entry-tags-fontSize: var(--step--2);
+  --Entry-tags-lineHeight: var(--line-height-1);
+  --Entry-tags-marginBlock: var(--space-2xs) 0;
+  --Entry-tags-maxWidth: 40em;
+  --Entry-title-anchor-link-onHover-color: var(--blue-10);
+  --Entry-title-fontSize: var(--step-3);
+  --Entry-title-maxWidth: 20em;
+}
+
+/* EntryLayout */
+
+.EntryLayout {
 }
 
 /* JournalLayout */
@@ -120,38 +281,34 @@
 /* Note */
 
 .Note {
-  --Note-content-color: var(--slate-12);
-  --Note-content-fontFamily: var(--font-serif);
-  --Note-content-fontSize: var(--step-0);
-  --Note-content-fontWeight: var(--font-weight-3);
-  --Note-content-lineHeight: var(--line-height-5);
-  --Note-content-maxWidth: 32em;
-
-  --Note--sizeSmall-content-fontSize: var(--step--1);
-  --Note--sizeSmall-content-maxWidth: 24em;
   --Note--sizeLarge-content-fontSize: var(--step-2);
   --Note--sizeLarge-content-maxWidth: 24em;
-
+  --Note--sizeLarge-published-fontSize: var(--step--1);
+  --Note--sizeLarge-published-fontWeight: var(--font-weight-3);
+  --Note--sizeSmall-content-fontSize: var(--step--1);
+  --Note--sizeSmall-content-maxWidth: 24em;
+  --Note--sizeSmall-published-fontSize: var(--step--2);
+  --Note--sizeSmall-published-fontWeight: var(--font-weight-3);
   --Note-content-anchor-link-color: var(--anchor-link-color);
   --Note-content-anchor-link-onHover-color: var(--anchor-link-onHover-color);
   --Note-content-anchor-visited-color: var(--anchor-visited-color);
   --Note-content-anchor-visited-onHover-color: var(--anchor-visited-onHover-color);
-
+  --Note-content-color: var(--slate-12);
+  --Note-content-fontFamily: var(--font-serif);
+  --Note-content-fontSize: var(--step-0);
+  --Note-content-fontWeight: var(--font-weight-3);
+  --Note-content-img-borderRadius: var(--space-3xs);
+  --Note-content-lineHeight: var(--line-height-5);
+  --Note-content-liteYoutube-borderRadius: var(--space-3xs);
+  --Note-content-maxWidth: 32em;
   --Note-footer-marginBlock: var(--space-2xs) 0;
-
   --Note-published-color: var(--slate-9);
   --Note-published-fontFamily: var(--font-system);
   --Note-published-fontSize: var(--step--2);
-  --Note-published-fontWeight: var(--font-weight-4);
+  --Note-published-fontWeight: var(--font-weight-3);
   --Note-published-marginBlock: var(--Note-footer-marginBlock);
   --Note-publishedLink-color: var(--slate-9);
   --Note-publishedLink-onHover-color: var(--slate-11);
-
-  --Note--sizeSmall-published-fontSize: var(--step--2);
-  --Note--sizeSmall-published-fontWeight: var(--font-weight-4);
-  --Note--sizeLarge-published-fontSize: var(--step--1);
-  --Note--sizeLarge-published-fontWeight: var(--font-weight-4);
-
   --Note-tags-fontSize: var(--step--2);
   --Note-tags-lineHeight: var(--line-height-1);
   --Note-tags-marginBlock: var(--Note-footer-marginBlock);
@@ -181,6 +338,8 @@
 /* NotesLayout */
 
 .NotesLayout {
+  --NotesLayout-content-fontFamily: var(--font-serif);
+  --NotesLayout-content-fontSize: var(--step-0);
   --NotesLayout-nav-marginBlock: var(--space-l) 0;
   --NotesLayout-navContent-backgroundColor: var(--slate-3);
   --NotesLayout-navContent-borderRadius: 0.25em;

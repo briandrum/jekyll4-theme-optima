@@ -12,12 +12,12 @@ layout: default
   {% for post in page.posts %}
     {%- if post.categories.first == "articles" -%}
       <section class="ArchivesLayout-article">
-        {% include entry.html content=post.content date=post.date description=post.description excerpt=post.excerpt mode="excerpt" size="" slug=post.slug tags=post.tags title=post.title url=post.url %}
+        {% include entry.html content=post.content date=post.date description=post.description excerpt=post.excerpt mode="excerpt" size="medium" slug=post.slug tags=post.tags title=post.title url=post.url %}
       </section>
     {%- endif -%}
     {%- if post.categories.first == "journal" -%}
       <section class="ArchivesLayout-entry">
-        {% include entry.html content=post.content date=post.date description=post.description excerpt=post.excerpt mode="excerpt" size="" slug=post.slug tags=post.tags title=post.title url=post.url %}
+        {% include entry.html content=post.content date=post.date description=post.description excerpt=post.excerpt mode="excerpt" size="medium" slug=post.slug tags=post.tags title=post.title url=post.url %}
       </section>
     {%- endif -%}
     {%- if post.categories.first == "notes" -%}

@@ -8,8 +8,12 @@
   max-width: var(--Note-content-maxWidth);
 }
 
-.Note-content a:link {
+.Note-content a:link,
+.Note-content a:visited {
   color: var(--Note-content-anchor-link-color);
+  font-weight: 400;
+  text-decoration-thickness: 0.05em;
+  text-underline-offset: 0.1em;
 }
 
 .Note-content a:link:hover {
@@ -24,9 +28,26 @@
   color: var(--Note-content-anchor-visited-onHover-color);
 }
 
+.Note-content figure {
+  margin-block: calc(var(--line-height-5) / 4 * 1em) 0;
+  margin-inline: 0;
+}
+
+.Note-content figcaption {
+  font-size: var(--step--1);
+  font-style: italic;
+  margin-block-start: var(--space-3xs-2xs);
+}
+
 .Note-content img {
+  border-radius: var(--Note-content-img-borderRadius);
   display: block;
   max-width: 100%;
+}
+
+.Note-content lite-youtube {
+  border-radius: var(--Note-content-liteYoutube-borderRadius);
+  margin-block: calc(var(--line-height-5) / 4 * 1em) 0;
 }
 
 .Note-tags {
