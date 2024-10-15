@@ -56,6 +56,26 @@
 /* Tags */
 
 .Tags {
+  --Tags-detailsLink--freq1-link-backgroundColor: var(--slate-3);
+  --Tags-detailsLink--freq1-link-color: var(--slate-10);
+  --Tags-detailsLink--freq1-link-onHover-backgroundColor: var(--blue-3);
+  --Tags-detailsLink--freq1-link-onHover-color: var(--blue-10);
+  --Tags-detailsLink--freq2-link-backgroundColor: var(--slate-4);
+  --Tags-detailsLink--freq2-link-color: var(--slate-10);
+  --Tags-detailsLink--freq2-link-onHover-backgroundColor: var(--blue-4);
+  --Tags-detailsLink--freq2-link-onHover-color: var(--blue-10);
+  --Tags-detailsLink--freq3-link-backgroundColor: var(--slate-5);
+  --Tags-detailsLink--freq3-link-color: var(--slate-11);
+  --Tags-detailsLink--freq3-link-onHover-backgroundColor: var(--blue-5);
+  --Tags-detailsLink--freq3-link-onHover-color: var(--blue-11);
+  --Tags-detailsLink--freq4-link-backgroundColor: var(--slate-6);
+  --Tags-detailsLink--freq4-link-color: var(--slate-11);
+  --Tags-detailsLink--freq4-link-onHover-backgroundColor: var(--blue-6);
+  --Tags-detailsLink--freq4-link-onHover-color: var(--blue-11);
+  --Tags-detailsLink--freq5-link-backgroundColor: var(--slate-7);
+  --Tags-detailsLink--freq5-link-color: var(--slate-11);
+  --Tags-detailsLink--freq5-link-onHover-backgroundColor: var(--blue-7);
+  --Tags-detailsLink--freq5-link-onHover-color: var(--blue-11);
   --Tags-detailsLink-backgroundColor: var(--slate-3);
   --Tags-detailsLink-borderRadius: 0.25em;
   --Tags-detailsLink-color: var(--slate-10);
