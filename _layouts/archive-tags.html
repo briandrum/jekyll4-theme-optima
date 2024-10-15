@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+{% capture tags %}
+  {% for tag in site.tags %}
+    {{ tag[1].size }},
+  {% endfor %}
+{% endcapture %}
+{% assign sorted_tags = tags | split: ',' | sort |reverse %}
+{% assign per100 = sorted_tags[0] | plus: 0 %}
+{% assign per080 = per100 | times: 0.8 %}
+{% assign per060 = per100 | times: 0.6 %}
+{% assign per040 = per100 | times: 0.4 %}
+{% assign per020 = per100 | times: 0.2 %}
+{% assign Tags-detailsLinkClass = "" %}
+
+<div class="ArchivesLayout">
+  <h1 class="ArchivesLayout-title">Tags</h1>
+  <dl class="ArchivesLayout-tags Tags Tags--justifyBetween">
+    {% assign sortedTags = site.tags | sort: tag[0] %}
+    {% for tag in sortedTags %}
+      <dd class="Tags-details">
+        {% if tag[1].size <= per100 and tag[1].size > per080 %}
+          {% assign Tags-detailsLinkClass = "Tags-detailsLink--freq5" %}
+        {% elsif tag[1].size <= per080 and tag[1].size > per060  %}
+          {% assign Tags-detailsLinkClass = "Tags-detailsLink--freq4" %}
+        {% elsif tag[1].size <= per060 and tag[1].size > per040  %}
+          {% assign Tags-detailsLinkClass = "Tags-detailsLink--freq3" %}
+        {% elsif tag[1].size <= per040tag[1].size > per020  %}
+          {% assign Tags-detailsLinkClass = "Tags-detailsLink--freq2" %}
+        {% else %}
+          {% assign Tags-detailsLinkClass = "Tags-detailsLink--freq1" %}
+        {% endif %}
+        <a class="Tags-detailsLink {{ Tags-detailsLinkClass }} p-category" href="{{ tag[0] | prepend: '/tags/' | relative_url }}">{{ tag[0] | replace: "-", " " }}</a>
+      </dd>
+    {% endfor %}
+  </dl>
+</div>
