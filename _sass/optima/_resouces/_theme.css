@@ -329,7 +329,7 @@
   --Note-published-marginBlock: var(--Note-footer-marginBlock);
   --Note-publishedLink-color: var(--slate-9);
   --Note-publishedLink-onHover-color: var(--slate-11);
-  --Note-tags-fontSize: var(--step--2);
+  --Note-tags-fontSize: var(--step--1);
   --Note-tags-lineHeight: var(--line-height-1);
   --Note-tags-marginBlock: var(--Note-footer-marginBlock);
   --Note-tags-maxWidth: 40em;
