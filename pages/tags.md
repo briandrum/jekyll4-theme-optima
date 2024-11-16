@@ -1,7 +1,5 @@
 ---
-layout: default
+layout: archive-tags
 title: Tags
 permalink: /tags/
 ---
-
-Hello tags
