@@ -33,11 +33,11 @@
       <ul class="Footer-navList">
         {%- if site.plugins contains "jekyll-feed" -%}
           <li class="Footer-navListItem">
-            <a class="Footer-link Footer-link--withIcon" href="{{ 'feed.xml' | absolute_url }}">
+            <a class="Footer-link" href="{{ 'feed.xml' | absolute_url }}" title="Subscribe at {{ 'feed.xml' | absolute_url | remove_first: "https" | remove_first: "http" | remove_first: "://" }}">
               <svg class="Footer-linkIcon Icon">
                 <use xlink:href="{{ 'assets/optima-social-icons.svg#rss' | relative_url }}"></use>
               </svg>
-              <span>{{ 'feed.xml' | absolute_url | remove_first: "https" | remove_first: "http" | remove_first: "://" }}</span>
+              <span>RSS</span>
             </a>
           </li>
         {%- endif -%}
