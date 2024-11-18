@@ -1,8 +1,8 @@
-<li class="Footer-navListItem">{% assign entry = include.item %}
-  <a {% unless entry.platform == 'rss' %}rel="me" {% endunless %}href="{{ entry.user_url }}" title="{{ entry.title | default: entry.platform }}" class="Footer-link Footer-link--withIcon">
+<li class="Footer-navListItem">{% assign entry = include.item %}{% capture title %}{{ entry.user_name }} on {{ entry.platform }}{% endcapture %}
+  <a {% unless entry.platform == 'rss' %}rel="me" {% endunless %}href="{{ entry.user_url }}" title="{{ entry.title | default: title }}" class="Footer-link">
     <svg class="Footer-linkIcon Icon">
-      <use xlink:href="{{ '/assets/optima-social-icons.svg#' | append: entry.platform | relative_url }}"></use>
+      <use xlink:href="{{ '/assets/optima-social-icons.svg#' | append: entry.symbol_id | relative_url }}"></use>
     </svg>
-    <span>{{ entry.user_name }}</span>
+    <span>{{ entry.platform }}</span>
   </a>
 </li>

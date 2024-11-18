@@ -7,7 +7,8 @@
 }
 
 .Footer-heading {
-  color: inherit;
+  color: var(--slate-8);
+  font-family: var(--font-grotesque);
   font-size: var(--step--1);
   font-weight: var(--font-weight-6);
   line-height: var(--line-height-5);
@@ -16,10 +17,12 @@
 
 .Footer-content p,
 .Footer-navList {
-  font-size: var(--step--2);
+  color: var(--slate-11);
+  font-family: var(--font-grotesque);
+  font-size: var(--step--1);
   font-weight: var(--font-weight-3);
   line-height: var(--line-height-5);
-  margin-block: var(--space-3xs-2xs) 0;
+  margin-block: var(--space-4xs-3xs) 0;
 }
 
 .Footer-navList {
@@ -33,22 +36,25 @@
 }
 
 .Footer-link:link,
-.Footer-link:visited,
-.Footer-link:hover,
-.Footer-link:focus,
-.Footer-link:active {
+.Footer-link:visited {
   background-color: unset;
   color: inherit;
   text-decoration: none;
 }
 
-.Footer-link--withIcon {
-  align-items: center;
-  display: flex;
+.Footer-link:hover,
+.Footer-link:focus,
+.Footer-link:active {
+  color: var(--blue-10);
+  text-decoration: none;
 }
 
 .Footer-linkIcon {
-  margin-right: var(--space-4xs-3xs);
+  color: var(--slate-12);
+  fill: var(--slate-12);
+  height: 1em;
+  vertical-align: middle;
+  width: 1.25em;
 }
 
 @media (min-width: 60em) {
@@ -66,13 +72,13 @@
   }
 
   .Footer-nav {
-    grid-column-end: 7;
+    grid-column-end: 8;
     grid-column-start: 5;
   }
 
   .Footer-social {
     grid-column-end: 10;
-    grid-column-start: 7;
+    grid-column-start: 8;
   }
 
   .Footer-other {

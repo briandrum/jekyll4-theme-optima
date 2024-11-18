@@ -9,9 +9,10 @@ permalink: /assets/optima-social-icons.svg
   in the footer and therefore inject the "rss" icon outside the iteration loop.
 {% endcomment %}
 {% for entry in site.optima.social_links %}
-  {%- assign symbol_id = entry.platform -%}
+  {%- assign symbol_id = entry.symbol_id -%}
+  {%- assign view_box = entry.view_box -%}
   {%- unless symbol_id == "rss" -%}
-    {%- include social/svg_symbol.html key = symbol_id -%}
+    {%- include social/svg_symbol.html key=symbol_id view_box=view_box-%}
   {% endunless %}
 {%- endfor -%}
   {%- include social/svg_symbol.html key = "rss" -%}
