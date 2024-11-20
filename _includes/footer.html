@@ -27,6 +27,14 @@
           {%- endif -%}
         {%- endfor -%}
       </ul>
+      <h1 class="Footer-heading">{{ site.optima.other_links_title }}</h1>
+      <ul class="Footer-navList">
+        {%- for other_link in site.optima.other_links -%}
+          <li class="Footer-navListItem">
+            <a class="Footer-link" href="{{ other_link.site_url }}">{{ other_link.site_name }}</a>
+          </li>
+        {%- endfor -%}
+      </ul>
     </div>
     <div class="Footer-social">
       <h1 class="Footer-heading">{{ site.optima.social_links_title }}</h1>
@@ -42,16 +50,6 @@
           </li>
         {%- endif -%}
         {%- include social/social.html -%}
-      </ul>
-    </div>
-    <div class="Footer-other">
-      <h1 class="Footer-heading">{{ site.optima.other_links_title }}</h1>
-      <ul class="Footer-navList">
-        {%- for other_link in site.optima.other_links -%}
-          <li class="Footer-navListItem">
-            <a class="Footer-link" href="{{ other_link.site_url }}">{{ other_link.site_name }}</a>
-          </li>
-        {%- endfor -%}
       </ul>
     </div>
   </div>

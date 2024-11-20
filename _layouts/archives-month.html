@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<div class="ArchivesLayout">
+  <h1 class="ArchivesLayout-title">Archives</h1>
+  {%- assign testContent = content | strip_newlines -%}
+  {%- unless testContent == "" -%}
+    <div class="ArchivesLayout-content">
+      {{ content | markdownify }}
+    </div>
+  {%- endunless -%}
+  <ol class="ArchivesLayout-years">
+    {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+    {% for year in posts_by_year %}
+      <li>
+        <h1 class="ArchivesLayout-year">{{ year.name }}</h1>
+        <ol class="ArchivesLayout-months">
+          {% assign posts_by_month = year.items | group_by_exp: "post", "post.date | date: '%m'" | reverse %}
+          {% for month in posts_by_month %}
+            {% capture url %}archives/{{ year.name }}-{{ month.name}}/{% endcapture %}
+            <li class="ArchivesLayout-month">
+              <a class="ArchivesLayout-monthLink" href="{{ url | relative_url  }}">{{ month.items.first.date | date: "%B" }}</a>
+            </li>
+          {% endfor %}
+        </ol>
+      </li>
+    {% endfor %}
+  </ol>
+</div>

@@ -1,0 +1,22 @@
+.ArchiveLayout {
+  align-self: center;
+  margin-inline: auto;
+  max-width: 100%;
+}
+
+.ArchiveLayout-title {
+  color: var(--ArchiveLayout-title-color);
+  font-family: var(--ArchiveLayout-title-fontFamily);
+  font-size: var(--ArchiveLayout-title-fontSize);
+  font-style: var(--ArchiveLayout-title-fontStyle);
+  font-weight: var(--ArchiveLayout-title-fontWeight);
+  margin-block: var(--ArchiveLayout-title-marginBlock);
+  margin-inline: var(--ArchiveLayout-title-marginInline);
+  position: relative;
+}
+
+.ArchiveLayout-article,
+.ArchiveLayout-entry,
+.ArchiveLayout-note {
+  margin-block: var(--space-2xs-xs) 0;
+}
