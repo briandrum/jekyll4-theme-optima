@@ -1,5 +1,6 @@
 ---
 layout: search
-title: Search
+short_title: Search
+title: Search by keyword
 permalink: /search/
 ---

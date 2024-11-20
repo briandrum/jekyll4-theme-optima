@@ -1,7 +1,7 @@
 ---
 layout: page
 short_title: Now
-title: What I'm Doing Now
+title: What I'm doing now
 permalink: /now/
 ---
 

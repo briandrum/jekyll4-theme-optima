@@ -81,19 +81,13 @@ include: [".well-known"]
 
 jekyll-archives:
   enabled:
-    - year
     - month
-    - day
     - tags
   layouts:
-    year: archive-year
-    month: archive-month
-    day: archive-day
-    tag: archive-tag
+    month: archive
+    tag: archive
   permalinks:
-    year: '/archives/:year/'
-    month: '/archives/:year/:month/'
-    day: '/archives/:year/:month/:day/'
+    month: '/archives/:year-:month/'
     tag: '/tags/:name/'
 
 ################################################################################
@@ -122,6 +116,7 @@ optima:
   #
   time_and_date_short_format: "%-I:%M %P - %b %-d, %Y"
   date_long_format: "%B %-d, %Y"
+  date_short_format: "%b %-d, %Y"
 
   # Features
   #
