@@ -1,0 +1,67 @@
+.ArchivesLayout {
+  align-self: center;
+  margin-inline: auto;
+  max-width: 100%;
+}
+
+.ArchivesLayout-title {
+  color: var(--ArchivesLayout-title-color);
+  font-family: var(--ArchivesLayout-title-fontFamily);
+  font-size: var(--ArchivesLayout-title-fontSize);
+  font-style: var(--ArchivesLayout-title-fontStyle);
+  font-weight: var(--ArchivesLayout-title-fontWeight);
+  margin-block: var(--ArchivesLayout-title-marginBlock);
+  margin-inline: var(--ArchivesLayout-title-marginInline);
+  position: relative;
+}
+
+.ArchivesLayout-years {
+  list-style-type: none;;
+  margin-block: 0;
+  margin-inline: 0;
+  padding-block: 0;
+  padding-inline: 0;
+}
+
+.ArchivesLayout-year {
+  color: var(--slate-7);
+  font-family: var(--font-grotesque);
+  font-size: var(--step-1);
+  font-weight: var(--font-weight-9);
+  margin-block: var(--space-m-l) 0;
+  margin-inline: 0;
+  padding-block: 0;
+  padding-inline: 0;
+}
+
+.ArchivesLayout-months {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: var(--space-xs-s);
+  list-style-type: none;;
+  margin-block: 0;
+  margin-inline: 0;
+  padding-block: 0;
+  padding-inline: 0;
+}
+
+.ArchivesLayout-month {
+  color: var(--slate-11);
+  font-family: var(--font-grotesque);
+  font-size: var(--step-4);
+  margin-block: 0;
+  margin-inline: 0;
+  padding-block: 0;
+  padding-inline: 0;
+}
+
+.ArchivesLayout-monthLink:link,
+.ArchivesLayout-monthLink:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+.ArchivesLayout-monthLink:hover,
+.ArchivesLayout-monthLink:focus {
+  color: var(--blue-9);
+}

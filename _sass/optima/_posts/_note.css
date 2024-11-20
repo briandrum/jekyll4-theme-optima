@@ -107,6 +107,10 @@
   font-weight: var(--Note--sizeSmall-published-fontWeight);
 }
 
+.Note--sizeSmall .Note-tags {
+  font-size: var(--Note--sizeLarge-tags-fontSize);
+}
+
 .Note--sizeLarge .Note-content {
   font-size: var(--Note--sizeLarge-content-fontSize);
   max-width: var(--Note--sizeLarge-content-maxWidth);
@@ -116,3 +120,8 @@
   font-size: var(--Note--sizeLarge-published-fontSize);
   font-weight: var(--Note--sizeLarge-published-fontWeight);
 }
+
+.Note--sizeLarge .Note-tags {
+  font-size: var(--Note--sizeLarge-tags-fontSize);
+}
+

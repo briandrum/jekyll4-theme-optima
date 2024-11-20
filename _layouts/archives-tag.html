@@ -16,6 +16,12 @@ layout: default
 
 <div class="ArchivesLayout">
   <h1 class="ArchivesLayout-title">Tags</h1>
+  {%- assign testContent = content | strip_newlines -%}
+  {%- unless testContent == "" -%}
+    <div class="ArchivesLayout-content">
+      {{ content | markdownify }}
+    </div>
+  {%- endunless -%}
   <dl class="ArchivesLayout-tags Tags Tags--justifyBetween">
     {%- assign sortedTags = site.tags | sort: tag[0] -%}
     {% for tag in sortedTags -%}

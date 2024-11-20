@@ -68,7 +68,8 @@
 .Entry-content a:link
 .Entry-content a:visited {
   font-weight: 400;
-  text-decoration-thickness: 0.05em;
+  text-decoration-skip-ink: all;
+  text-decoration-thickness: 0.04em;
   text-underline-offset: 0.1em;
 }
 
@@ -145,7 +146,7 @@
   margin-inline: 0;
 }
 
-.Entry-content figcaption {
+.Entry-content figcaption:not(:empty) {
   font-size: var(--step--1);
   font-style: italic;
   margin-block-start: var(--space-3xs-2xs);
@@ -166,6 +167,10 @@
   background-clip: text;
   background-image: linear-gradient(to top, transparent 0, var(--Entry-content-color) calc(3 * var(--Entry-content-fontSize) * var(--Entry-content-lineHeight)), var(--Entry-content-color) 100%);
   -webkit-text-fill-color: transparent;
+}
+
+.Entry-content div:has(.Entry-continueLink) {
+  margin-block: var(--space-xs-s) var(--space-3xs-2xs);
 }
 
 .Entry-continueLink {

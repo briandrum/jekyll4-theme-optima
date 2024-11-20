@@ -1,0 +1,10 @@
+<article class="Archive">
+  <a class="Archive-link" href="{{ include.url }}">
+    <div class="Archive-publishedDate">
+      {{ include.date | date:site.optima.date_short_format  }}
+    </div>
+    <h1 class="Archive-title">
+      {{ include.title | markdownify | strip_html }}
+    </h1>
+  </a>
+</article>

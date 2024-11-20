@@ -95,22 +95,21 @@
  *                                                                             *
  ******************************************************************************/
 
+/* ArchiveLayout */
+
+.ArchiveLayout {
+  --ArchiveLayout-title-color: var(--slate-8);
+  --ArchiveLayout-title-fontFamily: var(--font-system);
+  --ArchiveLayout-title-fontSize: var(--step-0);
+  --ArchiveLayout-title-fontStyle: normal;
+  --ArchiveLayout-title-fontWeight: var(--font-weight-6);
+  --ArchiveLayout-title-marginBlock : var(--space-l);
+  --ArchiveLayout-title-marginInline: 0;
+}
+
 /* ArchivesLayout */
 
 .ArchivesLayout {
-  --ArchivesLayout-post-paddingBlock: var(--space-xs-s) var(--space-l-xl);
-  --ArchivesLayout-postCategory-color: var(--slate-9);
-  --ArchivesLayout-postCategory-cursor: default;
-  --ArchivesLayout-postCategory-fontFamily: var(--font-system);
-  --ArchivesLayout-postCategory-fontSize: var(--step--2);
-  --ArchivesLayout-postCategory-fontWeight: 800;
-  --ArchivesLayout-postCategory-letterSpacing: 0.1em;
-  --ArchivesLayout-postCategory-textTransform: uppercase;
-  --ArchivesLayout-postCategory-userSelect: none;
-  --ArchivesLayout-postCategoryText-link-color: var(--slate-8);
-  --ArchivesLayout-postCategoryText-link-onHover-color: var(--anchor-link-onHover-color);
-  --ArchivesLayout-postCategoryText-visited-color: var(--slate-8);
-  --ArchivesLayout-postCategoryText-visited-onHover-color: var(--anchor-visited-onHover-color);
   --ArchivesLayout-title-color: var(--slate-8);
   --ArchivesLayout-title-fontFamily: var(--font-system);
   --ArchivesLayout-title-fontSize: var(--step-0);
@@ -305,10 +304,12 @@
   --Note--sizeLarge-content-maxWidth: 24em;
   --Note--sizeLarge-published-fontSize: var(--step--1);
   --Note--sizeLarge-published-fontWeight: var(--font-weight-3);
+  --Note--sizeLarge-tags-fontSize: var(--step--1);
   --Note--sizeSmall-content-fontSize: var(--step--1);
   --Note--sizeSmall-content-maxWidth: 24em;
   --Note--sizeSmall-published-fontSize: var(--step--2);
   --Note--sizeSmall-published-fontWeight: var(--font-weight-3);
+  --Note--sizeSmall-tags-fontSize: var(--step--2);
   --Note-content-anchor-link-color: var(--anchor-link-color);
   --Note-content-anchor-link-onHover-color: var(--anchor-link-onHover-color);
   --Note-content-anchor-visited-color: var(--anchor-visited-color);
@@ -329,7 +330,7 @@
   --Note-published-marginBlock: var(--Note-footer-marginBlock);
   --Note-publishedLink-color: var(--slate-9);
   --Note-publishedLink-onHover-color: var(--slate-11);
-  --Note-tags-fontSize: var(--step--1);
+  --Note-tags-fontSize: var(--step--2);
   --Note-tags-lineHeight: var(--line-height-1);
   --Note-tags-marginBlock: var(--Note-footer-marginBlock);
   --Note-tags-maxWidth: 40em;
