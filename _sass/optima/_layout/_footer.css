@@ -20,7 +20,7 @@
   color: var(--slate-11);
   font-family: var(--font-grotesque);
   font-size: var(--step--1);
-  font-weight: var(--font-weight-3);
+  font-weight: var(--font-weight-6);
   line-height: var(--line-height-5);
   margin-block: var(--space-4xs-3xs) 0;
 }
@@ -73,14 +73,14 @@
   }
 
   .Footer-nav {
-    grid-column-end: 8;
+    grid-column-end: 7;
     grid-column-start: 1;
     grid-row: 2;
   }
 
   .Footer-social {
     grid-column-end: 13;
-    grid-column-start: 8;
+    grid-column-start: 7;
     grid-row: 2;
   }
 }
@@ -98,7 +98,7 @@
 
   .Footer-nav {
     grid-column-end: 10;
-    grid-column-start: 6;
+    grid-column-start: 7;
     grid-row: 1;
   }
 

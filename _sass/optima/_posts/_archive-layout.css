@@ -1,4 +1,12 @@
 .ArchiveLayout {
+  --ArchiveLayout-title-color: var(--slate-8);
+  --ArchiveLayout-title-fontFamily: var(--font-system);
+  --ArchiveLayout-title-fontSize: var(--step-0);
+  --ArchiveLayout-title-fontStyle: normal;
+  --ArchiveLayout-title-fontWeight: var(--font-weight-6);
+  --ArchiveLayout-title-marginBlock : var(--space-l);
+  --ArchiveLayout-title-marginInline: 0;
+
   align-self: center;
   margin-inline: auto;
   max-width: 100%;

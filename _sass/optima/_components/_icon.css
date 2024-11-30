@@ -1,4 +1,6 @@
 .Icon {
+  --Icon-color: var(--slate-9);
+
   display: inline-block;
   fill: var(--Icon-color);
   height: 1em;

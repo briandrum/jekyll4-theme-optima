@@ -1,5 +1,15 @@
 # jekyll4-theme-optima
 
+## Getting Started
+
+## Setting Up
+
+## Local Environment
+
+````
+bundle exec jekyll serve --drafts --future --incremental --livereload --port 4000
+````
+
 ## Categories
 
 Out of the box, Optima comes with three Categories of Posts: Articles, (Journal)
@@ -18,6 +28,10 @@ Notes are brief, lack titles, and time-bound (Twitter, Threads, etc.)
 https://indieweb.org/note
 
 Enable/disable each of these post categories in _config.yml
+
+## Tags
+
+## Archives
 
 ## RSS
 

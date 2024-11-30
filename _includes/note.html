@@ -11,13 +11,13 @@
       <dt class="Tags-term">Tagged</dt>
       {% for tag in include.tags %}
         <dd class="Tags-details">
-          <a class="Tags-detailsLink p-category" href="{{ tag | prepend: '/tags/' | relative_url }}">{{ tag | replace: "-", " " }}</a>
+          <a class="p-category" href="{{ tag | prepend: '/tags/' | relative_url }}">{{ tag | replace: "-", " " }}</a>
         </dd>
       {% endfor %}
     </dl>
     <div class="Note-published">
       <time class="dt-published" datetime="{{ include.date | date_to_xmlschema }}" itemprop="datePublished">
-        <a class="Note-publishedLink u-url" href="{{ include.url | relative_url }}">
+        <a class="u-url" href="{{ include.url | relative_url }}">
           {{ include.date | date:site.optima.time_and_date_short_format }}
         </a>
       </time>

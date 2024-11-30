@@ -63,14 +63,15 @@ function searchDocuments(term) {
   resetSearchResults();
   if (term) {
     var results = idx.search(term);
-    if(results.length>0){
+    if (results.length>0) {
       for (var i = 0; i < results.length; i++) {
         var ref = results[i]["ref"];
         var href = ("fragmentDirective" in document ? documents[ref]["url"] + "#:~:text=" + encodeURIComponent(term) : documents[ref]["url"]);
         var url = documents[ref]["url"].split("/").slice(3,-1).join(" › ");
+        if (url == "") {url = "home"}
         var title = documents[ref]["title"];
         var body = documents[ref]["body"].substring(0,320) + "…";
-        document.querySelectorAll("#search-results ol.Search-results")[0].innerHTML = document.querySelectorAll("#search-results ol.Search-results")[0].innerHTML + "<li class=\"Search-result\"><a class=\"Search-resultLink\" href=\"" + href + "\"><address class=\"Search-resultUrl\"><span>" + url + "</span></address><h4 class=\"Search-resultTitle\">" + title + "</h4><p class=\"Search-resultDescription\">" + body + "</p></a></li>";
+        document.querySelectorAll("#search-results ol.Search-results")[0].innerHTML = document.querySelectorAll("#search-results ol.Search-results")[0].innerHTML + "<li class=\"Search-result\"><a href=\"" + href + "\"><address class=\"Search-resultUrl\"><span>" + url + "</span></address><h4 class=\"Search-resultTitle\">" + title + "</h4><p class=\"Search-resultDescription\">" + body + "</p></a></li>";
       }
       focusFormElement("search-submit");;
     }
@@ -114,13 +115,6 @@ window.addEventListener("popstate", (event) => {
 <search class="Search">
   <div class="Search-form">
 
-    {%- assign testContent = content | strip_newlines -%}
-    {%- unless testContent == "" -%}
-      <div class="Search-content">
-        {{ content | markdownify }}
-      </div>
-    {%- endunless -%}
-
     <form action="https://html.duckduckgo.com/html" method="get" onsubmit="return onFormSubmit();">
       <fieldset class="Search-fieldSet" id="search-fieldset">
         <input autofocus class="Search-fieldInput" enterkeyhint="search" id="search-input" maxlength="255" name="q" placeholder="example: bicycle" type="search" value="site:{{ search_domain }} ">
@@ -138,6 +132,14 @@ window.addEventListener("popstate", (event) => {
   </div>
 
   <aside class="Search-aside">
+
+    {%- assign testContent = content | strip_newlines -%}
+    {%- unless testContent == "" -%}
+      <div class="Search-content">
+        {{ content | markdownify }}
+      </div>
+    {%- endunless -%}
+
     <details class="Search-tips">
       <summary class="Search-tipsSummary">Search tips</summary>
       <dl class="Search-tipsList">

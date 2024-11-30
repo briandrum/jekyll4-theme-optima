@@ -1,17 +1,39 @@
 .Tags {
+  --Tags-details-color: var(--TextStyle07-color);
+  --Tags-details-fontFamily: var(--TextStyle07-fontFamily);
+  --Tags-details-letterSpacing: var(--TextStyle07-letterSpacing);
+  --Tags-details-link--freq1-link-backgroundColor: var(--slate-3);
+  --Tags-details-link--freq1-link-color: var(--slate-10);
+  --Tags-details-link--freq1-link-onHover-backgroundColor: var(--blue-3);
+  --Tags-details-link--freq1-link-onHover-color: var(--blue-10);
+  --Tags-details-link--freq2-link-backgroundColor: var(--slate-4);
+  --Tags-details-link--freq2-link-color: var(--slate-10);
+  --Tags-details-link--freq2-link-onHover-backgroundColor: var(--blue-4);
+  --Tags-details-link--freq2-link-onHover-color: var(--blue-10);
+  --Tags-details-link--freq3-link-backgroundColor: var(--slate-5);
+  --Tags-details-link--freq3-link-color: var(--slate-11);
+  --Tags-details-link--freq3-link-onHover-backgroundColor: var(--blue-5);
+  --Tags-details-link--freq3-link-onHover-color: var(--blue-11);
+  --Tags-details-link--freq4-link-backgroundColor: var(--slate-6);
+  --Tags-details-link--freq4-link-color: var(--slate-11);
+  --Tags-details-link--freq4-link-onHover-backgroundColor: var(--blue-6);
+  --Tags-details-link--freq4-link-onHover-color: var(--blue-11);
+  --Tags-details-link--freq5-link-backgroundColor: var(--slate-7);
+  --Tags-details-link--freq5-link-color: var(--slate-11);
+  --Tags-details-link--freq5-link-onHover-backgroundColor: var(--blue-7);
+  --Tags-details-link--freq5-link-onHover-color: var(--blue-11);
+  --Tags-details-link-backgroundColor: var(--color-background-muted);
+  --Tags-details-link-borderRadius: 0.25em;
+  --Tags-details-link-color: var(--color-link-inherit);
+  --Tags-details-link-onHover-backgroundColor: var(--color-background-muted-onHover);
+  --Tags-details-link-onHover-color: var(--color-link-inherit-onHover);
+  --Tags-details-link-paddingBlock: var(--space-3xs);
+  --Tags-details-link-paddingInline: var(--space-2xs);
+
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5em;
-  margin-inline: 0 0;
-}
-
-.Tags--justifyBetween {
-  justify-content: space-between;
-}
-
-.Tags--justifyBetween::after {
-  content: "";
-  flex: auto;
+  gap: var(--space-3xs-2xs);
+  margin-inline: 0;
 }
 
 .Tags-term {
@@ -19,96 +41,76 @@
 }
 
 .Tags-details {
+  color: var(--Tags-details-color);
+  font-family: var(--Tags-details-fontFamily);
+  letter-spacing: var(--Tags-details-letterSpacing);
   margin-block: 0 0;
   margin-inline: 0 0;
 }
 
-.Tags-detailsLink {
-  background-color: var(--Tags-detailsLink-backgroundColor);
-  border-radius: var(--Tags-detailsLink-borderRadius);
-  color: var(--Tags-detailsLink-color);
+.Tags-details *:link,
+.Tags-details *:visited {
+  background-color: var(--Tags-details-link-backgroundColor);
+  border-radius: var(--Tags-details-link-borderRadius);
+  color: var(--Tags-details-link-color);
   display: block;
-  font-family: var(--Tags-detailsLink-fontFamily);
-  letter-spacing: var(--Tags-detailsLink-letterSpacing);
-  padding-block: var(--Tags-detailsLink-paddingBlock);
-  padding-inline: var(--Tags-detailsLink-paddingInline);
+  padding-block: var(--Tags-details-link-paddingBlock);
+  padding-inline: var(--Tags-details-link-paddingInline);
   text-decoration: none;
 }
 
-.Tags-detailsLink:link {
-  color: var(--Tags-detailsLink-link-color);
+.Tags-details *:link:hover,
+.Tags-details *:visited:hover {
+  background-color: var(--Tags-details-link-onHover-backgroundColor);
+  color: var(--Tags-details-link-onHover-color);
 }
 
-.Tags-detailsLink:visited {
-  color: var(--Tags-detailsLink-visited-color);
+.Tags-details *[data-frequency="1"] {
+  background-color: var(--Tags-details-link--freq1-link-backgroundColor);
+  color: var(--Tags-details-link--freq1-link-color);
 }
 
-.Tags-detailsLink:link:hover {
-  background-color: var(--blue-3);
-  color: var(--Tags-detailsLink-link-onHover-color);
+.Tags-details *[data-frequency="1"]:hover {
+  background-color: var(--Tags-details-link--freq1-link-onHover-backgroundColor);
+  color: var(--Tags-details-link--freq1-link-onHover-color);
 }
 
-.Tags-detailsLink:visited:hover {
-  background-color: var(--blue-3);
-  color: var(--Tags-detailsLink-visited-onHover-color);
+.Tags-details *[data-frequency="2"] {
+  background-color: var(--Tags-details-link--freq2-link-backgroundColor);
+  color: var(--Tags-details-link--freq2-link-color);
 }
 
-.Tags-detailsLink--freq1:link,
-.Tags-detailsLink--freq1:visited {
-  background-color: var(--Tags-detailsLink--freq1-link-backgroundColor);
-  color: var(--Tags-detailsLink--freq1-link-color);
+.Tags-details *[data-frequency="2"]:hover {
+  background-color: var(--Tags-details-link--freq2-link-onHover-backgroundColor);
+  color: var(--Tags-details-link--freq2-link-onHover-color);
 }
 
-.Tags-detailsLink--freq1:link:hover,
-.Tags-detailsLink--freq1:visited:hover {
-  background-color: var(--Tags-detailsLink--freq1-link-onHover-backgroundColor);
-  color: var(--Tags-detailsLink--freq1-link-onHover-color);
+.Tags-details *[data-frequency="3"] {
+  background-color: var(--Tags-details-link--freq3-link-backgroundColor);
+  color: var(--Tags-details-link--freq3-link-color);
 }
 
-.Tags-detailsLink--freq2:link,
-.Tags-detailsLink--freq2:visited {
-  background-color: var(--Tags-detailsLink--freq2-link-backgroundColor);
-  color: var(--Tags-detailsLink--freq2-link-color);
+.Tags-details *[data-frequency="3"]:hover {
+  background-color: var(--Tags-details-link--freq3-link-onHover-backgroundColor);
+  color: var(--Tags-details-link--freq3-link-onHover-color);
 }
 
-.Tags-detailsLink--freq2:link:hover,
-.Tags-detailsLink--freq2:visited:hover {
-  background-color: var(--Tags-detailsLink--freq2-link-onHover-backgroundColor);
-  color: var(--Tags-detailsLink--freq2-link-onHover-color);
+.Tags-details *[data-frequency="4"] {
+  background-color: var(--Tags-details-link--freq4-link-backgroundColor);
+  color: var(--Tags-details-link--freq4-link-color);
 }
 
-.Tags-detailsLink--freq3:link,
-.Tags-detailsLink--freq3:visited {
-  background-color: var(--Tags-detailsLink--freq3-link-backgroundColor);
-  color: var(--Tags-detailsLink--freq3-link-color);
+.Tags-details *[data-frequency="4"]:hover {
+  background-color: var(--Tags-details-link--freq4-link-onHover-backgroundColor);
+  color: var(--Tags-details-link--freq4-link-onHover-color);
 }
 
-.Tags-detailsLink--freq3:link:hover,
-.Tags-detailsLink--freq3:visited:hover {
-  background-color: var(--Tags-detailsLink--freq3-link-onHover-backgroundColor);
-  color: var(--Tags-detailsLink--freq3-link-onHover-color);
+.Tags-details *[data-frequency="5"] {
+  background-color: var(--Tags-details-link--freq5-link-backgroundColor);
+  color: var(--Tags-details-link--freq5-link-color);
 }
 
-.Tags-detailsLink--freq4:link,
-.Tags-detailsLink--freq4:visited {
-  background-color: var(--Tags-detailsLink--freq4-link-backgroundColor);
-  color: var(--Tags-detailsLink--freq4-link-color);
-}
-
-.Tags-detailsLink--freq4:link:hover,
-.Tags-detailsLink--freq4:visited:hover {
-  background-color: var(--Tags-detailsLink--freq4-link-onHover-backgroundColor);
-  color: var(--Tags-detailsLink--freq4-link-onHover-color);
-}
-
-.Tags-detailsLink--freq5:link,
-.Tags-detailsLink--freq5:visited {
-  background-color: var(--Tags-detailsLink--freq5-link-backgroundColor);
-  color: var(--Tags-detailsLink--freq5-link-color);
-}
-
-.Tags-detailsLink--freq5:link:hover,
-.Tags-detailsLink--freq5:visited:hover {
-  background-color: var(--Tags-detailsLink--freq5-link-onHover-backgroundColor);
-  color: var(--Tags-detailsLink--freq5-link-onHover-color);
+.Tags-details *[data-frequency="5"]:hover {
+  background-color: var(--Tags-details-link--freq5-link-onHover-backgroundColor);
+  color: var(--Tags-details-link--freq5-link-onHover-color);
 }

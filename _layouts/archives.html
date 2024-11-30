@@ -1,0 +1,62 @@
+---
+layout: default
+---
+
+{%- assign per100 = 0 -%}
+{%- for tag in site.tags -%}
+  {%- if tag[1].size > per100 -%}
+    {%- assign per100 = tag[1].size -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign per080 = per100 | times: 0.8 -%}
+{%- assign per060 = per100 | times: 0.6 -%}
+{%- assign per040 = per100 | times: 0.4 -%}
+{%- assign per020 = per100 | times: 0.2 -%}
+{%- assign frequency = "" %}
+
+<div class="ArchivesLayout">
+  {%- assign testContent = content | strip_newlines -%}
+  {%- unless testContent == "" -%}
+    <div class="ArchivesLayout-content">
+      {{ content | markdownify }}
+    </div>
+  {%- endunless -%}
+  <ol class="ArchivesLayout-years">
+    <li class="ArchivesLayout-year">
+      <h1 class="ArchivesLayout-yearHeader">Tags</h1>
+      <dl class="ArchivesLayout-tags Tags">
+        {%- assign sortedTags = site.tags | sort: tag[0] -%}
+        {% for tag in sortedTags -%}
+          <dd class="Tags-details">
+            {%- if tag[1].size <= per100 and tag[1].size > per080 -%}
+              {% assign frequency = "5" -%}
+            {%- elsif tag[1].size <= per080 and tag[1].size > per060  %}
+              {% assign frequency = "4" -%}
+            {%- elsif tag[1].size <= per060 and tag[1].size > per040  %}
+              {% assign frequency = "3" -%}
+            {%- elsif tag[1].size <= per040 and tag[1].size > per020  %}
+              {% assign frequency = "2" -%}
+            {%- else %}
+              {% assign frequency = "1" -%}
+            {%- endif -%}
+            <a class="p-category" data-frequency="{{ frequency }}" href="{{ tag[0] | prepend: '/tags/' | relative_url }}">{{ tag[0] | replace: "-", " " }} <small>{{ tag[1].size }}</small></a>
+          </dd>
+        {% endfor -%}
+      </dl>
+    {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+    {% for year in posts_by_year %}
+      <li class="ArchivesLayout-year">
+        <h1 class="ArchivesLayout-yearHeader">{{ year.name }}</h1>
+        <ol class="ArchivesLayout-months">
+          {% assign posts_by_month = year.items | group_by_exp: "post", "post.date | date: '%m'" | reverse %}
+          {% for month in posts_by_month %}
+            {% capture url %}archives/{{ year.name }}-{{ month.name}}/{% endcapture %}
+            <li class="ArchivesLayout-month">
+              <a href="{{ url | relative_url  }}">{{ month.items.first.date | date: "%B" }}</a>
+            </li>
+          {% endfor %}
+        </ol>
+      </li>
+    {% endfor %}
+  </ol>
+</div>

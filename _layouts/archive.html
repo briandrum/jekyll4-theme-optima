@@ -9,7 +9,8 @@ layout: default
     <h1 class="ArchiveLayout-title">Archive of everything from {{ page.date | date: "%B %Y" }}</h1>
   {% endif %}
   <div class="ArchiveLayout-archives">
-    {% for post in page.posts %}
+    {% assign posts_by_date = page.posts | reverse %}
+    {% for post in posts_by_date %}
       {% case post.categories.first %}
         {% when "articles" %}
           <section class="ArchiveLayout-article">

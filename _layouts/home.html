@@ -13,10 +13,10 @@ layout: default
 
   <div class="HomeLayout-posts">
     {%- assign posts = site.posts | sort: 'date' | reverse  -%}
-    {%- for post in posts limit: 10 -%}
+    {%- for post in posts limit: 99 -%}
       <section class="HomeLayout-post">
         <div class="HomeLayout-postCategory">
-          <a class="HomeLayout-postCategoryText" href="{{ post.categories.first | append: '/' | relative_url }}">{{ post.categories.first }}</a>
+          <a href="{{ post.categories.first | append: '/' | relative_url }}">{{ post.categories.first }}</a>
         </div>
         {% case post.categories.first %}
           {% when "articles" %}

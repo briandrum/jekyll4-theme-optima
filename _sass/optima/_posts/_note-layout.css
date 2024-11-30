@@ -1,4 +1,20 @@
 .NoteLayout {
+  --NoteLayout-nav-color: var(--slate-9);
+  --NoteLayout-nav-cursor: default;
+  --NoteLayout-nav-fontFamily: var(--font-system);
+  --NoteLayout-nav-fontSize: var(--step--2);
+  --NoteLayout-nav-fontWeight: 800;
+  --NoteLayout-nav-letterSpacing: 0.1em;
+  --NoteLayout-nav-marginBlock: var(--space-2xs);
+  --NoteLayout-nav-textTransform: uppercase;
+  --NoteLayout-nav-userSelect: none;
+  --NoteLayout-navItemContent-link-color: var(--anchor-link-color);
+  --NoteLayout-navItemContent-link-onHover-color: var(--anchor-link-onHover-color);
+  --NoteLayout-navItemContent-visited-color: var(--anchor-visited-color);
+  --NoteLayout-navItemContent-visited-onHover-color: var(--anchor-visited-onHover-color);
+  --NoteLayout-navList-gap: 1.0em;
+  --NoteLayout-navList-marginBlock: var(--space-2xs) var(--space-2xs);
+
   align-self: center;
   margin-inline: auto;
 }

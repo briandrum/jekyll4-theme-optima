@@ -1,6 +1,7 @@
 .JournalLayout {
-  --JournalLayout-content-fontFamily: var(--font-serif);
-  --JournalLayout-content-fontSize: var(--step-0);
+  --JournalLayout-content-color: var(--TextStyle01-color);
+  --JournalLayout-content-fontFamily: var(--TextStyle01-fontFamily);
+  --JournalLayout-content-fontSize: var(--TextStyle01-fontSize);
   --JournalLayout-entry-marginBlock: var(--space-m-l) 0;
   --JournalLayout-nav-marginBlock: var(--space-l-xl) 0;
   --JournalLayout-navContent-backgroundColor: var(--slate-3);
@@ -24,12 +25,12 @@
   --JournalLayout-title-fontFamily: var(--font-system);
   --JournalLayout-title-fontSize: var(--step-0);
   --JournalLayout-title-fontStyle: normal;
+  --JournalLayout-title-fontWeight: var(--font-weight-6);
   --JournalLayout-title-fontWeight: var(--font-weight-7);
+  --JournalLayout-title-marginBlock : var(--space-l) 0;
   --JournalLayout-title-marginBlock: var(--space-l) 0;
   --JournalLayout-title-marginInline: 0;
-}
 
-.JournalLayout {
   align-self: center;
   margin-inline: auto;
 }
@@ -45,11 +46,12 @@
 }
 
 .JournalLayout-content {
+  color: var(--JournalLayout-content-color);
   font-family: var(--JournalLayout-content-fontFamily);
   font-size: var(--JournalLayout-content-fontSize);
   font-weight: var(--font-weight-3);
   line-height: var(--line-height-5);
-  margin-block: var(--space-xs-s) 0;
+  max-width: 32em;
 }
 
 .JournalLayout-nav {
