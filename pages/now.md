@@ -5,31 +5,10 @@ title: What I'm doing now
 permalink: /now/
 ---
 
-## Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
+## Auctor Netus Nascetur Aliquam Neque Donec Ex Habitant
 
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque
-porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
-velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
-magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
-exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
-consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit
-esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
-voluptas nulla pariatur?
+Eget scelerisque taciti in eu semper vehicula placerat ultrices ligula, feugiat fames nisi lobortis aptent malesuada gravida faucibus sit, hendrerit non varius consectetur nisl curabitur magnis mollis, egestas condimentum dolor himenaeos neque eros viverra lacinia. Rutrum venenatis pharetra ex potenti convallis elementum orci per ac lorem, gravida platea purus in mi ridiculus nisl tortor nascetur, condimentum rhoncus cursus elit porttitor ullamcorper cras tempor ad, quam nisi fames litora quisque semper et laoreet sodales. Lobortis commodo litora phasellus diam accumsan taciti mollis libero vel, mauris dui sociosqu netus at condimentum laoreet fusce porttitor, proin etiam pretium torquent hac neque volutpat aptent curae euismod, tortor convallis pellentesque fermentum suscipit est vestibulum vulputate. Eu dui conubia nunc nec lorem ultrices enim pretium ultricies ullamcorper, nullam taciti nibh tempor aliquet interdum parturient a porta penatibus, dis vitae magna varius placerat cras ex primis semper, litora finibus posuere fames purus fermentum himenaeos elit commodo.
 
-## Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
+## Etiam Magna Fermentum Cras Tempus Risus Dictum Tristique
 
-At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias
-excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui
-officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem
-rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis
-est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere
-possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus
-autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet
-ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum
-rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores
-alias consequatur aut perferendis doloribus asperiores repellat.
+Facilisi taciti et eleifend phasellus mi imperdiet vitae vehicula sagittis quis, at ligula nullam natoque laoreet pellentesque pharetra maecenas varius, fermentum nostra vulputate urna fringilla etiam consequat diam dolor, neque enim nibh posuere lacinia tristique ultricies nisi felis. Enim ligula sed felis sem morbi amet risus eget, per congue donec suscipit lacus purus sodales ornare, lorem primis dis maximus hac placerat consectetur nibh posuere, in etiam tempus lectus vitae nisl interdum. Tempor amet at augue interdum nostra ut mattis dignissim, pulvinar diam tristique ligula eleifend condimentum ipsum fusce turpis, ante montes auctor netus senectus dui platea facilisis conubia, potenti torquent integer class scelerisque pretium massa. Mollis elementum inceptos taciti fringilla ligula aptent bibendum varius conubia, ex dignissim blandit interdum eleifend dictumst pretium senectus fermentum, aliquam placerat auctor at vitae elit tristique sociosqu efficitur, tempus litora massa tellus dolor turpis aliquet porttitor. Dui aliquam congue consequat porttitor etiam habitasse pretium nibh massa, vel ligula sapien class vehicula facilisi montes potenti nunc, conubia quisque faucibus facilisis turpis integer penatibus auctor purus mauris, primis elementum quam augue sodales semper gravida senectus.
