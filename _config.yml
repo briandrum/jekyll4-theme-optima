@@ -4,6 +4,7 @@
 #                                                                              #
 ################################################################################
 
+# Uncomment for GitHub repository demonstration
 baseurl: /jekyll4-theme-optima
 
 permalink: /:categories/:year-:month-:day-:title/
@@ -42,7 +43,7 @@ url: https://briandrum.github.io
 
 title: Optima
 # tagline:
-description: "Optima dies … prima fugit"
+description: "Optima dies … prima fugit. Dignissim adipiscing velit habitasse tincidunt eu felis malesuada per justo, sed aenean mi elementum morbi senectus maximus imperdiet conubia, et quisque augue euismod enim libero arcu fringilla, purus semper natoque ultricies condimentum taciti mus venenatis."
 # url:
 # author:
 # facebook:
@@ -168,7 +169,6 @@ optima:
     - pages/now.md
     - pages/about.md
     - pages/archives.md
-    - pages/tags.md
     - pages/search.md
     - pages/analytics.md
 
