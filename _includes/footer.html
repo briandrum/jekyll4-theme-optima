@@ -17,10 +17,10 @@
           {%- if my_page.short_title or my_page.title -%}
             <li class="Footer-navListItem">
               <a class="Footer-link" href="{{ my_page.url | remove: 'index.html' | relative_url }}">
-                {%- if my_page.title -%}
-                  {{ my_page.title | smartify }}
-                {%- else -%}
+                {%- if my_page.short_title -%}
                   {{ my_page.short_title | smartify }}
+                {%- else -%}
+                  {{ my_page.title | smartify }}
                 {%- endif -%}
               </a>
             </li>

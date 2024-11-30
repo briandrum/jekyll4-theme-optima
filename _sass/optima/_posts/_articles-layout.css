@@ -1,6 +1,9 @@
 .ArticlesLayout {
-  --ArticlesLayout-content-fontFamily: var(--font-serif);
-  --ArticlesLayout-content-fontSize: var(--step-0);
+  --ArticlesLayout-content-color: var(--TextStyle01-color);
+  --ArticlesLayout-content-fontFamily: var(--TextStyle01-fontFamily);
+  --ArticlesLayout-content-fontSize: var(--TextStyle01-fontSize);
+  --ArticlesLayout-content-fontWeight: var(--TextStyle01-fontWeight);
+  --ArticlesLayout-content-lineHeight: var(--TextStyle01-lineHeight);
   --ArticlesLayout-entry-marginBlock: var(--space-m-l) 0;
   --ArticlesLayout-nav-marginBlock: var(--space-l-xl) 0;
   --ArticlesLayout-navContent-backgroundColor: var(--slate-3);
@@ -24,12 +27,12 @@
   --ArticlesLayout-title-fontFamily: var(--font-system);
   --ArticlesLayout-title-fontSize: var(--step-0);
   --ArticlesLayout-title-fontStyle: normal;
+  --ArticlesLayout-title-fontWeight: var(--font-weight-6);
   --ArticlesLayout-title-fontWeight: var(--font-weight-7);
+  --ArticlesLayout-title-marginBlock : var(--space-l) 0;
   --ArticlesLayout-title-marginBlock: var(--space-l) 0;
   --ArticlesLayout-title-marginInline: 0;
-}
 
-.ArticlesLayout {
   align-self: center;
   margin-inline: auto;
 }
@@ -45,11 +48,12 @@
 }
 
 .ArticlesLayout-content {
+  color: var(--ArticlesLayout-content-color);
   font-family: var(--ArticlesLayout-content-fontFamily);
   font-size: var(--ArticlesLayout-content-fontSize);
-  font-weight: var(--font-weight-3);
-  line-height: var(--line-height-5);
-  margin-block: var(--space-xs-s) 0;
+  font-weight: var(--ArticlesLayout-content-fontWeight);
+  line-height: var(--ArticlesLayout-content-lineHeight);
+  max-width: 32em;
 }
 
 .ArticlesLayout-nav {

@@ -5,7 +5,7 @@
 
   {%- if site.title -%}
     <div class="Header-name">
-      <a class="Header-link" rel="author" href="{{ "/" | relative_url }}">{{ site.title | smartify }}</a>
+      <a rel="author" href="{{ "/" | relative_url }}">{{ site.title | smartify }}</a>
     </div>
   {%- endif -%}
 
@@ -31,8 +31,8 @@
           {% endif %}
 
           {%- if my_page.short_title or my_page.title -%}
-          <li class="Header-navListItem">
-            <a class="Header-link{%- if current_page == true %} is-current{%- endif -%}" href="{{ my_page.url | remove: 'index.html' | relative_url }}">
+          <li class="Header-navListItem{%- if current_page == true %} is-current{%- endif -%}">
+            <a href="{{ my_page.url | remove: 'index.html' | relative_url }}">
               {%- if my_page.short_title -%}
                 {{ my_page.short_title | smartify }}
               {%- else -%}

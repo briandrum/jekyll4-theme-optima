@@ -9,11 +9,11 @@
     {%- endif -%}
     <h1 class="Entry-title">
       {%- if include.mode == "excerpt" -%}
-        <a class="Entry-titleLink u-url" href="{{ include.url | relative_url }}">
+        <a class="u-url" href="{{ include.url | relative_url }}">
           {{ include.title | smartify }}
         </a>
       {%- else if include.mode == "content" -%}
-        <span class="Entry-titleLink u-url">
+        <span class="u-url">
           {{ include.title | smartify }}
         </span>
       {%- endif -%}
@@ -25,7 +25,9 @@
     </div>
     {%- if include.mode == "excerpt" -%}
       {{ include.excerpt | markdownify }}
-      <div><a class="Entry-continueLink u-url" href="{{ include.url | relative_url }}">Continue reading</a></div>
+      <div class="Entry-continue">
+        <a class="u-url" href="{{ include.url | relative_url }}">Continue reading</a>
+      </div>
     {%- else if include.mode == "content" -%}
       {{ include.content | markdownify }}
     {%- endif -%}
@@ -35,13 +37,13 @@
       <dt class="Tags-term">Tagged</dt>
       {% for tag in include.tags %}
         <dd class="Tags-details">
-          <a class="Tags-detailsLink p-category" href="{{ tag | prepend: '/tags/' | relative_url }}">{{ tag | replace: "-", " " }}</a>
+          <a class="p-category" href="{{ tag | prepend: '/tags/' | relative_url }}">{{ tag | replace: "-", " " }}</a>
         </dd>
       {% endfor %}
     </dl>
     <div class="Entry-published">
       <time class="dt-published" datetime="{{ include.date | date_to_xmlschema }}" itemprop="datePublished">
-        <a class="Entry-publishedLink u-url" href="{{ include.url | relative_url }}">
+        <a class="u-url" href="{{ include.url | relative_url }}">
           {{ include.date | date:site.optima.time_and_date_short_format }}
         </a>
       </time>

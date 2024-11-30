@@ -1,4 +1,11 @@
 .Body {
+  --Body-backgroundColor: var(--slate-2);
+  --Body-color: var(--slate-12);
+  --Body-footer-backgroundColor: inherit;
+  --Body-footer-color: inherit;
+  --Body-header-backgroundColor: inherit;
+  --Body-header-color: inherit;
+
   background-color: var(--Body-backgroundColor);
   color: var(--Body-color);
   display: grid;

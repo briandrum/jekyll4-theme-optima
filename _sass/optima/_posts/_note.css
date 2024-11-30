@@ -1,18 +1,58 @@
+.Note {
+  --Note--sizeLarge-content-fontSize: var(--step-2);
+  --Note--sizeLarge-content-maxWidth: 24em;
+  --Note--sizeLarge-published-fontSize: var(--step--1);
+  --Note--sizeLarge-published-fontWeight: var(--font-weight-3);
+  --Note--sizeLarge-tags-fontSize: var(--step--1);
+  --Note--sizeSmall-content-fontSize: var(--step--1);
+  --Note--sizeSmall-content-maxWidth: 24em;
+  --Note--sizeSmall-published-fontSize: var(--step--2);
+  --Note--sizeSmall-published-fontWeight: var(--font-weight-3);
+  --Note--sizeSmall-tags-fontSize: var(--step--2);
+  --Note-content-anchor-link-color: var(--anchor-link-color);
+  --Note-content-anchor-link-onHover-color: var(--anchor-link-onHover-color);
+  --Note-content-anchor-visited-color: var(--anchor-visited-color);
+  --Note-content-anchor-visited-onHover-color: var(--anchor-visited-onHover-color);
+  --Note-content-color: var(--TextStyle05-color);
+  --Note-content-fontFamily: var(--TextStyle05-fontFamily);
+  --Note-content-fontSize: var(--TextStyle05-fontSize);
+  --Note-content-fontWeight: var(--TextStyle05-fontWeight);
+  --Note-content-img-borderRadius: var(--space-3xs);
+  --Note-content-lineHeight: var(--TextStyle05-lineHeight);
+  --Note-content-liteYoutube-borderRadius: var(--space-3xs);
+  --Note-content-maxWidth: 32em;
+  --Note-footer-marginBlock: var(--space-2xs) 0;
+  --Note-published-color: var(--TextStyle06-color);
+  --Note-published-fontFamily: var(--TextStyle06-fontFamily);
+  --Note-published-fontSize: var(--TextStyle06-fontSize);
+  --Note-published-fontWeight: var(--TextStyle06-fontWeight);
+  --Note-published-link-color: var(--TextStyle06-link-color);
+  --Note-published-link-onHover-color: var(--TextStyle06-link-onHover-color);
+  --Note-published-marginBlock: var(--Note-footer-marginBlock);
+  --Note-tags-fontSize: var(--step--2);
+  --Note-tags-lineHeight: var(--line-height-1);
+  --Note-tags-marginBlock: var(--Note-footer-marginBlock);
+  --Note-tags-maxWidth: 40em;
+
+  font-size: var(--Note-content-fontSize);
+  max-width: var(--Note-content-maxWidth);
+}
+
 .Note-content {
   color: var(--Note-content-color);
   font-family: var(--Note-content-fontFamily);
-  font-size: var(--Note-content-fontSize);
+  font-size: inherit;
   font-weight: var(--Note-content-fontWeight);
   hanging-punctuation: first allow-end last;
   line-height: var(--Note-content-lineHeight);
-  max-width: var(--Note-content-maxWidth);
 }
 
 .Note-content a:link,
 .Note-content a:visited {
   color: var(--Note-content-anchor-link-color);
   font-weight: 400;
-  text-decoration-thickness: 0.05em;
+  text-decoration-skip-ink: all;
+  text-decoration-thickness: 0.04em;
   text-underline-offset: 0.1em;
 }
 
@@ -54,7 +94,7 @@
   font-size: var(--Note-tags-fontSize);
   line-height: var(--Note-tags-lineHeight);
   margin-block: var(--Note-tags-marginBlock);
-  max-width: var(--Note-tags-maxWidth);
+  /* max-width: var(--Note-tags-maxWidth); */
 }
 
 .Note-published {
@@ -66,14 +106,16 @@
   white-space: nowrap;
 }
 
-.Note-publishedLink {
-  color: var(--Note-publishedLink-color);
+.Note-published *:link,
+.Note-published *:visited {
+  color: var(--Note-published-link-color);
   text-decoration: none;
   transition: color 0.2s ease-in-out;
 }
 
-.Note-publishedLink:hover {
-  color: var(--Note-publishedLink-onHover-color);
+.Note-published *:link:hover,
+.Note-published *:visited:hover {
+  color: var(--Note-published-link-onHover-color);
 }
 
 @media screen and (min-width:32em) {
@@ -97,7 +139,7 @@
   margin-block: calc(var(--line-height-5) / 4 * 1em) 0;
 }
 
-.Note--sizeSmall .Note-content {
+.Note--sizeSmall {
   font-size: var(--Note--sizeSmall-content-fontSize);
   max-width: var(--Note--sizeSmall-content-maxWidth);
 }
@@ -108,10 +150,10 @@
 }
 
 .Note--sizeSmall .Note-tags {
-  font-size: var(--Note--sizeLarge-tags-fontSize);
+  font-size: var(--Note--sizeSmall-tags-fontSize);
 }
 
-.Note--sizeLarge .Note-content {
+.Note--sizeLarge {
   font-size: var(--Note--sizeLarge-content-fontSize);
   max-width: var(--Note--sizeLarge-content-maxWidth);
 }

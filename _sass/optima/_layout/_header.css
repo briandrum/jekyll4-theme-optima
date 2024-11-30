@@ -1,4 +1,27 @@
 .Header {
+  --Header-height: var(--space-xl-2xl);
+  --Header-mobileNav-backgroundColor: var(--slate-2);
+  --Header-mobileNav-boxShadowColor: var(--slate-2);
+  --Header-mobileNav-color: var(--slate-11);
+  --Header-mobileNavListItem-boxShadowColor: var(--slate-6);
+  --Header-name-color: var(--color-text-bright);
+  --Header-name-fontFamily: var(--font-serif);
+  --Header-name-fontSize: var(--step-1);
+  --Header-name-fontWeight: var(--font-weight-6);
+  --Header-name-link-color: var(--color-link-inherit);
+  --Header-name-link-onHover-color: var(--color-link-bright-onHover);
+  --Header-navListItem-color: var(--color-text-regular);
+  --Header-navListItem-fontFamily: var(--font-grotesque);
+  --Header-navListItem-fontSize: var(--step-0);
+  --Header-navListItem-fontWeight: var(--font-weight-6);
+  --Header-navListItem-link-color: var(--color-link-bright);
+  --Header-navListItem-link-onHover-backgroundColor: var(--color-background-muted-onHover);
+  --Header-navListItem-link-onHover-color: var(--color-link-bright-onHover);
+  --Header-navListItem-isCurrent-link-backgroundColor: var(--color-background-muted);
+  --Header-navListItem-isCurrent-link-Color: var(--color-link-inherit);
+  --Header-navListItem-isCurrent-link-onHover-backgroundColor: var(--color-background-muted-onHover);
+  --Header-navListItem-isCurrent-link-onHover-color: var(--color-link-inherit-onHover);
+
   align-items: center;
   display: flex;
   height: var(--Header-height);
@@ -19,6 +42,35 @@
   min-width: 0 !important;
 }
 
+.Header-name *:link,
+.Header-name *:visited,
+.Header-navListItem *:link,
+.Header-navListItem *:visited {
+  border-radius: 0.125em;
+  display: block;
+  max-width: 100%;
+  overflow: hidden !important;
+  padding: var(--space-3xs-2xs) var(--space-xs-s);
+  text-decoration: none;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  word-wrap: normal !important;
+}
+
+.Header-name *:link,
+.Header-name *:visited {
+  color: var(--Header-name-link-color);
+  left: calc(-1 * var(--space-xs-s));
+  position: relative;
+}
+
+.Header-name *:link:hover,
+.Header-name *:link:focus,
+.Header-name *:visited:hover,
+.Header-name *:visited:focus {
+  color: var(--Header-name-link-onHover-color);
+}
+
 .Header-nav {
   display: none;
   flex: 1 1 auto;
@@ -34,48 +86,41 @@
 }
 
 .Header-navListItem {
+  color: var(--Header-navListItem-color);
   font-family: var(--Header-navListItem-fontFamily);
   font-size: var(--Header-navListItem-fontSize);
   font-weight: var(--Header-navListItem-fontWeight);
   margin: 0 var(--space-3xs);
 }
 
-.Header-link {
-  border-radius: 0.125em;
-  display: block;
-  /* u-textTruncate */
-  max-width: 100%;
-  overflow: hidden !important;
-  padding: var(--space-3xs-2xs) var(--space-xs-s);
-  text-overflow: ellipsis !important;
-  white-space: nowrap !important;
-  word-wrap: normal !important;
-}
-
-.Header-name .Header-link {
-  left: calc(-1 * var(--space-xs-s));
-  position: relative;
-}
-
-.Header-link:link,
-.Header-link:visited,
-.Header-link:active {
+.Header-navListItem *:link,
+.Header-navListItem *:visited {
   background-color: unset;
-  color: inherit;
-  text-decoration: none;
+  color: var(--Header-navListItem-link-color);
 }
 
-.Header-link:hover,
-.Header-link:focus {
-  background-color: var(--slate-2);
+.Header-navListItem *:link:hover,
+.Header-navListItem *:visited:hover,
+.Header-navListItem *:link:focus,
+.Header-navListItem *:visited:focus {
+  color: var(--Header-navListItem-link-onHover-color);
+  background-color: var(--Header-navListItem-link-onHover-backgroundColor);
 }
 
-.Header-link.is-current:link,
-.Header-link.is-current:visited,
-.Header-link.is-current:hover,
-.Header-link.is-current:focus,
-.Header-link.is-current:active {
-  background-color: var(--slate-3);
+.Header-navListItem.is-current *:link,
+.Header-navListItem.is-current *:visited {
+  color: var(--Header-navListItem-isCurrent-link-Color);
+  background-color: var(--Header-navListItem-isCurrent-link-backgroundColor);
+}
+
+.Header-navListItem.is-current *:link:hover,
+.Header-navListItem.is-current *:link:focus,
+.Header-navListItem.is-current *:link:active,
+.Header-navListItem.is-current *:visited:hover,
+.Header-navListItem.is-current *:visited:focus,
+.Header-navListItem.is-current *:visited:active {
+  background-color: var(--Header-navListItem-isCurrent-link-onHover-backgroundColor);
+  color: var(--Header-navListItem-isCurrent-link-onHover-color);
 }
 
 .Header-details {

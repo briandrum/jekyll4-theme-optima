@@ -1,21 +1,27 @@
 :root {
-  --Page-header-color: var(--slate-12);
-  --Page-header-fontFamily: var(--font-serif);
-  --Page-header-fontSize: var(--step-4);
+  --Page-header-color: var(--TextStyle03-color);
+  --Page-header-fontFamily: var(--TextStyle03-fontFamily);
+  --Page-header-fontSize: var(--TextStyle03-fontSize);
   --Page-header-fontWeight: var(--font-weight-4);
   --Page-header-letterSpacing: -0.04em;
   --Page-header-lineHeight: var(--line-height-1);
 
-  --Page-body-anchor-link-color: var(--anchor-link-color);
-  --Page-body-anchor-link-onHover-color: var(--anchor-link-onHover-color);
-  --Page-body-anchor-visited-color: var(--anchor-visited-color);
-  --Page-body-anchor-visited-onHover-color: var(--anchor-visited-onHover-color);
+  --Page-content-anchor-link-color: var(--anchor-link-color);
+  --Page-content-anchor-link-onHover-color: var(--anchor-link-onHover-color);
+  --Page-content-anchor-visited-color: var(--anchor-visited-color);
+  --Page-content-anchor-visited-onHover-color: var(--anchor-visited-onHover-color);
 
-  --Page-body-color: var(--slate-12);
-  --Page-body-fontFamily: var(--font-serif);
-  --Page-body-fontSize: var(--step-1);
-  --Page-body-fontWeight: var(--font-weight-3);
-  --Page-body-lineHeight: var(--line-height-5);
+  --Page-content-color: var(--TextStyle01-color);
+  --Page-content-fontFamily: var(--TextStyle01-fontFamily);
+  --Page-content-fontSize: var(--TextStyle01-fontSize);
+  --Page-content-fontWeight: var(--TextStyle01-fontWeight);
+  --Page-content-lineHeight: var(--TextStyle01-lineHeight);
+
+  --Page-content-h2-color: var(--TextStyle04-color);
+  --Page-content-h2-fontFamily: var(--TextStyle04-fontFamily);
+  --Page-content-h2-fontSize: var(--TextStyle04-fontSize);
+  --Page-content-h2-fontWeight: var(--TextStyle04-fontWeight);
+  --Page-content-h2-lineHeight: var(--TextStyle04-lineHeight);
 }
 
 .Page {
@@ -29,14 +35,14 @@
   width: 100%;
 }
 
-.Page:has(iframe) .Page-body {
+.Page:has(iframe) .Page-content {
   max-width: none;
 }
 
 .Page-header {
 }
 
-.Page-headerContent {
+.Page-title {
   color: var(--Page-header-color);
   font-family: var(--Page-header-fontFamily);
   font-size: var(--Page-header-fontSize);
@@ -48,48 +54,55 @@
   text-wrap: balance;
 }
 
-.Page-body {
-  color: var(--Page-body-color);
-  font-family: var(--Page-body-fontFamily);
-  font-size: var(--Page-body-fontSize);
-  font-weight: var(--Page-body-fontWeight);
-  line-height: var(--Page-body-lineHeight);
+.Page-content {
+  color: var(--Page-content-color);
+  font-family: var(--Page-content-fontFamily);
+  font-size: var(--Page-content-fontSize);
+  font-weight: var(--Page-content-fontWeight);
+  line-height: var(--Page-content-lineHeight);
   max-width: 32em;
 }
 
-.Page-body a:link {
-  color: var(--Page-body-anchor-link-color);
+.Page-content a:link {
+  color: var(--Page-content-anchor-link-color);
+  text-decoration-skip-ink: all;
+  text-decoration-thickness: 0.04em;
+  text-underline-offset: 0.1em;
 }
 
-.Page-body a:link:hover {
-  color: var(--Page-body-anchor-link-onHover-color);
+.Page-content a:link:hover {
+  color: var(--Page-content-anchor-link-onHover-color);
 }
 
-.Page-body a:visited {
-  color: var(--Page-body-anchor-visited-color);
+.Page-content a:visited {
+  color: var(--Page-content-anchor-visited-color);
+  text-decoration-skip-ink: all;
+  text-decoration-thickness: 0.04em;
+  text-underline-offset: 0.1em;
 }
 
-.Page-body a:visited:hover {
-  color: var(--Page-body-anchor-visited-onHover-color);
+.Page-content a:visited:hover {
+  color: var(--Page-content-anchor-visited-onHover-color);
 }
 
-.Page-body h2 {
-  color: var(--slate-12);
-  font-family: var(--font-grotesque);
+.Page-content h2 {
+  color: var(--Page-content-h2-color);
+  font-family: var(--Page-content-h2-fontFamily);
   font-optical-sizing: auto;
-  font-size: var(--step-2);
+  font-size: var(--Page-content-h2-fontSize);
   font-style: normal;
-  font-weight: 500;
+  font-weight: var(--Page-content-h2-fontWeight);
   font-variation-settings: "wdth" 75;
+  line-height: var(--Page-content-h2-lineHeight);
   margin-block: var(--space-l) 0;
   text-transform: uppercase;
 }
 
-.Page-body img {
+.Page-content img {
   display: block;
   max-width: 100%;
 }
 
-.Page-body p {
+.Page-content p {
   margin-block: var(--space-xs-s) 0;
 }

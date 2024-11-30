@@ -1,4 +1,75 @@
 .Article {
+  --Article--sizeLarge-content-fontSize: var(--step-1);
+  --Article--sizeLarge-content-maxWidth: 40em;
+  --Article--sizeLarge-publishedFooter-fontSize: var(--step--1);
+  --Article--sizeLarge-publishedFooter-fontWeight: var(--font-weight-3);
+  --Article--sizeLarge-publishedHeader-fontSize: var(--step-1);
+  --Article--sizeLarge-publishedHeader-fontWeight: var(--font-weight-9);
+  --Article--sizeLarge-title-fontSize: var(--step-5);
+  --Article--sizeLarge-title-maxWidth: 20em;
+  --Article--sizeSmall-content-fontSize: var(--step-0);
+  --Article--sizeSmall-content-maxWidth: 40em;
+  --Article--sizeSmall-publishedFooter-fontSize: var(--step--2);
+  --Article--sizeSmall-publishedFooter-fontWeight: var(--font-weight-3);
+  --Article--sizeSmall-publishedHeader-fontSize: var(--step--2);
+  --Article--sizeSmall-publishedHeader-fontWeight: var(--font-weight-3);
+  --Article--sizeSmall-title-fontSize: var(--step-3);
+  --Article--sizeSmall-title-maxWidth: 20em;
+  --Article-content-anchor-link-color: var(--anchor-link-color);
+  --Article-content-anchor-link-onHover-color: var(--anchor-link-onHover-color);
+  --Article-content-anchor-visited-color: var(--anchor-visited-color);
+  --Article-content-anchor-visited-onHover-color: var(--anchor-visited-onHover-color);
+  --Article-content-color: var(--TextStyle05-color);
+  --Article-content-fontFamily: var(--TextStyle05-fontFamily);
+  --Article-content-fontSize: var(--TextStyle05-fontSize);
+  --Article-content-fontWeight: var(--TextStyle05-fontWeight);
+  --Article-content-h2-color: var(--TextStyle04-color);
+  --Article-content-h2-fontFamily: var(--TextStyle04-fontFamily);
+  --Article-content-h2-fontSize: var(--TextStyle04-fontSize);
+  --Article-content-h2-fontWeight: var(--TextStyle04-fontWeight);
+  --Article-content-h2-lineHeight: var(--TextStyle04-lineHeight);
+  --Article-content-iframe-borderRadius: var(--space-3xs);
+  --Article-content-img-borderRadius: var(--space-3xs);
+  --Article-content-lineHeight: var(--TextStyle05-lineHeight);
+  --Article-content-liteYoutube-borderRadius: var(--space-3xs);
+  --Article-content-maxWidth: 40em;
+  --Article-continue-link-borderColor: var(--slate-6);
+  --Article-continue-link-borderRadius: var(--space-3xs);
+  --Article-continue-link-borderStyle: solid;
+  --Article-continue-link-borderWidth: 1px;
+  --Article-continue-link-color: var(--anchor-link-color);
+  --Article-continue-link-fontFamily: var(--font-grotesque);
+  --Article-continue-link-fontSize: var(--step--2);
+  --Article-continue-link-fontWeight: var(--font-weight-6);
+  --Article-continue-link-letterSpacing: 0.05em;
+  --Article-continue-link-borderColor: var(--blue-6);
+  --Article-continue-link-color: var(--anchor-link-color);
+  --Article-continue-link-onHover-borderColor: var(--blue-7);
+  --Article-continue-link-onHover-color: var(--anchor-link-onHover-color);
+  --Article-continue-link-padding: var(--space-3xs) var(--space-2xs);
+  --Article-continue-link-textDecoration: none;
+  --Article-continue-link-textTransform: uppercase;
+  --Article-continue-margin: var(--space-s);
+  --Article-footer-marginBlock: var(--space-2xs) 0;
+  --Article-published-color: var(--TextStyle06-color);
+  --Article-published-fontFamily: var(--TextStyle06-fontFamily);
+  --Article-published-link-color: var(--TextStyle06-link-color);
+  --Article-published-link-onHover-color: var(--TextStyle06-link-onHover-color);
+  --Article-published-marginBlock: var(--Article-footer-marginBlock);
+  --Article-publishedFooter-fontSize: var(--step--2);
+  --Article-publishedFooter-fontWeight: var(--font-weight-3);
+  --Article-publishedHeader-fontSize: var(--step--2);
+  --Article-publishedHeader-fontWeight: var(--font-weight-3);
+  --Article-tags-fontSize: var(--step--2);
+  --Article-tags-lineHeight: var(--line-height-1);
+  --Article-tags-marginBlock: var(--space-2xs) 0;
+  --Article-tags-maxWidth: 40em;
+  --Article-title-link-onHover-color: var(--TextStyle02-link-onHover-color);
+  --Article-title-color: var(--TextStyle02-color);
+  --Article-title-fontFamily: var(--TextStyle02-fontFamily);
+  --Article-title-fontSize: var(--TextStyle02-fontSize);
+  --Article-title-link-color: var(--TextStyle02-link-color);
+  --Article-title-maxWidth: 20em;
 }
 
 .Article-header {
@@ -21,18 +92,21 @@
   font-weight: var(--Article-publishedFooter-fontWeight);
 }
 
-.Article-publishedLink {
-  color: var(--Article-publishedLink-color);
+.Article-published *:link,
+.Article-published *:visited {
+  color: var(--Article-published-link-color);
   text-decoration: none;
   transition: color 0.2s ease-in-out;
 }
 
-.Article-publishedLink:hover {
-  color: var(--Article-publishedLink-onHover-color);
+.Article-published *:link:hover,
+.Article-published *:visited:hover {
+  color: var(--Article-published-link-onHover-color);
 }
 
 .Article-title {
-  font-family: var(--font-serif);
+  color: var(--Article-title-color);
+  font-family: var(--Article-title-fontFamily);
   font-size: var(--Article-title-fontSize);
   font-weight: var(--font-weight-4);
   letter-spacing: -0.04em;
@@ -42,17 +116,17 @@
   text-wrap: balance;
 }
 
-.Article-titleLink:link,
-.Article-titleLink:visited {
-  color: inherit;
+.Article-title *:link,
+.Article-title *:visited {
+  color: var(--Article-title-link-color);
   text-decoration: none;
 }
 
-.Article-titleLink:link:hover,
-.Article-titleLink:link:focus,
-.Article-titleLink:visited:hover,
-.Article-titleLink:visited:focus {
-  color: var(--Article-title-anchor-link-onHover-color);
+.Article-title *:link:hover,
+.Article-title *:link:focus,
+.Article-title *:visited:hover,
+.Article-title *:visited:focus {
+  color: var(--Article-title-link-onHover-color);
 }
 
 .Article-content {
@@ -68,7 +142,8 @@
 .Article-content a:link,
 .Article-content a:visited {
   font-weight: 400;
-  text-decoration-thickness: 0.05em;
+  text-decoration-skip-ink: all;
+  text-decoration-thickness: 0.04em;
   text-underline-offset: 0.1em;
 }
 
@@ -109,13 +184,14 @@
 
 /* .Article-content p:first-child::first-line, */
 .Article-content h2 {
-  color: var(--slate-12);
-  font-family: var(--font-grotesque);
+  color: var(--Article-content-h2-color);
+  font-family: var(--Article-content-h2-fontFamily);
   font-optical-sizing: auto;
-  font-size: var(--step-2);
+  font-size: var(--Article-content-h2-fontSize);
   font-style: normal;
-  font-weight: 500;
+  font-weight: var(--Article-content-h2-fontWeight);
   font-variation-settings: "wdth" 75;
+  line-height: var(--Article-content-h2-lineHeight);
   margin-block: var(--space-l) 0;
   text-transform: uppercase;
 }
@@ -145,7 +221,7 @@
   margin-inline: 0;
 }
 
-.Article-content figcaption {
+.Article-content figcaption:not(:empty) {
   font-size: var(--step--1);
   font-style: italic;
   margin-block-start: var(--space-3xs-2xs);
@@ -160,6 +236,42 @@
 .Article-content lite-youtube {
   border-radius: var(--Article-content-liteYoutube-borderRadius);
   margin-block: calc(var(--line-height-5) / 4 * 1em) 0;
+}
+
+.Article-content:has(.Article-continue) > *:nth-last-child(2) {
+  background-clip: text;
+  background-image: linear-gradient(to top, transparent 0, var(--Article-content-color) calc(3 * var(--Article-content-fontSize) * var(--Article-content-lineHeight)), var(--Article-content-color) 100%);
+  -webkit-text-fill-color: transparent;
+}
+
+.Article-content div:has(.Article-continue) {
+  margin-block: var(--space-xs-s) var(--space-3xs-2xs);
+}
+
+.Article-continue {
+  margin-block: var(--Article-continue-margin);
+}
+
+.Article-continue *:link,
+.Article-continue *:visited {
+  border-color: var(--Article-continue-link-borderColor);
+  border-radius: var(--Article-continue-link-borderRadius);
+  border-style: var(--Article-continue-link-borderStyle);
+  border-width: var(--Article-continue-link-borderWidth);
+  color: var(--Article-continue-link-color);
+  font-family: var(--Article-continue-link-fontFamily);
+  font-size: var(--Article-continue-link-fontSize);
+  font-weight: var(--Article-continue-link-fontWeight);
+  letter-spacing: var(--Article-continue-link-letterSpacing);
+  padding: var(--Article-continue-link-padding);
+  text-decoration: var(--Article-continue-link-textDecoration);
+  text-transform: var(--Article-continue-link-textTransform);
+}
+
+.Article-continue *:link:hover,
+.Article-continue *:visited:hover {
+  border-color: var(--Article-continue-link-onHover-borderColor);
+  color: var(--Article-continue-link-onHover-color);
 }
 
 @media screen and (min-width:32em) {
