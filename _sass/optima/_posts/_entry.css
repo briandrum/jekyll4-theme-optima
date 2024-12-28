@@ -78,6 +78,7 @@
 .Entry-published {
   color: var(--Entry-published-color);
   font-family: var(--Entry-published-fontFamily);
+  font-variant-numeric: oldstyle-nums;
   margin-block: var(--Entry-published-marginBlock);
   white-space: nowrap;
 }
