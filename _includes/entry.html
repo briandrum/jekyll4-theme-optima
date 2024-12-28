@@ -25,9 +25,12 @@
     </div>
     {%- if include.mode == "excerpt" -%}
       {{ include.excerpt | markdownify }}
-      <div class="Entry-continue">
-        <a class="u-url" href="{{ include.url | relative_url }}">Continue reading</a>
-      </div>
+      {% assign content = include.content | strip %}
+      {% unless content == "" %}
+        <div class="Entry-continue">
+          <a class="u-url" href="{{ include.url | relative_url }}">Continue reading</a>
+        </div>
+      {% endunless %}
     {%- else if include.mode == "content" -%}
       {{ include.content | markdownify }}
     {%- endif -%}
