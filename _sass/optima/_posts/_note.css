@@ -85,7 +85,7 @@
   max-width: 100%;
 }
 
-.Note-content lite-youtube {
+.Note-content :is(lite-vimeo, lite-youtube) {
   border-radius: var(--Note-content-liteYoutube-borderRadius);
   margin-block: calc(var(--line-height-5) / 4 * 1em) 0;
 }
