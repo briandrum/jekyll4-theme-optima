@@ -1,0 +1,10 @@
+<figure>
+  <lite-vimeo videoid="{{ include.videoid }}" style="background-image: url('https://i.vimeocdn.com/video/{{ include.videoid }}.webp?mw=1600&mh=900&q=70');">
+    <a href="https://vimeo.com/{{ include.videoid }}" class="ltv-playbtn" title="Play Video">
+      <span class="lyt-visually-hidden">Play Video: {{ include.title }}</span>
+    </a>
+  </lite-vimeo>
+  {% if include.caption %}
+    <figcaption>{{ include.caption }}</figcaption>
+  {% endif %}
+</figure>

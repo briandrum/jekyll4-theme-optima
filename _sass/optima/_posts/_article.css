@@ -137,6 +137,7 @@
   hanging-punctuation: first allow-end last;
   line-height: var(--Article-content-lineHeight);
   max-width: var(--Article-content-maxWidth);
+  text-wrap: pretty;
 }
 
 .Article-content a:link,
@@ -233,7 +234,7 @@
   max-width: 100%;
 }
 
-.Article-content lite-youtube {
+.Article-content :is(lite-vimeo, lite-youtube) {
   border-radius: var(--Article-content-liteYoutube-borderRadius);
   margin-block: calc(var(--line-height-5) / 4 * 1em) 0;
 }
