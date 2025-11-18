@@ -172,6 +172,7 @@
 
 .Article-description p {
   font-weight: var(--font-weight-4) !important;
+  text-wrap: pretty;
 }
 
 .Article-content p {

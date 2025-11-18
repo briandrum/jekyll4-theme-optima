@@ -172,6 +172,7 @@
 
 .Entry-description p {
   font-weight: var(--font-weight-4) !important;
+  text-wrap: pretty;
 }
 
 .Entry-content p {

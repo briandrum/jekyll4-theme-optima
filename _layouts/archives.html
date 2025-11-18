@@ -52,7 +52,7 @@ layout: default
           {% for month in posts_by_month %}
             {% capture url %}archives/{{ year.name }}-{{ month.name}}/{% endcapture %}
             <li class="ArchivesLayout-month">
-              <a href="{{ url | relative_url  }}">{{ month.items.first.date | date: "%B" }}</a>
+              <a href="{{ url | relative_url  }}" title="{{ month.items.first.date | date: "%B" }}">{{ month.items.first.date | date: "%b" }}</a>
             </li>
           {% endfor %}
         </ol>
