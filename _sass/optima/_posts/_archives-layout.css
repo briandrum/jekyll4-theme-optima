@@ -47,20 +47,34 @@
 }
 
 .ArchivesLayout-months {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: var(--space-xs-s);
+  column-gap: var(--space-xs);
+  display: grid;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   list-style-type: none;;
   margin-block: 0;
   margin-inline: 0;
   padding-block: 0;
   padding-inline: 0;
+  row-gap: var(--space-s);
+}
+
+@media only screen and (min-width: 640px) {
+  .ArchivesLayout-months {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .ArchivesLayout-months {
+    grid-template-columns: repeat(12, 1fr);
+  }
 }
 
 .ArchivesLayout-month {
-  color: var(--slate-11);
+  color: var(--TextStyle07-color);
   font-family: var(--font-grotesque);
-  font-size: var(--step-2);
+  font-size: var(--step--1);
   font-weight: var(--font-weight-7);
   margin-block: 0;
   margin-inline: 0;
@@ -71,7 +85,13 @@
 
 .ArchivesLayout-month *:link,
 .ArchivesLayout-month *:visited {
-  color: inherit;
+  aspect-ratio: 1 / 1;
+  background-color: var(--color-background-muted);
+  border-radius: var(--space-4xs-3xs);
+  color: var(--color-link-inherit);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
 }
 
@@ -79,5 +99,6 @@
 .ArchivesLayout-month *:link:focus,
 .ArchivesLayout-month *:visited:hover,
 .ArchivesLayout-month *:visited:focus {
-  color: var(--blue-9);
+  background-color: var(--color-background-muted-onHover);
+  color: var(--color-link-inherit-onHover);
 }

@@ -1,0 +1,18 @@
+<p style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-2xs-xs); margin-block: var(--space-s-m) 0;">
+  <span style="grid-column: 1 / 3; grid-row: 1;">
+    <img alt="" src="/images/IMG_6794.jpeg">
+  </span>
+  <span style="grid-column: 1 / 2; grid-row: 2;">
+    <img alt="" src="/images/IMG_6794.jpeg">
+  </span>
+  <span style="grid-column: 2 / 3; grid-row: 2;">
+    <img alt="" src="/images/IMG_6794.jpeg">
+  </span>
+</p>
+{%- assign figures = include.figures | split: "|" -%}
+
+<p style="display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-2xs-xs); margin-block: var(--space-s-m) 0;">
+{% for figure in figures %}
+  <img src="{{ figure }}"/>
+{% endfor %}
+</p>
