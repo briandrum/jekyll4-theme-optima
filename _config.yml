@@ -124,7 +124,7 @@ optima:
   features:
     plausible_analytics:
       enabled: true
-      domain: briandrum.github.io
+      src: "plausible.io/js/pa-SaRi9zdHAofEUaC131s-4.js"
 
   # Plausible analytics: https://plausible.io/
   #
