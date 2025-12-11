@@ -32,7 +32,28 @@ layout: default
   </div>
 
   <div class="HomeLayout-content">
-    Read other <a href="/articles/">articles</a>, <a href="/journal/">entries</a>, or  <a href="/notes/">notes</a>.
+    Read other
+    {% if site.optima.post_categories.articles.enabled %}
+      <a href="/articles/">articles</a>
+      {%- if site.optima.post_categories.journal.enabled and site.optima.post_categories.notes.enabled -%}
+        ,
+      {% endif -%}
+    {% endif -%}
+    {% if site.optima.post_categories.journal.enabled %}
+      {% if site.optima.post_categories.articles.enabled and site.optima.post_categories.notes.enabled == false %}
+        or
+      {% endif %}
+      <a href="/journal/">entries</a>
+      {%- if site.optima.post_categories.articles.enabled and site.optima.post_categories.notes.enabled -%}
+        ,
+      {% endif -%}
+    {% endif -%}
+    {% if site.optima.post_categories.notes.enabled %}
+      {% if site.optima.post_categories.articles.enabled or site.optima.post_categories.journal.enabled %}
+        or
+      {% endif %}
+      <a href="/notes/">notes</a>
+    {%- endif -%}
+    .
   </div>
-
 </div>
