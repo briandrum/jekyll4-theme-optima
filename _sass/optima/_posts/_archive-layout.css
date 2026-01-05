@@ -1,3 +1,8 @@
+/*
+ * 1. Necessary until Safari supports the font-variation-settings property in @font-face
+ *    https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@font-face#browser_compatibility
+ */
+
 .ArchiveLayout {
   --ArchiveLayout-title-color: var(--slate-8);
   --ArchiveLayout-title-fontFamily: var(--font-system);
@@ -17,6 +22,7 @@
   font-family: var(--ArchiveLayout-title-fontFamily);
   font-size: var(--ArchiveLayout-title-fontSize);
   font-style: var(--ArchiveLayout-title-fontStyle);
+  font-variation-settings: "SOFT" 100, "WONK" 1; /* 1 */
   font-weight: var(--ArchiveLayout-title-fontWeight);
   margin-block: var(--ArchiveLayout-title-marginBlock);
   margin-inline: var(--ArchiveLayout-title-marginInline);

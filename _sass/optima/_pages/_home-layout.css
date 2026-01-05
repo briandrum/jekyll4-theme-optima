@@ -1,3 +1,8 @@
+/*
+ * 1. Necessary until Safari supports the font-variation-settings property in @font-face
+ *    https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@font-face#browser_compatibility
+ */
+
 .HomeLayout {
   --HomeLayout-content-color: var(--TextStyle01-color);
   --HomeLayout-content-fontFamily: var(--TextStyle01-fontFamily);
@@ -24,6 +29,7 @@
   color: var(--HomeLayout-content-color);
   font-family: var(--HomeLayout-content-fontFamily);
   font-size: var(--HomeLayout-content-fontSize);
+  font-variation-settings: "SOFT" 100, "WONK" 1; /* 1 */
   font-weight: var(--font-weight-3);
   line-height: var(--line-height-5);
   max-width: 32em;

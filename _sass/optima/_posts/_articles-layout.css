@@ -1,3 +1,8 @@
+/*
+ * 1. Necessary until Safari supports the font-variation-settings property in @font-face
+ *    https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@font-face#browser_compatibility
+ */
+
 .ArticlesLayout {
   --ArticlesLayout-content-color: var(--TextStyle01-color);
   --ArticlesLayout-content-fontFamily: var(--TextStyle01-fontFamily);
@@ -42,6 +47,7 @@
   font-family: var(--ArticlesLayout-title-fontFamily);
   font-size: var(--ArticlesLayout-title-fontSize);
   font-style:  var(--ArticlesLayout-title-fontStyle);
+  font-variation-settings: "SOFT" 100, "WONK" 1; /* 1 */
   font-weight: var(--ArticlesLayout-title-fontWeight);
   margin-block: var(--ArticlesLayout-title-marginBlock);
   margin-inline: var(--ArticlesLayout-title-marginInline);
@@ -51,6 +57,7 @@
   color: var(--ArticlesLayout-content-color);
   font-family: var(--ArticlesLayout-content-fontFamily);
   font-size: var(--ArticlesLayout-content-fontSize);
+  font-variation-settings: "SOFT" 100, "WONK" 1; /* 1 */
   font-weight: var(--ArticlesLayout-content-fontWeight);
   line-height: var(--ArticlesLayout-content-lineHeight);
   max-width: 32em;

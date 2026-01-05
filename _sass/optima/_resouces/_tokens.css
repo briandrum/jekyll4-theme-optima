@@ -1,4 +1,6 @@
-/* fonts */
+/**
+ * Fonts
+ */
 
 :root {
   --font-system: system-ui, sans-serif, color-emoji;
@@ -7,7 +9,9 @@
   --font-monospace: ui-monospace, "SFMono-Regular", "SF Mono", "Menlo", "Consolas", "Liberation Mono", monospace, color-emoji;
 }
 
-/* typography */
+/**
+ * Typography
+ */
 
 :root {
   --line-height-1: 1.0;
@@ -45,7 +49,10 @@
   --font-weight-9: 900;
 }
 
-/* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+/**
+ *
+ * @link https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
+ */
 
 :root {
   --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
@@ -58,7 +65,10 @@
   --step-5: clamp(2.7994rem, 2.4461rem + 1.7663vw, 3.815rem);
 }
 
-/* @link https://utopia.fyi/space/calculator?c=320,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25|0.125,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+/**
+ *
+ * @link https://utopia.fyi/space/calculator?c=320,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25|0.125,1.5|2|3|4|6,s-l&g=s,l,xl,12
+ */
 
 :root {
   --space-4xs: clamp(0.125rem, 0.1033rem + 0.1087vw, 0.1875rem);
@@ -87,7 +97,10 @@
   --space-s-l: clamp(1.125rem, 0.6467rem + 2.3913vw, 2.5rem);
 }
 
-/* @link https://utopia.fyi/grid/calculator?c=320,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+/**
+ *
+ * @link https://utopia.fyi/grid/calculator?c=320,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
+ */
 
 :root {
   --grid-max-width: 77.50rem;

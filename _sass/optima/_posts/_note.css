@@ -1,3 +1,8 @@
+/*
+ * 1. Necessary until Safari supports the font-variation-settings property in @font-face
+ *    https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@font-face#browser_compatibility
+ */
+
 .Note {
   --Note--sizeLarge-content-fontSize: var(--step-2);
   --Note--sizeLarge-content-maxWidth: 24em;
@@ -42,6 +47,7 @@
   color: var(--Note-content-color);
   font-family: var(--Note-content-fontFamily);
   font-size: inherit;
+  font-variation-settings: "SOFT" 100, "WONK" 1; /* 1 */
   font-weight: var(--Note-content-fontWeight);
   hanging-punctuation: first allow-end last;
   line-height: var(--Note-content-lineHeight);
