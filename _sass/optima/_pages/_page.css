@@ -1,4 +1,10 @@
-:root {
+/*
+ * 1. Since iframes have unknown width, just take the whole horizontal space.
+ * 2. Necessary until Safari supports the font-variation-settings property in @font-face
+ *    https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@font-face#browser_compatibility
+ */
+
+.Page {
   --Page-header-color: var(--TextStyle03-color);
   --Page-header-fontFamily: var(--TextStyle03-fontFamily);
   --Page-header-fontSize: var(--TextStyle03-fontSize);
@@ -22,14 +28,10 @@
   --Page-content-h2-fontSize: var(--TextStyle04-fontSize);
   --Page-content-h2-fontWeight: var(--TextStyle04-fontWeight);
   --Page-content-h2-lineHeight: var(--TextStyle04-lineHeight);
-}
 
-.Page {
   align-self: center;
   margin-inline: auto;
 }
-
-/* Since iframes have unknown width, just take the whole horizontal space */
 
 .Page:has(iframe) {
   width: 100%;
@@ -46,6 +48,7 @@
   color: var(--Page-header-color);
   font-family: var(--Page-header-fontFamily);
   font-size: var(--Page-header-fontSize);
+  font-variation-settings: "SOFT" 100, "WONK" 1; /* 1 */
   font-weight: var(--Page-header-fontWeight);
   letter-spacing: var(--Page-header-letterSpacing);
   line-height: var(--Page-header-lineHeight);
@@ -58,6 +61,7 @@
   color: var(--Page-content-color);
   font-family: var(--Page-content-fontFamily);
   font-size: var(--Page-content-fontSize);
+  font-variation-settings: "SOFT" 100, "WONK" 1; /* 1 */
   font-weight: var(--Page-content-fontWeight);
   line-height: var(--Page-content-lineHeight);
   max-width: 32em;

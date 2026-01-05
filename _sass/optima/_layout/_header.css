@@ -1,3 +1,8 @@
+/*
+ * 1. Necessary until Safari supports the font-variation-settings property in @font-face
+ *    https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@font-face#browser_compatibility
+ */
+
 .Header {
   --Header-height: var(--space-xl-2xl);
   --Header-mobileNav-backgroundColor: var(--slate-2);
@@ -37,6 +42,7 @@
   color: var(--Header-name-color);
   font-family: var(--Header-name-fontFamily);
   font-size: var(--Header-name-fontSize);
+  font-variation-settings: "SOFT" 100, "WONK" 1; /* 1 */
   font-weight: var(--Header-name-fontWeight);
   /* u-flexTruncateParent */
   min-width: 0 !important;

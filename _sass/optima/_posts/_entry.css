@@ -1,3 +1,8 @@
+/*
+ * 1. Necessary until Safari supports the font-variation-settings property in @font-face
+ *    https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@font-face#browser_compatibility
+ */
+
 .Entry {
   --Entry--sizeLarge-content-fontSize: var(--step-1);
   --Entry--sizeLarge-content-maxWidth: 40em;
@@ -109,6 +114,7 @@
   color: var(--Entry-title-color);
   font-family: var(--Entry-title-fontFamily);
   font-size: var(--Entry-title-fontSize);
+  font-variation-settings: "SOFT" 100, "WONK" 1; /* 1 */
   font-weight: var(--font-weight-4);
   letter-spacing: -0.04em;
   line-height: var(--line-height-1);
@@ -134,6 +140,7 @@
   color: var(--Entry-content-color);
   font-family: var(--Entry-content-fontFamily);
   font-size: var(--Entry-content-fontSize);
+  font-variation-settings: "SOFT" 100, "WONK" 1; /* 1 */
   font-weight: var(--Entry-content-fontWeight);
   hanging-punctuation: first allow-end last;
   line-height: var(--Entry-content-lineHeight);
@@ -148,7 +155,7 @@
   text-underline-offset: 0.1em;
 }
 
-.Entry-content ol {
+.Entry-content :is(ol, ul) {
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
@@ -157,16 +164,11 @@
   padding-inline: var(--space-s-m) var(--space-l-xl);
 }
 
-.Entry-content ul {
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  line-height: inherit;
-  margin-block: var(--space-xs-s) 0;
-  padding-inline: var(--space-s-m) var(--space-l-xl);
+.Entry-content :is(ol, ul) > li > :is(ol, ul) {
+  margin-block: 0;
 }
 
-.Entry-content li {
+.Entry-content :is(ol, ul) > li {
   margin-block: var(--space-3xs-2xs);
 }
 
